@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://itwanggj.github.io/"/>
   <updated>2017-01-05T14:14:46.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://itwanggj.github.io/</id>
   
   <author>
     <name>Guojun Wang</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>My second article</title>
-    <link href="http://yoursite.com/2017/01/04/My-second-article/"/>
-    <id>http://yoursite.com/2017/01/04/My-second-article/</id>
+    <link href="https://itwanggj.github.io/2017/01/04/My-second-article/"/>
+    <id>https://itwanggj.github.io/2017/01/04/My-second-article/</id>
     <published>2017-01-04T15:48:53.000Z</published>
     <updated>2017-01-05T14:14:46.000Z</updated>
     
@@ -27,18 +27,18 @@
     </summary>
     
     
-      <category term="Gulp" scheme="http://yoursite.com/tags/Gulp/"/>
+      <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
     
-      <category term="Grunt" scheme="http://yoursite.com/tags/Grunt/"/>
+      <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
     
-      <category term="AngularJs" scheme="http://yoursite.com/tags/AngularJs/"/>
+      <category term="AngularJs" scheme="https://itwanggj.github.io/tags/AngularJs/"/>
     
   </entry>
   
   <entry>
     <title>My first article</title>
-    <link href="http://yoursite.com/2017/01/04/My-first-article/"/>
-    <id>http://yoursite.com/2017/01/04/My-first-article/</id>
+    <link href="https://itwanggj.github.io/2017/01/04/My-first-article/"/>
+    <id>https://itwanggj.github.io/2017/01/04/My-first-article/</id>
     <published>2017-01-04T15:32:04.000Z</published>
     <updated>2017-01-05T14:14:15.000Z</updated>
     
@@ -47,18 +47,18 @@
     </summary>
     
     
-      <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
-      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
-      <category term="Ionic" scheme="http://yoursite.com/tags/Ionic/"/>
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/01/04/hello-world/"/>
-    <id>http://yoursite.com/2017/01/04/hello-world/</id>
+    <link href="https://itwanggj.github.io/2017/01/04/hello-world/"/>
+    <id>https://itwanggj.github.io/2017/01/04/hello-world/</id>
     <published>2017-01-04T14:20:27.000Z</published>
     <updated>2017-01-05T14:06:01.000Z</updated>
     
@@ -80,11 +80,11 @@
     </summary>
     
     
-      <category term="Html" scheme="http://yoursite.com/tags/Html/"/>
+      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
-      <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
   </entry>
   
