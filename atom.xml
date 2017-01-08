@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-01-08T09:00:16.000Z</updated>
+  <updated>2017-01-08T09:01:57.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用GitHub + Hexo搭建博客(Mac版)</title>
+    <title>基于Hexo搭建个人技术博客</title>
     <link href="https://itwanggj.github.io/2017/01/08/%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/"/>
     <id>https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/</id>
     <published>2017-01-08T15:48:53.000Z</published>
-    <updated>2017-01-08T09:00:16.000Z</updated>
+    <updated>2017-01-08T09:01:57.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>从<a href="https://nodejs.org/en/" style="text-decoration:none;" target="_blank" rel="external">Node.js官网</a>按其提示安装，安装成功后如下图：<br><a id="more"></a><br><img src="https://maoqiq.github.io/images/01/01_01nodejs.png" width="280px" style="margin:0;padding:0;"><br>安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：<br>查看Node.js的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure></p>
 <p>Node.js成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ node -v </div><div class="line">v6.2.0</div></pre></td></tr></table></figure></p>
@@ -62,6 +62,7 @@
 <h3 id="编写文章内容"><a href="#编写文章内容" class="headerlink" title="编写文章内容"></a>编写文章内容</h3><p>本人使用<a href="http://25.io/mou/" style="text-decoration:none;" target="_blank" rel="external"><strong>Mou编辑器</strong></a>(Markdown语言编辑器)编写文章内容，下载后直接将<code>My first article.md</code>文件使用Mou编辑器打开，根据<a href="http://www.markdown.cn" style="text-decoration:none;" target="_blank" rel="external">Markdown语法格式</a>编写文章内容，或者使用HTML编写内容(Mou兼容HTML语法格式)。<br><strong style="color:#f5871f;">注：</strong>使用两种语法格式编写文章内容时，避免嵌套使用，因为在HTML标签内的Markdown格式语法不会被处理。</p>
 <h3 id="生成部署新文章"><a href="#生成部署新文章" class="headerlink" title="生成部署新文章"></a>生成部署新文章</h3><p>文章编写好后，执行如下命令，重新生成页面并部署到github上：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
 <p><strong style="color:#f5871f;">注：</strong>hexo命令支持如下缩写形式：<br>hexo generate = hexo g<br>hexo deploy = hexo d<br>hexo server = hexo s<br>hexo new = hexo n</p>
+<p>引文来源<a href="https://maoqiq.github.io/2016/12/12/%E4%BD%BF%E7%94%A8GitHub-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="text-decoration:none;" target="_blank" rel="external">Mao Qi’s Blog</a><br>转载请注明出处</p>
 ]]></content>
     
     <summary type="html">
