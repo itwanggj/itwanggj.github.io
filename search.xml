@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[基于Hexo搭建个人技术博客]]></title>
+      <url>https://itwanggj.github.io/2017/01/08/%E5%9F%BA%E4%BA%8EHexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>从<a href="https://nodejs.org/en/" style="text-decoration:none;" target="_blank" rel="external">Node.js官网</a>按其提示安装，安装成功后如下图：<br><a id="more"></a><br><img src="https://maoqiq.github.io/images/01/01_01nodejs.png" width="280px" style="margin:0;padding:0;"><br>安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：<br>查看Node.js的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure></p>
+<p>Node.js成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ node -v </div><div class="line">v6.2.0</div></pre></td></tr></table></figure></p>
+<p>查看npm的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
+<p>npm成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ npm -v </div><div class="line">3.8.9</div></pre></td></tr></table></figure></p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>Xcode自带Git，查看Git版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git version</div></pre></td></tr></table></figure></p>
+<p>本地已安装git，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ git version </div><div class="line">git version 2.5.4 (Apple Git-61)</div></pre></td></tr></table></figure></p>
+<h2 id="安装设置Hexo"><a href="#安装设置Hexo" class="headerlink" title="安装设置Hexo"></a>安装设置Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在<strong>Node.js和Git安装完成后</strong> 安装Hexo，在终端输入如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p><strong style="color:#f5871f;">注：</strong>一定要在前面加<code>sudo</code>，表示Linux系统管理指令，不加<code>sudo</code>会出现权限问题的报错。</p>
+<p>安装成功会出现类似下图所示的信息：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_02hexoInstall.png" width="280px" style="margin:0;padding:0;"></p>
+<h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><p>在用户目录(Users)下创建名为hexo的文件夹，在终端cd进入到此目录下，执行命令：<code>hexo init</code>，操作如下：</p>
+<p>1&nbsp;&nbsp;打开Finder，”前往”-&gt;”上层文件夹”，在用户目录下新建hexo文件夹，如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_03hexoNewFile.png" width="280px" style="margin:0;padding:0;"><br>2&nbsp;&nbsp;在终端进入hexo文件夹，进行初始化hexo，输入内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
+<p>输入后开始初始化：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_04hexoInit.png" width="280px" style="margin:0;padding:0;"></p>
+<h3 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h3><p>1&nbsp;&nbsp;部署前安装依赖：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>2&nbsp;&nbsp;生成静态页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>生成静态界面时终端的显示如下图：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_05hexoGenerate.png" width="280px" style="margin:0;padding:0;"><br>3    开启本地服务器，在本地预览所生成的静态页面，control+c停止服务器：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>开启本地服务器后显示如下图：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_06hexoServer.png" width="280px" style="margin:0;padding:0;"><br>使用<a href="http://localhost:4000/" style="text-decoration:none;" disabled="true" target="_blank" rel="external">http://localhost:4000/</a>在浏览器打开查看本地效果，本地效果如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_07localPage.png" width="280px" style="margin:0;padding:0;"></p>
+<h2 id="关联GitHub"><a href="#关联GitHub" class="headerlink" title="关联GitHub"></a>关联GitHub</h2><h3 id="创建仓库repository"><a href="#创建仓库repository" class="headerlink" title="创建仓库repository"></a>创建仓库repository</h3><p>1&nbsp;&nbsp;登录github帐号，右上角”+”下选择 New repository，创建将用于存储博客的仓库，选择位置如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_08githubRepository.png" width="280px" style="margin:0;padding:0;"><br>2&nbsp;&nbsp;新建仓库时要使用<code>your_username.github.io</code>固定格式命名仓库，例如：我的用户名为”maoqiq”，则我的仓库名为”maoqiq.github.io”，如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_09githubNewRepository.JPG" width="280px" style="margin:0;padding:0;"><br>此时本地的hexo文件夹下的内容如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_10hexoFile.png" width="280px" style="margin:0;padding:0;"></p>
+<h3 id="博客部署到github"><a href="#博客部署到github" class="headerlink" title="博客部署到github"></a>博客部署到github</h3><p>1&nbsp;&nbsp;在终端cd进入hexo文件夹，输入以下命令安装git部署器：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>2&nbsp;&nbsp;修改根目录下的站点配置文件_config.yml，本人直接使用sublime打开hexo文件夹下的_config.yml文件，在文件末尾修改如下内容，然后保存：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: https://github.com/maoqiq/maoqiq.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p><strong style="color:#f5871f;">注：</strong><code>maoqiq</code>改为<code>your_username</code>，即你的github博客仓库的网址，如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_11githubHttp.JPG" width="280px" style="margin:0;padding:0;"><br><strong style="color:#f5871f;">注：</strong>在配置所有配置文件_config.yml时，所有<code>:</code>冒号后都要加一个”空格”</p>
+<p>3&nbsp;&nbsp;在hexo目录下，生成静态页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>4&nbsp;&nbsp;执行部署命令，如果没有关联github，执行时终端会提示输入github的用户名和密码，输入后等待执行成功：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>引文来源<a href="https://maoqiq.github.io/2016/12/12/%E4%BD%BF%E7%94%A8GitHub-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="text-decoration:none;" target="_blank" rel="external">Mao Qi’s Blog</a><br>转载请注明出处</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用GitHub + Hexo搭建博客(Mac版)]]></title>
+      <url>https://itwanggj.github.io/2017/01/06/%E4%BD%BF%E7%94%A8GitHub-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>从<a href="https://nodejs.org/en/" style="text-decoration:none;" target="_blank" rel="external">Node.js官网</a>按其提示安装，安装成功后如下图：<br><a id="more"></a><br><img src="https://maoqiq.github.io/images/01/01_01nodejs.png" width="280px" style="margin:0;padding:0;"><br>安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：<br>查看Node.js的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure></p>
+<p>Node.js成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ node -v </div><div class="line">v6.2.0</div></pre></td></tr></table></figure></p>
+<p>查看npm的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm -v</div></pre></td></tr></table></figure></p>
+<p>npm成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ npm -v </div><div class="line">3.8.9</div></pre></td></tr></table></figure></p>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>Xcode自带Git，查看Git版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git version</div></pre></td></tr></table></figure></p>
+<p>本地已安装git，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">maomaodeMacBook-Pro:~ maomao$ git version </div><div class="line">git version 2.5.4 (Apple Git-61)</div></pre></td></tr></table></figure></p>
+<h2 id="安装设置Hexo"><a href="#安装设置Hexo" class="headerlink" title="安装设置Hexo"></a>安装设置Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在<strong>Node.js和Git安装完成后</strong> 安装Hexo，在终端输入如下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p><strong style="color:#f5871f;">注：</strong>一定要在前面加<code>sudo</code>，表示Linux系统管理指令，不加<code>sudo</code>会出现权限问题的报错。</p>
+<p>安装成功会出现类似下图所示的信息：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_02hexoInstall.png" width="280px" style="margin:0;padding:0;"></p>
+<h3 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h3><p>在用户目录(Users)下创建名为hexo的文件夹，在终端cd进入到此目录下，执行命令：<code>hexo init</code>，操作如下：</p>
+<p>1&nbsp;&nbsp;打开Finder，”前往”-&gt;”上层文件夹”，在用户目录下新建hexo文件夹，如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_03hexoNewFile.png" width="280px" style="margin:0;padding:0;"><br>2&nbsp;&nbsp;在终端进入hexo文件夹，进行初始化hexo，输入内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> hexo</div><div class="line">$ hexo init</div></pre></td></tr></table></figure></p>
+<p>输入后开始初始化：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_04hexoInit.png" width="280px" style="margin:0;padding:0;"></p>
+<h3 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h3><p>1&nbsp;&nbsp;部署前安装依赖：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure></p>
+<p>2&nbsp;&nbsp;生成静态页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>生成静态界面时终端的显示如下图：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_05hexoGenerate.png" width="280px" style="margin:0;padding:0;"><br>3    开启本地服务器，在本地预览所生成的静态页面，control+c停止服务器：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure></p>
+<p>开启本地服务器后显示如下图：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_06hexoServer.png" width="280px" style="margin:0;padding:0;"><br>使用<a href="http://localhost:4000/" style="text-decoration:none;" disabled="true" target="_blank" rel="external">http://localhost:4000/</a>在浏览器打开查看本地效果，本地效果如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_07localPage.png" width="280px" style="margin:0;padding:0;"></p>
+<h2 id="关联GitHub"><a href="#关联GitHub" class="headerlink" title="关联GitHub"></a>关联GitHub</h2><h3 id="创建仓库repository"><a href="#创建仓库repository" class="headerlink" title="创建仓库repository"></a>创建仓库repository</h3><p>1&nbsp;&nbsp;登录github帐号，右上角”+”下选择 New repository，创建将用于存储博客的仓库，选择位置如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_08githubRepository.png" width="280px" style="margin:0;padding:0;"><br>2&nbsp;&nbsp;新建仓库时要使用<code>your_username.github.io</code>固定格式命名仓库，例如：我的用户名为”maoqiq”，则我的仓库名为”maoqiq.github.io”，如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_09githubNewRepository.JPG" width="280px" style="margin:0;padding:0;"><br>此时本地的hexo文件夹下的内容如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_10hexoFile.png" width="280px" style="margin:0;padding:0;"></p>
+<h3 id="博客部署到github"><a href="#博客部署到github" class="headerlink" title="博客部署到github"></a>博客部署到github</h3><p>1&nbsp;&nbsp;在终端cd进入hexo文件夹，输入以下命令安装git部署器：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>2&nbsp;&nbsp;修改根目录下的站点配置文件_config.yml，本人直接使用sublime打开hexo文件夹下的_config.yml文件，在文件末尾修改如下内容，然后保存：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: https://github.com/maoqiq/maoqiq.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p><strong style="color:#f5871f;">注：</strong><code>maoqiq</code>改为<code>your_username</code>，即你的github博客仓库的网址，如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_11githubHttp.JPG" width="280px" style="margin:0;padding:0;"><br><strong style="color:#f5871f;">注：</strong>在配置所有配置文件_config.yml时，所有<code>:</code>冒号后都要加一个”空格”</p>
+<p>3&nbsp;&nbsp;在hexo目录下，生成静态页面：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure></p>
+<p>4&nbsp;&nbsp;执行部署命令，如果没有关联github，执行时终端会提示输入github的用户名和密码，输入后等待执行成功：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p>正在执行<code>hexo deploy</code>中的终端如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_12hexoDeploy.png" width="280px" style="margin:0;padding:0;"><br><code>hexo deploy</code>命令执行成功后，在浏览器使用网址<a href="https://maoqiq.github.io/" style="text-decoration:none;" target="_blank" rel="external">https://maoqiq.github.io/</a>打开页面，与本地预览的效果相同，则部署成功，成功页面如下图所示：</p>
+<p><img src="https://maoqiq.github.io/images/01/01_13httpPage.png" width="280px" style="margin:0;padding:0;"></p>
+<h2 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h2><h3 id="新建文章文件"><a href="#新建文章文件" class="headerlink" title="新建文章文件"></a>新建文章文件</h3><p>终端cd进入到hexo目录下执行如下命令创建新文章的<code>.md</code>文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My first article"</span></div></pre></td></tr></table></figure></p>
+<p>创建成功会提示：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO Created: /Users/hexo/<span class="built_in">source</span>/_posts/My first article.md</div></pre></td></tr></table></figure></p>
+<h3 id="编写文章内容"><a href="#编写文章内容" class="headerlink" title="编写文章内容"></a>编写文章内容</h3><p>本人使用<a href="http://25.io/mou/" style="text-decoration:none;" target="_blank" rel="external"><strong>Mou编辑器</strong></a>(Markdown语言编辑器)编写文章内容，下载后直接将<code>My first article.md</code>文件使用Mou编辑器打开，根据<a href="http://www.markdown.cn" style="text-decoration:none;" target="_blank" rel="external">Markdown语法格式</a>编写文章内容，或者使用HTML编写内容(Mou兼容HTML语法格式)。<br><strong style="color:#f5871f;">注：</strong>使用两种语法格式编写文章内容时，避免嵌套使用，因为在HTML标签内的Markdown格式语法不会被处理。</p>
+<h3 id="生成部署新文章"><a href="#生成部署新文章" class="headerlink" title="生成部署新文章"></a>生成部署新文章</h3><p>文章编写好后，执行如下命令，重新生成页面并部署到github上：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure></p>
+<p><strong style="color:#f5871f;">注：</strong>hexo命令支持如下缩写形式：<br>hexo generate = hexo g<br>hexo deploy = hexo d<br>hexo server = hexo s<br>hexo new = hexo n</p>
+<p>引文来源<a href="https://maoqiq.github.io/2016/12/12/%E4%BD%BF%E7%94%A8GitHub-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" style="text-decoration:none;" target="_blank" rel="external">Mao Qi’s Blog</a><br>转载请注明出处</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My second article]]></title>
+      <url>https://itwanggj.github.io/2017/01/04/My-second-article/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My first article]]></title>
+      <url>https://itwanggj.github.io/2017/01/04/My-first-article/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>https://itwanggj.github.io/2017/01/04/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-11]]></title>
+      <url>https://itwanggj.github.io/2016/11/04/My-article-11/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-10]]></title>
+      <url>https://itwanggj.github.io/2016/10/04/My-article-10/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-9]]></title>
+      <url>https://itwanggj.github.io/2016/09/04/My-article-9/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-8]]></title>
+      <url>https://itwanggj.github.io/2016/08/04/My-article-8/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-7]]></title>
+      <url>https://itwanggj.github.io/2016/07/04/My-article-7/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-6]]></title>
+      <url>https://itwanggj.github.io/2016/06/04/My-article-6/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-5]]></title>
+      <url>https://itwanggj.github.io/2016/05/04/My-article-5/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-3]]></title>
+      <url>https://itwanggj.github.io/2016/03/04/My-article-4/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-3]]></title>
+      <url>https://itwanggj.github.io/2016/02/04/My-article-3/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My article-2]]></title>
+      <url>https://itwanggj.github.io/2016/01/04/My-article-2/</url>
+      <content type="html"></content>
+    </entry>
+    
+  
+  
+</search>
