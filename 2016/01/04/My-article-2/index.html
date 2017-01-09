@@ -112,7 +112,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HEXO/">HEXO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/01/04/My-article-2/" data-id="cixonibua0004vw3aflvxusr1" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/01/04/My-article-2/" data-id="cixq3g29s0008ge3a8sy3n887" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/01/04/My-article-2/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -310,7 +310,13 @@ var _hmt = _hmt || [];
 <script>
 (function(){
     var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();

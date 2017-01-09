@@ -164,7 +164,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/" data-id="cixonibv4000mvw3ags4w70vm" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/" data-id="cixq3g2a7000sge3ahrajhb1b" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -358,7 +358,13 @@ var _hmt = _hmt || [];
 <script>
 (function(){
     var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
