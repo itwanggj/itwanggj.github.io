@@ -346,9 +346,9 @@
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
-      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
-    
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
+    
+      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
     
   </entry>
   
@@ -404,11 +404,11 @@
     </summary>
     
     
+      <category term="HEXO" scheme="https://itwanggj.github.io/tags/HEXO/"/>
+    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
-    
-      <category term="HEXO" scheme="https://itwanggj.github.io/tags/HEXO/"/>
     
   </entry>
   
