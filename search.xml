@@ -152,7 +152,12 @@
 <p>npm成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">itwanggjdeMacBook-Pro:~ itwanggj$ npm -v </div><div class="line">3.8.9</div></pre></td></tr></table></figure></p>
 <h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>Xcode自带Git，查看Git版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git version</div></pre></td></tr></table></figure></p>
 <p>本地已安装git，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">itwanggjdeMacBook-Pro:~ itwanggj$ git version </div><div class="line">git version 2.5.4 (Apple Git-61)</div></pre></td></tr></table></figure></p>
-<h2 id="安装设置Hexo"><a href="#安装设置Hexo" class="headerlink" title="安装设置Hexo"></a>安装设置Hexo</h2>]]></content>
+<h2 id="安装设置Hexo"><a href="#安装设置Hexo" class="headerlink" title="安装设置Hexo"></a>安装设置Hexo</h2><p>安装hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>查看hexo版本号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo version</div></pre></td></tr></table></figure></p>
+<p>创建项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init Hexo</div></pre></td></tr></table></figure></p>
+<p>进入目录(Mac版本hexo文件需搭建在user同一层，通过“工具栏”前往“上一层”进行访问)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> hexo</div></pre></td></tr></table></figure></p>
+<p>初始化项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure></p>
+]]></content>
     </entry>
     
     <entry>
