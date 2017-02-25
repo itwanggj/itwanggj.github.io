@@ -4,6 +4,31 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2016/02/21/My-first-article/</loc>
+    <lastmod>2017-02-25T09:23:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
+        <pubTime>2016-02-21T10:32:04.000Z</pubTime>
+        
+        <tag>Bootstrap</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>Ionic</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2015/12/20/hello-world/</loc>
     <lastmod>2017-02-24T12:22:09.000Z</lastmod>
     <data>
@@ -296,27 +321,6 @@
         <tag>Github</tag>
          
         <tag>itwanggj</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2017/01/04/My-first-article/</loc>
-    <lastmod>2017-01-05T14:14:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>My first article</title>
-        <pubTime>2017-01-04T15:32:04.000Z</pubTime>
-        
-        <tag>Bootstrap</tag>
-         
-        <tag>jQuery</tag>
-         
-        <tag>Ionic</tag>
          
          
            
