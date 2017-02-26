@@ -7,22 +7,22 @@
   
   <title>深入理解javascript原型和闭包（转） | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说明该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。
+  <meta name="description" content="说明   该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。
 　　为什么要偏偏要讲这两个知识点？
-　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对java">
+　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对j">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解javascript原型和闭包（转）">
 <meta property="og:url" content="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
-<meta property="og:description" content="说明该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。
+<meta property="og:description" content="说明   该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。
 　　为什么要偏偏要讲这两个知识点？
-　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对java">
-<meta property="og:updated_time" content="2017-02-26T12:13:01.000Z">
+　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对j">
+<meta property="og:updated_time" content="2017-02-26T12:15:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解javascript原型和闭包（转）">
-<meta name="twitter:description" content="说明该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。
+<meta name="twitter:description" content="说明   该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。
 　　为什么要偏偏要讲这两个知识点？
-　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对java">
+　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对j">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
   
@@ -118,11 +118,30 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
+        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>   该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
 <p>　　为什么要偏偏要讲这两个知识点？</p>
 <p>　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对javascript有更深层次的理解，至少理解了原型和作用域，就不能再算是javascript菜鸟了。另外，这两方面也是javascript与其他语言不同的地方，学习这样的设计，有助于你开阔眼界，帮助你了解编程语言的设计思路。毕竟，你不能只把眼睛盯在一门语言上。</p>
 <p>　　闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。<br><a id="more"></a></p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a href="http://www.cnblogs.com/wangfupeng1988/p/3977987.html" target="_blank" rel="external">深入理解javascript原型和闭包（1）——一切都是对象</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3978035.html" target="_blank" rel="external">深入理解javascript原型和闭包（2）——函数和对象的关系</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3978131.html" target="_blank" rel="external">深入理解javascript原型和闭包（3）——prototype原型</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3979290.html" target="_blank" rel="external">深入理解javascript原型和闭包（4）——隐式原型</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3979533.html" target="_blank" rel="external">深入理解javascript原型和闭包（5）——instanceof</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3979985.html" target="_blank" rel="external">深入理解javascript原型和闭包（6）——继承</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3980065.html" target="_blank" rel="external">深入理解javascript原型和闭包（7）——原型的灵活性</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3986420.html" target="_blank" rel="external">深入理解javascript原型和闭包（8）——简述【执行上下文】上</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3987563.html" target="_blank" rel="external">深入理解javascript原型和闭包（9）——简述【执行上下文】下</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3988422.html" target="_blank" rel="external">深入理解javascript原型和闭包（10）——this</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3989357.html" target="_blank" rel="external">深入理解javascript原型和闭包（11）——执行上下文栈</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3991151.html" target="_blank" rel="external">深入理解javascript原型和闭包（12）——简介【作用域】</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3991995.html" target="_blank" rel="external">深入理解javascript原型和闭包（13）-【作用域】和【上下文环境】</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3992795.html" target="_blank" rel="external">深入理解javascript原型和闭包（14）——从【自由变量】到【作用域链】</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3994065.html" target="_blank" rel="external">深入理解javascript原型和闭包（15）——闭包</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3994950.html" target="_blank" rel="external">深入理解javascript原型和闭包（16）——完结</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3996037.html" target="_blank" rel="external">深入理解javascript原型和闭包（17）——补this</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/4000798.html" target="_blank" rel="external">深入理解javascript原型和闭包（18）——补充：上下文环境和作用域的关系</a></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3977987.html" target="_blank" rel="external">深入理解javascript原型和闭包（1）——一切都是对象</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3978035.html" target="_blank" rel="external">深入理解javascript原型和闭包（2）——函数和对象的关系</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3978131.html" target="_blank" rel="external">深入理解javascript原型和闭包（3）——prototype原型</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3979290.html" target="_blank" rel="external">深入理解javascript原型和闭包（4）——隐式原型</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3979533.html" target="_blank" rel="external">深入理解javascript原型和闭包（5）——instanceof</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3979985.html" target="_blank" rel="external">深入理解javascript原型和闭包（6）——继承</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3980065.html" target="_blank" rel="external">深入理解javascript原型和闭包（7）——原型的灵活性</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3986420.html" target="_blank" rel="external">深入理解javascript原型和闭包（8）——简述【执行上下文】上</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3987563.html" target="_blank" rel="external">深入理解javascript原型和闭包（9）——简述【执行上下文】下</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3988422.html" target="_blank" rel="external">深入理解javascript原型和闭包（10）——this</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3989357.html" target="_blank" rel="external">深入理解javascript原型和闭包（11）——执行上下文栈</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3991151.html" target="_blank" rel="external">深入理解javascript原型和闭包（12）——简介【作用域】</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3991995.html" target="_blank" rel="external">深入理解javascript原型和闭包（13）-【作用域】和【上下文环境】</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3992795.html" target="_blank" rel="external">深入理解javascript原型和闭包（14）——从【自由变量】到【作用域链】</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3994065.html" target="_blank" rel="external">深入理解javascript原型和闭包（15）——闭包</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3994950.html" target="_blank" rel="external">深入理解javascript原型和闭包（16）——完结</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/3996037.html" target="_blank" rel="external">深入理解javascript原型和闭包（17）——补this</a></li>
+<li><a href="http://www.cnblogs.com/wangfupeng1988/p/4000798.html" target="_blank" rel="external">深入理解javascript原型和闭包（18）——补充：上下文环境和作用域的关系</a></li>
+</ul>
 <h3 id="说明：该文转载于–深入理解javascript原型和闭包（完结）-非常感谢。"><a href="#说明：该文转载于–深入理解javascript原型和闭包（完结）-非常感谢。" class="headerlink" title="说明：该文转载于–深入理解javascript原型和闭包（完结）,非常感谢。"></a>说明：该文转载于–<a href="http://www.cnblogs.com/wangfupeng1988/p/3977924.html" target="_blank" rel="external">深入理解javascript原型和闭包（完结）</a>,非常感谢。</h3>
       
     </div>
@@ -131,7 +150,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmmz9io000y0y3aifo0nz3a" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmn22vl000v1n3aufruq1h5" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
