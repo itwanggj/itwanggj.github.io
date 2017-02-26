@@ -5,14 +5,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>Guojun Wang&#39;s Blog</title>
+  <title>说说Javascript函数 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Guojun Wang's Blog">
-<meta property="og:url" content="https://itwanggj.github.io/index.html">
+  <meta name="description" content="相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="说说Javascript函数">
+<meta property="og:url" content="https://itwanggj.github.io/2017/01/20/说说Javascript函数/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
+<meta property="og:description" content="相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是">
+<meta property="og:updated_time" content="2017-02-26T13:23:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guojun Wang's Blog">
+<meta name="twitter:title" content="说说Javascript函数">
+<meta name="twitter:description" content="相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
   
@@ -79,127 +83,7 @@
 
 
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-深入理解javascript原型和闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/03/24/深入理解javascript原型和闭包/" class="article-date">
-  <time datetime="2017-03-24T15:48:53.000Z" itemprop="datePublished">2017-03-24</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/原型/">原型</a>►<a class="article-category-link" href="/categories/原型/闭包/">闭包</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/24/深入理解javascript原型和闭包/">深入理解javascript原型和闭包（转）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>　　该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
-<p>　　为什么要偏偏要讲这两个知识点？</p>
-<p>　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对javascript有更深层次的理解，至少理解了原型和作用域，就不能再算是javascript菜鸟了。另外，这两方面也是javascript与其他语言不同的地方，学习这样的设计，有助于你开阔眼界，帮助你了解编程语言的设计思路。毕竟，你不能只把眼睛盯在一门语言上。</p>
-<p>　　闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/03/24/深入理解javascript原型和闭包/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmpi5co000qp83a4urliqin" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-来自CSS3的黑科技－－如何实现环形进度条" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" class="article-date">
-  <time datetime="2017-02-08T09:49:50.000Z" itemprop="datePublished">2017-02-08</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/数据可视化/">数据可视化</a>►<a class="article-category-link" href="/categories/数据可视化/D3/">D3</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/">来自CSS3的黑科技－－如何实现环形进度条</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CSS3的提出使得CSS不再是单纯的样式表，只要运用得到，就可以实现一些我们很棒的动画效果，最近项目有需求需要实现一个环形进度条，一开始没有思路，在看了《CSS Secret》之后觉得有受启发，便记录下这个过程。在过去，实现一个这样的进度条难免要拼接大量图片，CSS3和HTML5的出现使得这个过程变得简单无比。<br>首先，我们需要一个元素来承载我们的样式：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pie"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>事实上，如果要实现环形图，只要实现饼图，然后在其上覆盖一层遮罩即可，所以我们可以先从如何实现饼图开始：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.pie</span> &#123;</div><div class="line">    <span class="attribute">width </span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height </span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#ddd</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>我们首先通过.pie实现了一个圆形，并将其居中方便我们进行观察，效果如下：</p>
-<p><img src="https://itwanggj.github.io/images/circle-step-1.png" alt=""></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizmpi5cn000lp83a1u5bblni" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-说说Javascript函数" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-说说Javascript函数" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/01/20/说说Javascript函数/" class="article-date">
   <time datetime="2017-01-20T01:09:10.000Z" itemprop="datePublished">2017-01-20</time>
@@ -218,8 +102,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/说说Javascript函数/">说说Javascript函数</a>
+    <h1 class="article-title" itemprop="name">
+      说说Javascript函数
     </h1>
   
 
@@ -268,352 +152,34 @@
   </div>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-My-article-11" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/11/04/My-article-11/" class="article-date">
-  <time datetime="2016-11-04T15:32:04.000Z" itemprop="datePublished">2016-11-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
+    <a href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/04/My-article-11/">My-article-11</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/require/">require</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizmpi5c50007p83a4b8rh4ra" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/11/04/My-article-11/#ds-thread" class="article-comment-link">Comments</a>
+          来自CSS3的黑科技－－如何实现环形进度条
         
       </div>
-    </footer>
-  </div>
-  </div>
-  </div>
+    </a>
+  
+  
+    <a href="/2016/11/04/My-article-11/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">My-article-11</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2017/01/20/说说Javascript函数/" data-title="说说Javascript函数" data-url="https://itwanggj.github.io/2017/01/20/说说Javascript函数/"></div>
+  </section>
 
-  
-    <article id="post-My-article-10" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/10/04/My-article-10/" class="article-date">
-  <time datetime="2016-10-04T15:32:04.000Z" itemprop="datePublished">2016-10-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/04/My-article-10/">My-article-10</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizmpi5c30006p83a1127vp3p" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/10/04/My-article-10/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-9" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/09/04/My-article-9/" class="article-date">
-  <time datetime="2016-09-04T15:32:04.000Z" itemprop="datePublished">2016-09-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/04/My-article-9/">My-article-9</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/09/04/My-article-9/" data-id="cizmpi5cp000tp83ap4bir2so" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/09/04/My-article-9/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-8" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/08/04/My-article-8/" class="article-date">
-  <time datetime="2016-08-04T15:32:04.000Z" itemprop="datePublished">2016-08-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/04/My-article-8/">My-article-8</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/08/04/My-article-8/" data-id="cizmpi5cg000gp83ag3vxged0" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/08/04/My-article-8/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-7" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/07/04/My-article-7/" class="article-date">
-  <time datetime="2016-07-04T15:32:04.000Z" itemprop="datePublished">2016-07-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/04/My-article-7/">My-article-7</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/07/04/My-article-7/" data-id="cizmpi5ce000fp83at8sbrq8n" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/07/04/My-article-7/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-6" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/06/04/My-article-6/" class="article-date">
-  <time datetime="2016-06-04T15:32:04.000Z" itemprop="datePublished">2016-06-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/04/My-article-6/">My-article-6</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/06/04/My-article-6/" data-id="cizmpi5ca000bp83avnzxig0m" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/06/04/My-article-6/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-5" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/05/04/My-article-5/" class="article-date">
-  <time datetime="2016-05-04T15:32:04.000Z" itemprop="datePublished">2016-05-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/04/My-article-5/">My-article-5</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/05/04/My-article-5/" data-id="cizmpi5c70008p83a6pumup6v" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/05/04/My-article-5/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </section>
       
       <aside id="sidebar">
