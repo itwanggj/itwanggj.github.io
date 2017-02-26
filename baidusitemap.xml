@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2015/12/20/hello-world/</loc>
+    <lastmod>2017-02-26T06:48:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2015-12-19T16:00:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>Html</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hello World" url="https://itwanggj.github.io/categories/Hello-World/"/>
+          
+             
+              <breadCrumb title="hexo" url="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/04/04/My-article-3/</loc>
     <lastmod>2017-02-26T06:46:28.000Z</lastmod>
     <data>
@@ -37,27 +64,6 @@
         <tag>Grunt</tag>
          
         <tag>AngularJs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2015/12/20/hello-world/</loc>
-    <lastmod>2017-02-26T06:42:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2015-12-19T16:00:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>CSS</tag>
-         
-        <tag>Html</tag>
          
          
            
