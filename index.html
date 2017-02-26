@@ -109,13 +109,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
 <p>　　为什么要偏偏要讲这两个知识点？</p>
 <p>　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对javascript有更深层次的理解，至少理解了原型和作用域，就不能再算是javascript菜鸟了。另外，这两方面也是javascript与其他语言不同的地方，学习这样的设计，有助于你开阔眼界，帮助你了解编程语言的设计思路。毕竟，你不能只把眼睛盯在一门语言上。</p>
-<p>　　闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。</p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a href="http://www.cnblogs.com/wangfupeng1988/p/3977987.html" target="_blank" rel="external">深入理解javascript原型和闭包（1）——一切都是对象</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3978035.html" target="_blank" rel="external">深入理解javascript原型和闭包（2）——函数和对象的关系</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3978131.html" target="_blank" rel="external">深入理解javascript原型和闭包（3）——prototype原型</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3979290.html" target="_blank" rel="external">深入理解javascript原型和闭包（4）——隐式原型</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3979533.html" target="_blank" rel="external">深入理解javascript原型和闭包（5）——instanceof</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3979985.html" target="_blank" rel="external">深入理解javascript原型和闭包（6）——继承</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3980065.html" target="_blank" rel="external">深入理解javascript原型和闭包（7）——原型的灵活性</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3986420.html" target="_blank" rel="external">深入理解javascript原型和闭包（8）——简述【执行上下文】上</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3987563.html" target="_blank" rel="external">深入理解javascript原型和闭包（9）——简述【执行上下文】下</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3988422.html" target="_blank" rel="external">深入理解javascript原型和闭包（10）——this</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3989357.html" target="_blank" rel="external">深入理解javascript原型和闭包（11）——执行上下文栈</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3991151.html" target="_blank" rel="external">深入理解javascript原型和闭包（12）——简介【作用域】</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3991995.html" target="_blank" rel="external">深入理解javascript原型和闭包（13）-【作用域】和【上下文环境】</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3992795.html" target="_blank" rel="external">深入理解javascript原型和闭包（14）——从【自由变量】到【作用域链】</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3994065.html" target="_blank" rel="external">深入理解javascript原型和闭包（15）——闭包</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3994950.html" target="_blank" rel="external">深入理解javascript原型和闭包（16）——完结</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/3996037.html" target="_blank" rel="external">深入理解javascript原型和闭包（17）——补this</a><br><a href="http://www.cnblogs.com/wangfupeng1988/p/4000798.html" target="_blank" rel="external">深入理解javascript原型和闭包（18）——补充：上下文环境和作用域的关系</a></p>
-<h3 id="说明：该文转载于深入理解javascript原型和闭包（完结）-非常感谢，学习了。"><a href="#说明：该文转载于深入理解javascript原型和闭包（完结）-非常感谢，学习了。" class="headerlink" title="说明：该文转载于深入理解javascript原型和闭包（完结）,非常感谢，学习了。"></a>说明：该文转载于<a href="http://www.cnblogs.com/wangfupeng1988/p/3977924.html" target="_blank" rel="external">深入理解javascript原型和闭包（完结）</a>,非常感谢，学习了。</h3>
+<p>　　闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/24/深入理解javascript原型和闭包/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -123,7 +125,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmmxfkx000szu3a8rvvui6a" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmmz9io000y0y3aifo0nz3a" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -179,7 +181,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/" data-id="cizmmxfkv000pzu3a0q9kt4ed" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/" data-id="cizmmz9in000w0y3a1sppyudg" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/08/基于Hexo搭建个人技术博客/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -231,7 +233,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HEXO/">HEXO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/itwanggj/">itwanggj</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/06/使用GitHub-Hexo搭建博客/" data-id="cizmmxfl0000xzu3ajise4rdn" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/06/使用GitHub-Hexo搭建博客/" data-id="cizmmz9ij000n0y3adxcpc5rp" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/06/使用GitHub-Hexo搭建博客/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -279,7 +281,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/require/">require</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizmmxfk40003zu3ain53bsq4" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizmmz9i500090y3amz291uu7" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/11/04/My-article-11/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -327,7 +329,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizmmxfk00001zu3afcmj5c8s" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizmmz9ht00030y3a4003x186" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/10/04/My-article-10/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -375,7 +377,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/09/04/My-article-9/" data-id="cizmmxfkr000jzu3aervoehwy" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/09/04/My-article-9/" data-id="cizmmz9il000s0y3au60vt6i4" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/09/04/My-article-9/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -423,7 +425,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/08/04/My-article-8/" data-id="cizmmxfku000mzu3aqfxx78oa" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/08/04/My-article-8/" data-id="cizmmz9id000g0y3an9dvnzg7" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/08/04/My-article-8/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -471,7 +473,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/07/04/My-article-7/" data-id="cizmmxfko000gzu3aarg30jaf" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/07/04/My-article-7/" data-id="cizmmz9ib000e0y3a54gf2nnn" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/07/04/My-article-7/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -519,7 +521,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/06/04/My-article-6/" data-id="cizmmxfkm000dzu3aljvsbd1n" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/06/04/My-article-6/" data-id="cizmmz9if000i0y3a9b6x5cjl" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/06/04/My-article-6/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -567,7 +569,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/04/My-article-5/" data-id="cizmmxfkk000azu3aj5f6py5v" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/04/My-article-5/" data-id="cizmmz9i8000c0y3aosdsj6cw" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/04/My-article-5/#ds-thread" class="article-comment-link">Comments</a>
         
