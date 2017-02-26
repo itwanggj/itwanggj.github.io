@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://itwanggj.github.io/2016/03/03/JS%E4%BB%A3%E7%A0%81%E8%AE%A9Markdown%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2017-02-26T06:32:16.000Z</lastmod>
+    <lastmod>2017-02-26T06:34:26.000Z</lastmod>
     <data>
         <display>
         <title>JS代码让Markdown自动生成目录</title>
@@ -93,9 +93,9 @@
         <title>基于Hexo搭建个人技术博客</title>
         <pubTime>2017-01-08T15:48:53.000Z</pubTime>
         
-        <tag>Grunt</tag>
-         
         <tag>Gulp</tag>
+         
+        <tag>Grunt</tag>
          
         <tag>AngularJs</tag>
          
@@ -161,9 +161,9 @@
         
         <tag>Ionic</tag>
          
-        <tag>Grunt</tag>
-         
         <tag>JS</tag>
+         
+        <tag>Grunt</tag>
          
          
            
@@ -306,9 +306,9 @@
         <title>My second article</title>
         <pubTime>2017-01-04T15:48:53.000Z</pubTime>
         
-        <tag>Grunt</tag>
-         
         <tag>Gulp</tag>
+         
+        <tag>Grunt</tag>
          
         <tag>AngularJs</tag>
          
