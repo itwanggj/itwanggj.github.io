@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-02-26T05:54:34.000Z</lastmod>
+    <lastmod>2017-02-26T06:01:54.000Z</lastmod>
     <data>
         <display>
         <title>使用GitHub + Hexo搭建博客（Mac版）</title>
@@ -23,6 +23,12 @@
          
          
            
+             
+              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
+             
+              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+          
         </display>
     </data>
     </url>
