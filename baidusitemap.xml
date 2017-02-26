@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2016/03/03/JS%E4%BB%A3%E7%A0%81%E8%AE%A9Markdown%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2017-02-26T06:09:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>JS代码让Markdown自动生成目录</title>
+        <pubTime>2016-03-03T12:32:04.000Z</pubTime>
+        
+        <tag>HEXO</tag>
+         
+        <tag>Markdown</tag>
+         
+        <tag>JavaScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Markdown" url="https://itwanggj.github.io/categories/Markdown/"/>
+          
+             
+              <breadCrumb title="hexo目录" url="https://itwanggj.github.io/categories/Markdown/hexo%E7%9B%AE%E5%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2017-02-26T06:01:54.000Z</lastmod>
     <data>
@@ -43,11 +70,11 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>CSS</tag>
          
         <tag>Html</tag>
-         
-        <tag>JavaScript</tag>
          
          
            
@@ -218,9 +245,9 @@
         
         <tag>html</tag>
          
-        <tag>Gulp</tag>
-         
         <tag>JS</tag>
+         
+        <tag>Gulp</tag>
          
          
            
@@ -263,27 +290,6 @@
         <tag>jQuery</tag>
          
         <tag>Ionic</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/01/04/My-article-2/</loc>
-    <lastmod>2017-01-08T08:49:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>My article-2</title>
-        <pubTime>2016-01-04T15:32:04.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-        <tag>HEXO</tag>
-         
-        <tag>Gulp</tag>
          
          
            
