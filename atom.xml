@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-02-26T12:24:27.000Z</updated>
+  <updated>2017-02-26T12:25:49.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://itwanggj.github.io/2017/03/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3javascript%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%97%AD%E5%8C%85/"/>
     <id>https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/</id>
     <published>2017-03-24T15:48:53.000Z</published>
-    <updated>2017-02-26T12:24:27.000Z</updated>
+    <updated>2017-02-26T12:25:49.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>　　该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
 <p>　　为什么要偏偏要讲这两个知识点？</p>
@@ -46,7 +46,7 @@
 <li><a href="http://www.cnblogs.com/wangfupeng1988/p/3996037.html" target="_blank" rel="external">深入理解javascript原型和闭包（17）——补this</a></li>
 <li><a href="http://www.cnblogs.com/wangfupeng1988/p/4000798.html" target="_blank" rel="external">深入理解javascript原型和闭包（18）——补充：上下文环境和作用域的关系</a></li>
 </ul>
-<p>说明：原文转载于–<a href="http://www.cnblogs.com/wangfupeng1988/p/3977924.html" target="_blank" rel="external">深入理解javascript原型和闭包（完结）</a>,非常感谢。</p>
+<p>说明：原文转载于<a href="http://www.cnblogs.com/wangfupeng1988/p/3977924.html" target="_blank" rel="external">深入理解javascript原型和闭包（完结）</a>,非常感谢。</p>
 ]]></content>
     
     <summary type="html">
