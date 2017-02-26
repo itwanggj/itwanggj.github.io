@@ -324,9 +324,9 @@
     <link href="https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>https://itwanggj.github.io/2016/02/21/使用GitHub + Hexo搭建博客/</id>
     <published>2016-02-21T10:32:04.000Z</published>
-    <updated>2017-02-26T05:16:18.000Z</updated>
+    <updated>2017-02-26T05:19:16.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>从<a href="https://nodejs.org/en/" style="text-decoration:none;" target="_blank" rel="external">Node.js官网</a>按其提示安装，安装成功后如下图：<br><a href="https://maoqiq.github.io/images/01/01_01nodejs.png" target="_blank" rel="external"></a><br>安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：<br>查看Node.js的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure></p>
+    <content type="html"><![CDATA[<h2 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>从<a href="https://nodejs.org/en/" style="text-decoration:none;" target="_blank" rel="external">Node.js官网</a>按其提示安装，安装成功后如下图：<br><img src="https://maoqiq.github.io/images/01/01_01nodejs.png" alt=""><br>安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：<br>查看Node.js的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure></p>
 <p>Node.js成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">itwanggjdeMacBook-Pro:~ itwanggj$ node -v </div><div class="line">v6.2.0</div></pre></td></tr></table></figure></p>
 <p>查看npm的版本号：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm -v</div></pre></td></tr></table></figure></p>
 <p>npm成功安装，可看到如下类似的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">itwanggjdeMacBook-Pro:~ itwanggj$ npm -v </div><div class="line">3.8.9</div></pre></td></tr></table></figure></p>
@@ -394,7 +394,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;安装环境&quot;&gt;&lt;a href=&quot;#安装环境&quot; class=&quot;headerlink&quot; title=&quot;安装环境&quot;&gt;&lt;/a&gt;安装环境&lt;/h2&gt;&lt;h3 id=&quot;安装Node-js&quot;&gt;&lt;a href=&quot;#安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;安装Node.js&quot;&gt;&lt;/a&gt;安装Node.js&lt;/h3&gt;&lt;p&gt;从&lt;a href=&quot;https://nodejs.org/en/&quot; style=&quot;text-decoration:none;&quot;&gt;Node.js官网&lt;/a&gt;按其提示安装，安装成功后如下图：&lt;br&gt;&lt;a href=&quot;https://maoqiq.github.io/images/01/01_01nodejs.png&quot;&gt;&lt;/a&gt;&lt;br&gt;安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：&lt;br&gt;查看Node.js的版本号：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;node -v&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;安装环境&quot;&gt;&lt;a href=&quot;#安装环境&quot; class=&quot;headerlink&quot; title=&quot;安装环境&quot;&gt;&lt;/a&gt;安装环境&lt;/h2&gt;&lt;h3 id=&quot;安装Node-js&quot;&gt;&lt;a href=&quot;#安装Node-js&quot; class=&quot;headerlink&quot; title=&quot;安装Node.js&quot;&gt;&lt;/a&gt;安装Node.js&lt;/h3&gt;&lt;p&gt;从&lt;a href=&quot;https://nodejs.org/en/&quot; style=&quot;text-decoration:none;&quot;&gt;Node.js官网&lt;/a&gt;按其提示安装，安装成功后如下图：&lt;br&gt;&lt;img src=&quot;https://maoqiq.github.io/images/01/01_01nodejs.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;安装成功的Node.js和npm都被安装到了/usr/local/bin目录下，可对其进行测试，看Node.js和npm是否可用：&lt;br&gt;查看Node.js的版本号：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;node -v&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;Node.js成功安装，可看到如下类似的信息：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;itwanggjdeMacBook-Pro:~ itwanggj$ node -v &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;v6.2.0&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;查看npm的版本号：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm -v&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;npm成功安装，可看到如下类似的信息：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;itwanggjdeMacBook-Pro:~ itwanggj$ npm -v &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3.8.9&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -446,9 +446,9 @@
     </summary>
     
     
-      <category term="HEXO" scheme="https://itwanggj.github.io/tags/HEXO/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="HEXO" scheme="https://itwanggj.github.io/tags/HEXO/"/>
     
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
     
