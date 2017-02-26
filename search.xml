@@ -139,6 +139,12 @@
     
     <entry>
       <title><![CDATA[My-article-3]]></title>
+      <url>https://itwanggj.github.io/2016/04/04/My-article-3/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[My-article-3]]></title>
       <url>https://itwanggj.github.io/2016/03/04/My-article-4/</url>
       <content type="html"></content>
     </entry>
@@ -223,12 +229,6 @@
 <h3 id="添加小图标"><a href="#添加小图标" class="headerlink" title="添加小图标"></a>添加小图标</h3><p>将 favicon.ico 文件放在 source 目录下<br>配置 landscape-plus 主题里的 _config.yml<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">favicon: /favicon.ico</div></pre></td></tr></table></figure></p>
 <h3 id="添加”fork-me-on-github”"><a href="#添加”fork-me-on-github”" class="headerlink" title="添加”fork me on github”"></a>添加”fork me on github”</h3><p><a href="https://github.com/blog/273-github-ribbons" target="_blank" rel="external">官方教程</a><br>将代码插入到 layout.ejs</p>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[My-article-3]]></title>
-      <url>https://itwanggj.github.io/2016/02/04/My-article-3/</url>
-      <content type="html"></content>
     </entry>
     
     <entry>

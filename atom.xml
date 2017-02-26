@@ -291,11 +291,31 @@
     </summary>
     
     
-      <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
-    
       <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
     
+      <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My-article-3</title>
+    <link href="https://itwanggj.github.io/2016/04/04/My-article-3/"/>
+    <id>https://itwanggj.github.io/2016/04/04/My-article-3/</id>
+    <published>2016-04-04T15:32:04.000Z</published>
+    <updated>2017-02-26T06:46:28.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
+    
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
+    
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
@@ -447,26 +467,6 @@
       <category term="hexo" scheme="https://itwanggj.github.io/tags/hexo/"/>
     
       <category term="github" scheme="https://itwanggj.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My-article-3</title>
-    <link href="https://itwanggj.github.io/2016/02/04/My-article-3/"/>
-    <id>https://itwanggj.github.io/2016/02/04/My-article-3/</id>
-    <published>2016-02-04T15:32:04.000Z</published>
-    <updated>2017-01-08T08:49:55.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
-    
-      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
