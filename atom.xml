@@ -111,11 +111,11 @@
       <category term="D3" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -126,7 +126,7 @@
     <link href="https://itwanggj.github.io/2017/01/20/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/"/>
     <id>https://itwanggj.github.io/2017/01/20/说说Javascript函数/</id>
     <published>2017-01-20T01:09:10.000Z</published>
-    <updated>2017-02-26T13:23:08.000Z</updated>
+    <updated>2017-02-26T13:25:08.000Z</updated>
     
     <content type="html"><![CDATA[<p>相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。<br>由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是什么？事实上，就好像一个组装好的玩具，如果不将其拆开，似乎也能玩得得心应手，但却总觉得少了些什么，不如拆拆看，说不定会有有趣的发现。</p>
 <h1 id="一、Javascript函数到底是什么？"><a href="#一、Javascript函数到底是什么？" class="headerlink" title="一、Javascript函数到底是什么？"></a>一、Javascript函数到底是什么？</h1><p>关于Javascript函数到底是什么，《Javascript高级程序设计》给出了定义————函数是对象，函数名是指针。是的，函数是对象，但它似乎与我们平常所见的Javascript对象有着诸多不同，比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> foo); <span class="comment">//'function'</span></div></pre></td></tr></table></figure></p>
@@ -158,14 +158,14 @@
     
     </summary>
     
-      <category term="数据可视化" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <category term="JavaScript" scheme="https://itwanggj.github.io/categories/JavaScript/"/>
     
-      <category term="D3" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
+      <category term="函数" scheme="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
     
-    
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     

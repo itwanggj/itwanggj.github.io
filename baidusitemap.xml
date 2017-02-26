@@ -5,15 +5,15 @@
     
   <url>
     <loc>https://itwanggj.github.io/2017/01/20/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2017-02-26T13:23:08.000Z</lastmod>
+    <lastmod>2017-02-26T13:25:08.000Z</lastmod>
     <data>
         <display>
         <title>说说Javascript函数</title>
         <pubTime>2017-01-20T01:09:10.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>html</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>CSS3</tag>
          
@@ -22,10 +22,10 @@
          
            
              
-              <breadCrumb title="数据可视化" url="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
           
              
-              <breadCrumb title="D3" url="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
+              <breadCrumb title="函数" url="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
           
         </display>
     </data>
@@ -40,11 +40,11 @@
         <title>来自CSS3的黑科技－－如何实现环形进度条</title>
         <pubTime>2017-02-08T09:49:50.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>html</tag>
          
         <tag>D3</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>CSS3</tag>
          
