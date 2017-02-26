@@ -166,7 +166,7 @@
       <title><![CDATA[前端开发面试题整理以及解答思路]]></title>
       <url>https://itwanggj.github.io/2016/04/01/My-article-3/</url>
       <content type="html"><![CDATA[<p>最近在网上看了各种各样的前端面试题，感觉大部分其实都知道一点，但要真正表述恐怕又不能说得很好，所以这里简单整理一下解答思路</p>
-<h2 id="一-HTML基础"><a href="#一-HTML基础" class="headerlink" title="一.HTML基础"></a>一.HTML基础</h2><h3 id="对HTML5的理解"><a href="#对HTML5的理解" class="headerlink" title="对HTML5的理解"></a>对HTML5的理解</h3><p>很大的一个问题，似乎每个人都能说上一点，但再深入就很看水平了，所以整理了HTML5的新特性，答题的时候应该抓住几个点入手：</p>
+<h2 id="一、HTML基础"><a href="#一、HTML基础" class="headerlink" title="一、HTML基础"></a>一、HTML基础</h2><h3 id="对HTML5的理解"><a href="#对HTML5的理解" class="headerlink" title="对HTML5的理解"></a>对HTML5的理解</h3><p>很大的一个问题，似乎每个人都能说上一点，但再深入就很看水平了，所以整理了HTML5的新特性，答题的时候应该抓住几个点入手：</p>
 <ol>
 <li>新标签<br>   多媒体的新标签： vedio,audio,embed<br>   语义化的新标签： article,header,footer,nav,section,figure</li>
 <li>内联svg</li>
@@ -192,7 +192,7 @@
 <li>外链</li>
 </ol>
 <h3 id="页面加载过程"><a href="#页面加载过程" class="headerlink" title="页面加载过程"></a>页面加载过程</h3><p>浏览器开启线程处理Http请求－&gt;DNS解析域名到IP地址-&gt;进行HTTP会话，客户端发送请求报头-&gt;进入服务端（Apache,tomcat,node.js等）-&gt;根据请求进入后端应用，找到请求处理-&gt;处理回馈报头，对比最后修改时间判断是否读缓存-&gt;下载html文档－&gt;建立文档树，加载CSS，JS文件－&gt;开始渲染DOM,执行JS</p>
-<h2 id="二-CSS基础"><a href="#二-CSS基础" class="headerlink" title="二.CSS基础"></a>二.CSS基础</h2><h3 id="三列布局："><a href="#三列布局：" class="headerlink" title="三列布局："></a>三列布局：</h3><p>主要思路是中间元素左右padding，左右元素设置浮动，中间元素清除浮动</p>
+<h2 id="二、CSS基础"><a href="#二、CSS基础" class="headerlink" title="二、CSS基础"></a>二、CSS基础</h2><h3 id="三列布局："><a href="#三列布局：" class="headerlink" title="三列布局："></a>三列布局：</h3><p>主要思路是中间元素左右padding，左右元素设置浮动，中间元素清除浮动</p>
 <h3 id="CSS3动画"><a href="#CSS3动画" class="headerlink" title="CSS3动画"></a>CSS3动画</h3><p>CSS3有两种方式设置动画：</p>
 <p>animation:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">animation-name</span>: <span class="selector-tag">none</span>  </div><div class="line"><span class="selector-tag">animation-duration</span>: 0<span class="selector-tag">s</span>  </div><div class="line"><span class="selector-tag">animation-timing-function</span>: <span class="selector-tag">ease</span>  </div><div class="line"><span class="selector-tag">animation-delay</span>: 0<span class="selector-tag">s</span>  </div><div class="line"><span class="selector-tag">animation-iteration-count</span>: 1</div><div class="line"><span class="selector-tag">animation-direction</span>: <span class="selector-tag">normal</span></div><div class="line"><span class="selector-tag">animation-fill-mode</span>: <span class="selector-tag">none</span></div></pre></td></tr></table></figure></p>
 <p>利用keyframe写帧动画，再animation-name中指定并调用,animation再动画结束后是不改变属性值的</p>
@@ -217,7 +217,7 @@
 <li>对于同级元素, 默认 (或 position:static) 情况下文档流后面的元素会覆盖前面的</li>
 <li>对于同级元素, position 不为 static 且 z-index 存在的情况下 z-index 大的元素会覆盖 z-index 小的元素, 即 z-index 越大优先级越高.</li>
 </ol>
-<h2 id="三-JS基础"><a href="#三-JS基础" class="headerlink" title="三.JS基础"></a>三.JS基础</h2><h3 id="关于提升"><a href="#关于提升" class="headerlink" title="关于提升"></a>关于提升</h3><p>记住一句话即可：包括变量和函数在内的所有声明都会在任何代码被执行前首先被处理</p>
+<h2 id="三、JS基础"><a href="#三、JS基础" class="headerlink" title="三、JS基础"></a>三、JS基础</h2><h3 id="关于提升"><a href="#关于提升" class="headerlink" title="关于提升"></a>关于提升</h3><p>记住一句话即可：包括变量和函数在内的所有声明都会在任何代码被执行前首先被处理</p>
 <h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p>undefined, null, string, number, boolean</p>
 <h3 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h3><p>其实就是将函数作为参数或返回值的函数</p>
 <h3 id="JSONP的原理"><a href="#JSONP的原理" class="headerlink" title="JSONP的原理"></a>JSONP的原理</h3><p>利用script标签的src没有跨域性质的特点，动态创建script标签，指定src为服务端数据api，并传入一个callback作为参数，返回的是一段javascript代码，将数据传入callback中执行</p>
