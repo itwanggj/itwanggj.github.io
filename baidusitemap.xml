@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/03/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3javascript%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%97%AD%E5%8C%85/</loc>
+    <lastmod>2017-02-26T12:11:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>深入理解javascript原型和闭包（转）</title>
+        <pubTime>2017-03-24T15:48:53.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>原型</tag>
+         
+        <tag>闭包</tag>
+         
+         
+           
+             
+              <breadCrumb title="原型" url="https://itwanggj.github.io/categories/%E5%8E%9F%E5%9E%8B/"/>
+          
+             
+              <breadCrumb title="闭包" url="https://itwanggj.github.io/categories/%E5%8E%9F%E5%9E%8B/%E9%97%AD%E5%8C%85/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/03/17/My-article-4/</loc>
     <lastmod>2017-02-26T07:05:45.000Z</lastmod>
     <data>
@@ -70,27 +97,6 @@
         <tag>jQuery</tag>
          
         <tag>Ionic</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2017/03/24/My-second-article/</loc>
-    <lastmod>2017-02-26T06:44:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>My second article</title>
-        <pubTime>2017-03-24T15:48:53.000Z</pubTime>
-        
-        <tag>Gulp</tag>
-         
-        <tag>Grunt</tag>
-         
-        <tag>AngularJs</tag>
          
          
            
