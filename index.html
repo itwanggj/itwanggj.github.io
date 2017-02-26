@@ -125,7 +125,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmpo0gz000ws13a9cfk1rx6" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizmpokr6000wsi3a3y1w737t" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -184,7 +184,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizmpo0gx000qs13ao8gu3kui" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizmpokr5000usi3asg6izyz2" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -227,7 +227,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。<br>由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是什么？事实上，就好像一个组装好的玩具，如果不将其拆开，似乎也能玩得得心应手，但却总觉得少了些什么，不如拆拆看，说不定会有有趣的发现。</p>
+        <p>相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。</p>
+<p>由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是什么？事实上，就好像一个组装好的玩具，如果不将其拆开，似乎也能玩得得心应手，但却总觉得少了些什么，不如拆拆看，说不定会有有趣的发现。</p>
 <h1 id="一、Javascript函数到底是什么？"><a href="#一、Javascript函数到底是什么？" class="headerlink" title="一、Javascript函数到底是什么？"></a>一、Javascript函数到底是什么？</h1><p>关于Javascript函数到底是什么，《Javascript高级程序设计》给出了定义————函数是对象，函数名是指针。是的，函数是对象，但它似乎与我们平常所见的Javascript对象有着诸多不同，比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> foo); <span class="comment">//'function'</span></div></pre></td></tr></table></figure></p>
 <p>对函数使用typeof，会单独打印出function，除此以外，函数还有诸多奇怪之处。但不管怎么样，这并不影响函数是对象的事实，我们知道，Javascript的所有对象都存在一个构造器，而函数的构造器就是Function，观察如下代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"num1"</span>, <span class="string">"num2"</span>, <span class="string">"return num1 + num2"</span>);</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>, <span class="number">2</span>)); <span class="comment">//'3'</span></div></pre></td></tr></table></figure></p>
 <p>使用new + 构造函数的方式创建对象，这和我们平常所见到的创建对象的方式并没有什么两样，事实上，尽管我们并不推荐使用这种方法创建函数，但不论是用函数声明还是函数表达式都必然会经过这个过程，这对于我们理解函数是对象，函数名是指针有着重要意义。<br>
@@ -243,7 +244,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/20/说说Javascript函数/" data-id="cizmpo0h10010s13ac3tx13ph" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/20/说说Javascript函数/" data-id="cizmpokr70010si3afjxlr71e" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/20/说说Javascript函数/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -291,7 +292,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/require/">require</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizmpo0gf0007s13ae4g8ryad" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizmpokqo0007si3a2yr4goln" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/11/04/My-article-11/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -339,7 +340,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizmpo0g80003s13a4u6otm6h" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizmpokqe0003si3a3i6uly9l" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/10/04/My-article-10/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -387,7 +388,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/09/04/My-article-9/" data-id="cizmpo0gr000is13a6t8800kf" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/09/04/My-article-9/" data-id="cizmpokr0000isi3a7orefa85" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/09/04/My-article-9/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -435,7 +436,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/08/04/My-article-8/" data-id="cizmpo0go000gs13aiqfxtxn3" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/08/04/My-article-8/" data-id="cizmpokqw000gsi3acwsn2c1q" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/08/04/My-article-8/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -483,7 +484,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Github/">Github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/07/04/My-article-7/" data-id="cizmpo0gm000es13ad10mcbu8" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/07/04/My-article-7/" data-id="cizmpokqv000esi3ay56be6dt" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/07/04/My-article-7/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -531,7 +532,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/06/04/My-article-6/" data-id="cizmpo0gl000ds13ay8kkn2wk" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/06/04/My-article-6/" data-id="cizmpokqu000dsi3abs6yyac5" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/06/04/My-article-6/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -579,7 +580,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/04/My-article-5/" data-id="cizmpo0gk000as13a752x28t1" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/04/My-article-5/" data-id="cizmpokqt000asi3ax8wes2qi" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/04/My-article-5/#ds-thread" class="article-comment-link">Comments</a>
         
