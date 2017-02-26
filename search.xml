@@ -6,10 +6,7 @@
     <entry>
       <title><![CDATA[深入理解javascript原型和闭包（转）]]></title>
       <url>https://itwanggj.github.io/2017/03/24/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3javascript%E5%8E%9F%E5%9E%8B%E5%92%8C%E9%97%AD%E5%8C%85/</url>
-      <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>   该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
-<p>　　为什么要偏偏要讲这两个知识点？</p>
-<p>　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对javascript有更深层次的理解，至少理解了原型和作用域，就不能再算是javascript菜鸟了。另外，这两方面也是javascript与其他语言不同的地方，学习这样的设计，有助于你开阔眼界，帮助你了解编程语言的设计思路。毕竟，你不能只把眼睛盯在一门语言上。</p>
-<p>　　闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。<br><a id="more"></a></p>
+      <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>   该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。<br>   为什么要偏偏要讲这两个知识点？<br>   这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对javascript有更深层次的理解，至少理解了原型和作用域，就不能再算是javascript菜鸟了。另外，这两方面也是javascript与其他语言不同的地方，学习这样的设计，有助于你开阔眼界，帮助你了解编程语言的设计思路。毕竟，你不能只把眼睛盯在一门语言上。<br>   闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。<br><a id="more"></a></p>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
 <li><a href="http://www.cnblogs.com/wangfupeng1988/p/3977987.html" target="_blank" rel="external">深入理解javascript原型和闭包（1）——一切都是对象</a></li>
 <li><a href="http://www.cnblogs.com/wangfupeng1988/p/3978035.html" target="_blank" rel="external">深入理解javascript原型和闭包（2）——函数和对象的关系</a></li>
