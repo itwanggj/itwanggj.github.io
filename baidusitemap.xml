@@ -3,10 +3,9 @@
 
 
     
-    
   <url>
     <loc>https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-02-26T04:34:54.000Z</lastmod>
+    <lastmod>2017-02-26T05:16:18.000Z</lastmod>
     <data>
         <display>
         <title>使用GitHub + Hexo搭建博客（Mac版）</title>
@@ -28,6 +27,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>https://itwanggj.github.io/2015/12/20/hello-world/</loc>
@@ -273,9 +273,9 @@
         <title>My article-2</title>
         <pubTime>2016-01-04T15:32:04.000Z</pubTime>
         
-        <tag>HEXO</tag>
-         
         <tag>html</tag>
+         
+        <tag>HEXO</tag>
          
         <tag>Gulp</tag>
          
