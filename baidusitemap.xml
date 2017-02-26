@@ -4,8 +4,81 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/03/24/My-second-article/</loc>
+    <lastmod>2017-02-26T06:42:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>My second article</title>
+        <pubTime>2017-03-24T15:48:53.000Z</pubTime>
+        
+        <tag>Gulp</tag>
+         
+        <tag>Grunt</tag>
+         
+        <tag>AngularJs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2015/12/20/hello-world/</loc>
+    <lastmod>2017-02-26T06:42:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2015-12-19T16:00:00.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>Html</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-02-26T06:41:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
+        <pubTime>2016-02-21T10:32:04.000Z</pubTime>
+        
+        <tag>Bootstrap</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>Ionic</tag>
+         
+        <tag>hexo</tag>
+         
+        <tag>github</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
+             
+              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/03/03/JS%E4%BB%A3%E7%A0%81%E8%AE%A9Markdown%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95/</loc>
-    <lastmod>2017-02-26T06:39:07.000Z</lastmod>
+    <lastmod>2017-02-26T06:41:31.000Z</lastmod>
     <data>
         <display>
         <title>JS代码让Markdown自动生成目录</title>
@@ -30,58 +103,6 @@
     </url>
 
     
-  <url>
-    <loc>https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-02-26T06:01:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
-        <pubTime>2016-02-21T10:32:04.000Z</pubTime>
-        
-        <tag>Ionic</tag>
-         
-        <tag>jQuery</tag>
-         
-        <tag>Bootstrap</tag>
-         
-        <tag>hexo</tag>
-         
-        <tag>github</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-          
-             
-              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>https://itwanggj.github.io/2015/12/20/hello-world/</loc>
-    <lastmod>2017-02-24T12:22:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2015-12-19T16:00:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>CSS</tag>
-         
-        <tag>Html</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
     
     
@@ -138,11 +159,11 @@
         <title>My-article-10</title>
         <pubTime>2016-10-04T15:32:04.000Z</pubTime>
         
-        <tag>Ionic</tag>
+        <tag>Bootstrap</tag>
          
         <tag>jQuery</tag>
          
-        <tag>Bootstrap</tag>
+        <tag>Ionic</tag>
          
          
            
@@ -222,9 +243,9 @@
         <title>My-article-6</title>
         <pubTime>2016-06-04T15:32:04.000Z</pubTime>
         
-        <tag>Ionic</tag>
-         
         <tag>Bootstrap</tag>
+         
+        <tag>Ionic</tag>
          
         <tag>hexo</tag>
          
@@ -264,9 +285,9 @@
         <title>My-article-3</title>
         <pubTime>2016-03-04T15:32:04.000Z</pubTime>
         
-        <tag>Ionic</tag>
-         
         <tag>jQuery</tag>
+         
+        <tag>Ionic</tag>
          
         <tag>CSS</tag>
          
@@ -285,32 +306,11 @@
         <title>My-article-3</title>
         <pubTime>2016-02-04T15:32:04.000Z</pubTime>
         
-        <tag>Ionic</tag>
+        <tag>Bootstrap</tag>
          
         <tag>jQuery</tag>
          
-        <tag>Bootstrap</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2017/01/04/My-second-article/</loc>
-    <lastmod>2017-01-08T08:45:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>My second article</title>
-        <pubTime>2017-01-04T15:48:53.000Z</pubTime>
-        
-        <tag>Gulp</tag>
-         
-        <tag>Grunt</tag>
-         
-        <tag>AngularJs</tag>
+        <tag>Ionic</tag>
          
          
            
