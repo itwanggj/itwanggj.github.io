@@ -168,7 +168,7 @@
       <content type="html"><![CDATA[<p>最近在网上看了各种各样的前端面试题，感觉大部分其实都知道一点，但要真正表述恐怕又不能说得很好，所以这里简单整理一下解答思路</p>
 <h2 id="一-HTML基础"><a href="#一-HTML基础" class="headerlink" title="一.HTML基础"></a>一.HTML基础</h2><h3 id="对HTML5的理解"><a href="#对HTML5的理解" class="headerlink" title="对HTML5的理解"></a>对HTML5的理解</h3><p>很大的一个问题，似乎每个人都能说上一点，但再深入就很看水平了，所以整理了HTML5的新特性，答题的时候应该抓住几个点入手：</p>
 <ol>
-<li>新标签<br> 多媒体的新标签： vedio,audio,embed<br> 语义化的新标签： article,header,footer,nav,section,figure</li>
+<li>新标签<br>   多媒体的新标签： vedio,audio,embed<br>   语义化的新标签： article,header,footer,nav,section,figure</li>
 <li>内联svg</li>
 <li>拖放事件（drop和drag）</li>
 <li>支持地理定位：navigator.geolocation.getCurrentPosition(showPosition)</li>
@@ -183,6 +183,7 @@
 <li>丢失样式的时候还能保持结构</li>
 <li>手机等设备能以有意义的方式渲染网页(它们可能对CSS支持比较弱)</li>
 </ol>
+<a id="more"></a>
 <h3 id="SEO"><a href="#SEO" class="headerlink" title="SEO"></a>SEO</h3><ol>
 <li>建立sitemap.xml</li>
 <li>使用语义化的标签</li>
@@ -192,18 +193,16 @@
 </ol>
 <h3 id="页面加载过程"><a href="#页面加载过程" class="headerlink" title="页面加载过程"></a>页面加载过程</h3><p>浏览器开启线程处理Http请求－&gt;DNS解析域名到IP地址-&gt;进行HTTP会话，客户端发送请求报头-&gt;进入服务端（Apache,tomcat,node.js等）-&gt;根据请求进入后端应用，找到请求处理-&gt;处理回馈报头，对比最后修改时间判断是否读缓存-&gt;下载html文档－&gt;建立文档树，加载CSS，JS文件－&gt;开始渲染DOM,执行JS</p>
 <h2 id="二-CSS基础"><a href="#二-CSS基础" class="headerlink" title="二.CSS基础"></a>二.CSS基础</h2><h3 id="三列布局："><a href="#三列布局：" class="headerlink" title="三列布局："></a>三列布局：</h3><p>主要思路是中间元素左右padding，左右元素设置浮动，中间元素清除浮动</p>
-<h3 id="CSS3动画"><a href="#CSS3动画" class="headerlink" title="CSS3动画"></a>CSS3动画</h3><p>CSS3有两种方式设置动画：<br>animation:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">animation-name</span>: <span class="selector-tag">none</span>  </div><div class="line"><span class="selector-tag">animation-duration</span>: 0<span class="selector-tag">s</span>  </div><div class="line"><span class="selector-tag">animation-timing-function</span>: <span class="selector-tag">ease</span>  </div><div class="line"><span class="selector-tag">animation-delay</span>: 0<span class="selector-tag">s</span>  </div><div class="line"><span class="selector-tag">animation-iteration-count</span>: 1</div><div class="line"><span class="selector-tag">animation-direction</span>: <span class="selector-tag">normal</span></div><div class="line"><span class="selector-tag">animation-fill-mode</span>: <span class="selector-tag">none</span></div></pre></td></tr></table></figure></p>
+<h3 id="CSS3动画"><a href="#CSS3动画" class="headerlink" title="CSS3动画"></a>CSS3动画</h3><p>CSS3有两种方式设置动画：</p>
+<p>animation:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">animation-name</span>: <span class="selector-tag">none</span>  </div><div class="line"><span class="selector-tag">animation-duration</span>: 0<span class="selector-tag">s</span>  </div><div class="line"><span class="selector-tag">animation-timing-function</span>: <span class="selector-tag">ease</span>  </div><div class="line"><span class="selector-tag">animation-delay</span>: 0<span class="selector-tag">s</span>  </div><div class="line"><span class="selector-tag">animation-iteration-count</span>: 1</div><div class="line"><span class="selector-tag">animation-direction</span>: <span class="selector-tag">normal</span></div><div class="line"><span class="selector-tag">animation-fill-mode</span>: <span class="selector-tag">none</span></div></pre></td></tr></table></figure></p>
 <p>利用keyframe写帧动画，再animation-name中指定并调用,animation再动画结束后是不改变属性值的</p>
 <h3 id="CSS3布局方案"><a href="#CSS3布局方案" class="headerlink" title="CSS3布局方案"></a>CSS3布局方案</h3><p>关于flex布局：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">     <span class="attribute">display</span>: flex;</div><div class="line">     <span class="attribute">flex-direction</span>: 主轴方向</div><div class="line">     flex-wrap: 如何换行</div><div class="line">     justify-content： 主轴上的对齐方式</div><div class="line">     align-item: 交叉轴上的对齐方式</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">    <span class="attribute">flex-grow</span>: 放大比例</div><div class="line">    flex-shrink: 缩小比例</div><div class="line">    order: 顺序</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>tranistion:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">transition-delay</span>: 0<span class="selector-tag">s</span>;</div><div class="line"><span class="selector-tag">transition-duration</span>: 0<span class="selector-tag">s</span>;</div><div class="line"><span class="selector-tag">transition-property</span>: <span class="selector-tag">all</span>;</div><div class="line"><span class="selector-tag">transition-timing-function</span>: <span class="selector-tag">ease</span>;</div></pre></td></tr></table></figure></p>
 <p>两个不同状态的插值渐变过程</p>
 <h3 id="CSS选择器的优先级"><a href="#CSS选择器的优先级" class="headerlink" title="CSS选择器的优先级"></a>CSS选择器的优先级</h3><p>内联样式 &gt; id &gt; (类, 伪类, 属性) &gt; (标签, 伪元素)</p>
-<p>一些比较特殊的选择器：</p>
-<p>E ~ F：匹配任何在E元素之后的同级F元素, CSS3新增<br>E &gt; F：子元素选择器，匹配所有E元素的子元素F<br>E + F: 毗邻元素选择器，匹配所有紧随E元素之后的同级元素F<br>E:nth-child(n): 匹配其父元素的第n个子元素，CSS3新增<br>E:nth-last-child(n): 匹配其父元素的倒数第n个子元素，CSS3新增<br>E:nth-of-type(n): 匹配其父元素的第n个同标签子元素，CSS3新增<br>E:nth-last-of-type(n): 匹配其父元素的倒数第n个同标签子元素，CSS3新增</p>
-<h3 id="background-相关属性"><a href="#background-相关属性" class="headerlink" title="background-*相关属性"></a>background-*相关属性</h3><p>就记录比较冷门的一些：</p>
-<p>background-origin： 规定 background-position 属性相对于什么位置来定位 （border-box|padding-box|content-box）<br>background-clip: 规定绘制区域（border-box|padding-box|content-box）<br>background-attachment: 背景图像能否随其余部分的滚动而移动（scroll|fixed|inherit）</p>
-<h3 id="关于BFC"><a href="#关于BFC" class="headerlink" title="关于BFC"></a>关于BFC</h3><p>BFC的形成</p>
-<p>满足以下条件任意一个即可</p>
+<h3 id="一些比较特殊的选择器："><a href="#一些比较特殊的选择器：" class="headerlink" title="一些比较特殊的选择器："></a>一些比较特殊的选择器：</h3><p>E ~ F：匹配任何在E元素之后的同级F元素, CSS3新增<br>E &gt; F：子元素选择器，匹配所有E元素的子元素F<br>E + F: 毗邻元素选择器，匹配所有紧随E元素之后的同级元素F<br>E:nth-child(n): 匹配其父元素的第n个子元素，CSS3新增<br>E:nth-last-child(n): 匹配其父元素的倒数第n个子元素，CSS3新增<br>E:nth-of-type(n): 匹配其父元素的第n个同标签子元素，CSS3新增<br>E:nth-last-of-type(n): 匹配其父元素的倒数第n个同标签子元素，CSS3新增</p>
+<h3 id="background-相关属性"><a href="#background-相关属性" class="headerlink" title="background-*相关属性"></a>background-*相关属性</h3><p>就记录比较冷门的一些：<br>background-origin： 规定 background-position 属性相对于什么位置来定位 （border-box|padding-box|content-box）<br>background-clip: 规定绘制区域（border-box|padding-box|content-box）<br>background-attachment: 背景图像能否随其余部分的滚动而移动（scroll|fixed|inherit）</p>
+<h3 id="关于BFC"><a href="#关于BFC" class="headerlink" title="关于BFC"></a>关于BFC</h3><p>BFC的形成,满足以下条件任意一个即可</p>
 <ul>
 <li>float 的值不为 none</li>
 <li>position 的值不为 static 或者 relative</li>
