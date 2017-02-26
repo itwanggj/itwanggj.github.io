@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://itwanggj.github.io/2017/01/20/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2017-02-26T13:26:51.000Z</lastmod>
+    <lastmod>2017-02-26T13:28:16.000Z</lastmod>
     <data>
         <display>
         <title>说说Javascript函数</title>
@@ -22,10 +22,10 @@
          
            
              
-              <breadCrumb title="数据可视化" url="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
           
              
-              <breadCrumb title="D3" url="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
+              <breadCrumb title="函数" url="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
           
         </display>
     </data>
