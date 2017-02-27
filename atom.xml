@@ -111,11 +111,11 @@
       <category term="D3" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
     
     
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -178,9 +178,9 @@
       <category term="函数" scheme="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
     
     
-      <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -273,12 +273,13 @@
     <link href="https://itwanggj.github.io/2016/06/02/SASS%E8%AF%AD%E6%B3%95--%E8%BF%9B%E9%98%B6/"/>
     <id>https://itwanggj.github.io/2016/06/02/SASS语法--进阶/</id>
     <published>2016-06-02T10:12:34.000Z</published>
-    <updated>2017-02-27T12:38:13.000Z</updated>
+    <updated>2017-02-27T12:39:46.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://itwanggj.github.io/images/sass-script-advanced.png" alt=""></p>
 <h2 id="数字类型-Number"><a href="#数字类型-Number" class="headerlink" title="数字类型(Number)"></a>数字类型(Number)</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 数字类型 */</div><div class="line">$n1: 1.2;</div><div class="line">$n2: 12;</div><div class="line">$n3: 14px;</div><div class="line"></div><div class="line">p&#123;</div><div class="line">  font-size: $n3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 数字类型 */</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="字符串类型-String"><a href="#字符串类型-String" class="headerlink" title="字符串类型(String)"></a>字符串类型(String)</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 字符串类型*/</div><div class="line">$s1: container;</div><div class="line">$s2: 'container';</div><div class="line">$s3: "container";</div><div class="line"></div><div class="line">.#&#123;$s3&#125;&#123;</div><div class="line">  font-size: $n3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 字符串类型*/</span></div><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h2 id="颜色类型"><a href="#颜色类型" class="headerlink" title="颜色类型"></a>颜色类型</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 颜色类型*/</div><div class="line">$c1: blue;</div><div class="line">$c2: #fff;</div><div class="line">$c3: rgba(255,255,0,0.5);</div><div class="line"></div><div class="line">body&#123;</div><div class="line">  color: $c3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 颜色类型*/</span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(255, 255, 0, 0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -316,7 +317,9 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://itwanggj.github.io/images/sass-script-advanced.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;数字类型-Number&quot;&gt;&lt;a href=&quot;#数字类型-Number&quot; class=&quot;head
+&lt;h2 id=&quot;数字类型-Number&quot;&gt;&lt;a href=&quot;#数字类型-Number&quot; class=&quot;headerlink&quot; title=&quot;数字类型(Number)&quot;&gt;&lt;/a&gt;数字类型(Number)&lt;/h2&gt;&lt;p&gt;For example:&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/*! 数字类型 */&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$n1: 1.2;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$n2: 12;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$n3: 14px;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;p&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  font-size: $n3;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;is compiled to:&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/*! 数字类型 */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;p&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;14px&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;字符串类型-String&quot;&gt;&lt;a href=&quot;#字符串类型-String&quot; class=&quot;headerlink&quot; title=&quot;字符串类型(String)&quot;&gt;&lt;/a&gt;字符串类型(String)&lt;/h2&gt;&lt;p&gt;For example:&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;/*! 字符串类型*/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$s1: container;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$s2: &#39;container&#39;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$s3: &quot;container&quot;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;.#&amp;#123;$s3&amp;#125;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  font-size: $n3;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
@@ -756,9 +759,9 @@
       <category term="hexo" scheme="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
