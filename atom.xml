@@ -111,11 +111,11 @@
       <category term="D3" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -178,9 +178,9 @@
       <category term="函数" scheme="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -220,11 +220,11 @@
     </summary>
     
     
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
+    
       <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
@@ -240,18 +240,18 @@
     </summary>
     
     
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
-    
       <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
     
       <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
+    
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
   <entry>
     <title>My-article-8</title>
-    <link href="https://itwanggj.github.io/2016/08/04/My-article-8/"/>
-    <id>https://itwanggj.github.io/2016/08/04/My-article-8/</id>
+    <link href="https://itwanggj.github.io/2016/08/04/SASS%E8%AF%AD%E6%B3%95--%E9%AB%98%E7%BA%A7/"/>
+    <id>https://itwanggj.github.io/2016/08/04/SASS语法--高级/</id>
     <published>2016-08-04T15:32:04.000Z</published>
     <updated>2017-01-08T08:54:00.000Z</updated>
     
@@ -269,22 +269,67 @@
   </entry>
   
   <entry>
-    <title>My-article-7</title>
-    <link href="https://itwanggj.github.io/2016/07/04/My-article-7/"/>
-    <id>https://itwanggj.github.io/2016/07/04/My-article-7/</id>
-    <published>2016-07-04T15:32:04.000Z</published>
-    <updated>2017-01-08T08:53:17.000Z</updated>
+    <title>SASS语法--进阶</title>
+    <link href="https://itwanggj.github.io/2016/06/02/SASS%E8%AF%AD%E6%B3%95--%E8%BF%9B%E9%98%B6/"/>
+    <id>https://itwanggj.github.io/2016/06/02/SASS语法--进阶/</id>
+    <published>2016-06-02T10:12:34.000Z</published>
+    <updated>2017-02-27T12:38:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://itwanggj.github.io/images/sass-script-advanced.png" alt=""></p>
+<h2 id="数字类型-Number"><a href="#数字类型-Number" class="headerlink" title="数字类型(Number)"></a>数字类型(Number)</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 数字类型 */</div><div class="line">$n1: 1.2;</div><div class="line">$n2: 12;</div><div class="line">$n3: 14px;</div><div class="line"></div><div class="line">p&#123;</div><div class="line">  font-size: $n3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 数字类型 */</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="字符串类型-String"><a href="#字符串类型-String" class="headerlink" title="字符串类型(String)"></a>字符串类型(String)</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 字符串类型*/</div><div class="line">$s1: container;</div><div class="line">$s2: 'container';</div><div class="line">$s3: "container";</div><div class="line"></div><div class="line">.#&#123;$s3&#125;&#123;</div><div class="line">  font-size: $n3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 字符串类型*/</span></div><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="颜色类型"><a href="#颜色类型" class="headerlink" title="颜色类型"></a>颜色类型</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 颜色类型*/</div><div class="line">$c1: blue;</div><div class="line">$c2: #fff;</div><div class="line">$c3: rgba(255,255,0,0.5);</div><div class="line"></div><div class="line">body&#123;</div><div class="line">  color: $c3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 颜色类型*/</span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(255, 255, 0, 0.5);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="Boolean类型"><a href="#Boolean类型" class="headerlink" title="Boolean类型"></a>Boolean类型</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/*! Bool类型*/</div><div class="line">$bt: ture;</div><div class="line">$bf: false;</div></pre></td></tr></table></figure></p>
+<h2 id="Null类型"><a href="#Null类型" class="headerlink" title="Null类型"></a>Null类型</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! Null类型*/</div><div class="line">$null: null;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">  @if $null == null&#123;</div><div class="line">    color: red;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! Bool类型*/</span></div><div class="line"><span class="comment">/*! Null类型*/</span></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="变量操作"><a href="#变量操作" class="headerlink" title="变量操作"></a>变量操作</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$width1: 10px;</div><div class="line">$width2: 15px;</div><div class="line"></div><div class="line">span&#123;</div><div class="line">  width: $width1 - $width2;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span> &#123;</div><div class="line">  <span class="attribute">width</span>: -<span class="number">5px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</div><div class="line">  <span class="attribute">cursor</span>: e + -resize;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">  <span class="attribute">cursor</span>: e-resize;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"A"</span> + bc;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:before</span>&#123;</div><div class="line">  <span class="attribute">content</span>: A + <span class="string">'bc'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"Abc"</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: Abc;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line">  padding: 3px + 4px auto; </div><div class="line">&#125;</div><div class="line">$version: 3;</div><div class="line">p:before&#123;</div><div class="line">  content: 'Hello,Sass #&#123;$version&#125;';</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">7px</span> auto;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:before</span> &#123;</div><div class="line">  <span class="attribute">content</span>: <span class="string">"Hello,Sass 3"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">20px</span> / <span class="number">10px</span>;</div><div class="line">  <span class="attribute">width</span>: $width2 / <span class="number">2</span>; </div><div class="line">  <span class="attribute">width</span>: <span class="built_in">round</span>($width2) / <span class="number">2</span>;</div><div class="line">  <span class="attribute">height</span>: (<span class="number">100px</span> / <span class="number">2</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font</span>: <span class="number">20px</span> / <span class="number">10px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">7.5px</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">7.5px</span>;</div><div class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>注意：<br>1.运算符之间的空格<br>2.相同运算单位<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! Good*/</span></div><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">3px</span> + <span class="number">4px</span> auto; </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*! Bad*/</span></div><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">  <span class="attribute">padding</span>: <span class="number">3px</span> + <span class="number">4px</span> auto; </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*! Good*/</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font</span>: (<span class="number">20px</span> / <span class="number">10px</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*! Bad*/</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font</span>: (<span class="number">20px</span> / <span class="number">10em</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="minix"><a href="#minix" class="headerlink" title="minix"></a>minix</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@minix cont() &#123;</div><div class="line">  color: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">  @include cont();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@minix cont($color) &#123;</div><div class="line">  color: $color;</div><div class="line">&#125;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">  @include cont(red);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@mixin cont($color: red, $fontSize: 14px)&#123;</div><div class="line">  color: $color;</div><div class="line">  font-size: $fontSize;</div><div class="line">&#125;</div><div class="line"></div><div class="line">body&#123;</div><div class="line">  @include cont($fontSize: 18px);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">  <span class="attribute">color</span>: red;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="传递多值参数"><a href="#传递多值参数" class="headerlink" title="传递多值参数"></a>传递多值参数</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@mixin box-shadow($shadow...)&#123;</div><div class="line">  -moz-box-shadow: $shadow;</div><div class="line">  -webkit-box-shadow: $shadow;</div><div class="line">  box-shadow: $shadow;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.shadows&#123;</div><div class="line">  @include box-shadow(0px 4px 4px #555, 2px 6px 10px #6dd3ee);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.shadows</span> &#123;</div><div class="line">  <span class="attribute">-moz-box-shadow</span>: <span class="number">0px</span> <span class="number">4px</span> <span class="number">4px</span> <span class="number">#555</span>, <span class="number">2px</span> <span class="number">6px</span> <span class="number">10px</span> <span class="number">#6dd3ee</span>;</div><div class="line">  <span class="attribute">-webkit-box-shadow</span>: <span class="number">0px</span> <span class="number">4px</span> <span class="number">4px</span> <span class="number">#555</span>, <span class="number">2px</span> <span class="number">6px</span> <span class="number">10px</span> <span class="number">#6dd3ee</span>;</div><div class="line">  <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">4px</span> <span class="number">4px</span> <span class="number">#555</span>, <span class="number">2px</span> <span class="number">6px</span> <span class="number">10px</span> <span class="number">#6dd3ee</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="传递内容"><a href="#传递内容" class="headerlink" title="传递内容"></a>传递内容</h2><p>For example:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">mixin</span> style-for-iphone&#123;</div><div class="line">  @<span class="keyword">media</span> only screen and (min-device-width: <span class="number">320px</span>) and (max-device-width:<span class="number">568px</span>)&#123;</div><div class="line">    @<span class="keyword">content</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@<span class="keyword">include</span> style-for-iphone&#123;</div><div class="line">  <span class="selector-tag">font-size</span>: 12<span class="selector-tag">px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> only screen and (min-device-width: <span class="number">320px</span>) and (max-device-width: <span class="number">568px</span>) &#123;</div><div class="line">  <span class="selector-tag">font-size</span>: 12<span class="selector-tag">px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>用于响应式布局。</p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@function getzIndex($layer: default)&#123;</div><div class="line">  $zindexMap: (default: 1, modal: 1000, dropdown: 500, grid: 300);</div><div class="line">  $zindex: 1;</div><div class="line">  @if map-has-key($zindexMap, $layer)&#123;</div><div class="line">    $zindex: map-get($zindexMap, $layer);</div><div class="line">  &#125;</div><div class="line">  @return $zindex;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@debug getzIndex('afd');</div><div class="line">//$layer可选：default,modal,dropdown,grid</div></pre></td></tr></table></figure></p>
+<p>嵌套语法</p>
+<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">.main-sec &#123;</div><div class="line">  font-family: $main-sec-ff;</div><div class="line"></div><div class="line">  .headline &#123;</div><div class="line">    font: &#123;</div><div class="line">      family: $main-sec-ff;</div><div class="line">      size: 16px;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  .detail &#123;</div><div class="line">    font-size: 12px;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.main-sec</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.main-sec</span> <span class="selector-class">.headline</span> &#123;</div><div class="line">  <span class="attribute">font-family</span>: <span class="string">"Microsoft YaHei"</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.main-sec</span> <span class="selector-class">.detail</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">12px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;img src=&quot;https://itwanggj.github.io/images/sass-script-advanced.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;数字类型-Number&quot;&gt;&lt;a href=&quot;#数字类型-Number&quot; class=&quot;head
+    
     </summary>
     
+      <category term="SASS" scheme="https://itwanggj.github.io/categories/SASS/"/>
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+      <category term="SCSS" scheme="https://itwanggj.github.io/categories/SASS/SCSS/"/>
     
-      <category term="Github" scheme="https://itwanggj.github.io/tags/Github/"/>
     
-      <category term="React" scheme="https://itwanggj.github.io/tags/React/"/>
+      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="Sass" scheme="https://itwanggj.github.io/tags/Sass/"/>
     
   </entry>
   
@@ -496,9 +541,9 @@
       <category term="面试题总结" scheme="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
+    
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -666,11 +711,11 @@
       <category term="博客优化" scheme="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     
     
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
+    
       <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
       <category term="github" scheme="https://itwanggj.github.io/tags/github/"/>
     
@@ -711,9 +756,9 @@
       <category term="hexo" scheme="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
