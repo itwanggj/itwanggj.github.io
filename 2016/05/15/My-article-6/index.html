@@ -5,14 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>Tag: Sass | Guojun Wang&#39;s Blog</title>
+  <title>Sass基础 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Guojun Wang's Blog">
-<meta property="og:url" content="https://itwanggj.github.io/tags/Sass/index.html">
+  <meta name="description" content="项目创建123npm initcompass create --bare
+orcompass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”
+自动化构建在根目录下创建gulpfile.js1npm gulp gulp-compass browser-sync del run-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sass基础">
+<meta property="og:url" content="https://itwanggj.github.io/2016/05/15/My-article-6/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
+<meta property="og:description" content="项目创建123npm initcompass create --bare
+orcompass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”
+自动化构建在根目录下创建gulpfile.js1npm gulp gulp-compass browser-sync del run-">
+<meta property="og:updated_time" content="2017-02-27T12:10:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guojun Wang's Blog">
+<meta name="twitter:title" content="Sass基础">
+<meta name="twitter:description" content="项目创建123npm initcompass create --bare
+orcompass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”
+自动化构建在根目录下创建gulpfile.js1npm gulp gulp-compass browser-sync del run-">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
   
@@ -79,59 +89,89 @@
 
 
     <div class="outer">
-      <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <h3 href="/2016/05/15/My-article-6/" class="archive-article-date">
-  <time datetime="2016-05-15T12:32:34.000Z" itemprop="datePublished">May 15</time>
+      <section id="main"><article id="post-My-article-6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2016/05/15/My-article-6/" class="article-date">
+  <time datetime="2016-05-15T12:32:34.000Z" itemprop="datePublished">2016-05-15</time>
 </h3>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SASS/">SASS</a>►<a class="article-category-link" href="/categories/SASS/SCSS/">SCSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/15/My-article-6/">Sass基础</a>
+    <h1 class="article-title" itemprop="name">
+      Sass基础
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <h3 href="/2016/05/05/Sass安装/" class="archive-article-date">
-  <time datetime="2016-05-05T04:22:34.000Z" itemprop="datePublished">May 5</time>
-</h3>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/05/05/Sass安装/">Sass安装步骤</a>
-    </h1>
-  
+        
+        <p><img src="" alt=""></p>
+<h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm init</div><div class="line"></div><div class="line">compass create --bare</div></pre></td></tr></table></figure>
+<p>or<br>compass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”</p>
+<h2 id="自动化构建"><a href="#自动化构建" class="headerlink" title="自动化构建"></a>自动化构建</h2><p>在根目录下创建gulpfile.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm gulp gulp-compass browser-sync del run-sequence --save-dev</div></pre></td></tr></table></figure></p>
+<p>假如下载失败可修改：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm config git registry</div><div class="line"></div><div class="line">npm config set registry http:<span class="comment">//</span></div></pre></td></tr></table></figure></p>
+<p>安装compass-normalize、breakpoint、susy<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install compass-normalize breakpoint susy</div></pre></td></tr></table></figure></p>
+<p>在config.rb里分别引入<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">require "compass-normalize"</div><div class="line"># 响应式</div><div class="line">require "breakpoint"</div><div class="line"># 布局</div><div class="line">require "susy"</div></pre></td></tr></table></figure></p>
+<p>main.scss<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! Vendor */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"compass"</span></div><div class="line">, <span class="string">"susy"</span></div><div class="line">, <span class="string">"breakpoint"</span></div><div class="line">, <span class="string">"normalize-version"</span>  </div><div class="line">, <span class="string">"normalize/base"</span></div><div class="line">, <span class="string">"normalize/links"</span></div><div class="line">, <span class="string">"normalize/html5"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Helpers */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"helpers/variables"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Base*/</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"base/font"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Layout */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"layout/main"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Components */</span> </div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"components/alerts"</span></div><div class="line">, <span class="string">"components/pop-stripe"</span></div><div class="line">, <span class="string">"components/banner"</span></div><div class="line">, <span class="string">"components/page-header"</span></div><div class="line">, <span class="string">"components/section-bottom"</span></div><div class="line">, <span class="string">"components/contentinfo"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Pages*/</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"pages/page-base"</span></div><div class="line">, <span class="string">"pages/index"</span></div><div class="line">, <span class="string">"pages/install"</span></div><div class="line">, <span class="string">"pages/guide"</span></div><div class="line">, <span class="string">"pages/community"</span></div><div class="line">, <span class="string">"pages/libsass"</span></div><div class="line">;</div></pre></td></tr></table></figure></p>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2016/05/15/My-article-6/" data-id="cizo2c1o10002rq3a8dsq370s" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2016/05/15/My-article-6/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
   </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/07/04/My-article-7/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          My-article-7
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/05/Sass安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Sass安装步骤</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
-  
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/05/15/My-article-6/" data-title="Sass基础" data-url="https://itwanggj.github.io/2016/05/15/My-article-6/"></div>
+  </section>
+
 </section>
       
       <aside id="sidebar">

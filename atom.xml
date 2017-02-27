@@ -113,9 +113,9 @@
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -200,9 +200,9 @@
     </summary>
     
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="require" scheme="https://itwanggj.github.io/tags/require/"/>
     
@@ -240,9 +240,9 @@
     </summary>
     
     
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
-    
       <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
+    
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
       <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
     
@@ -280,40 +280,57 @@
     </summary>
     
     
-      <category term="Github" scheme="https://itwanggj.github.io/tags/Github/"/>
-    
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
+      <category term="Github" scheme="https://itwanggj.github.io/tags/Github/"/>
     
       <category term="React" scheme="https://itwanggj.github.io/tags/React/"/>
     
   </entry>
   
   <entry>
-    <title>My-article-6</title>
-    <link href="https://itwanggj.github.io/2016/06/04/My-article-6/"/>
-    <id>https://itwanggj.github.io/2016/06/04/My-article-6/</id>
-    <published>2016-06-04T15:32:04.000Z</published>
-    <updated>2017-01-08T08:52:30.000Z</updated>
+    <title>Sass基础</title>
+    <link href="https://itwanggj.github.io/2016/05/15/My-article-6/"/>
+    <id>https://itwanggj.github.io/2016/05/15/My-article-6/</id>
+    <published>2016-05-15T12:32:34.000Z</published>
+    <updated>2017-02-27T12:10:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="" alt=""></p>
+<h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm init</div><div class="line"></div><div class="line">compass create --bare</div></pre></td></tr></table></figure>
+<p>or<br>compass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”</p>
+<h2 id="自动化构建"><a href="#自动化构建" class="headerlink" title="自动化构建"></a>自动化构建</h2><p>在根目录下创建gulpfile.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm gulp gulp-compass browser-sync del run-sequence --save-dev</div></pre></td></tr></table></figure></p>
+<p>假如下载失败可修改：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm config git registry</div><div class="line"></div><div class="line">npm config set registry http:<span class="comment">//</span></div></pre></td></tr></table></figure></p>
+<p>安装compass-normalize、breakpoint、susy<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install compass-normalize breakpoint susy</div></pre></td></tr></table></figure></p>
+<p>在config.rb里分别引入<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">require "compass-normalize"</div><div class="line"># 响应式</div><div class="line">require "breakpoint"</div><div class="line"># 布局</div><div class="line">require "susy"</div></pre></td></tr></table></figure></p>
+<p>main.scss<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! Vendor */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"compass"</span></div><div class="line">, <span class="string">"susy"</span></div><div class="line">, <span class="string">"breakpoint"</span></div><div class="line">, <span class="string">"normalize-version"</span>  </div><div class="line">, <span class="string">"normalize/base"</span></div><div class="line">, <span class="string">"normalize/links"</span></div><div class="line">, <span class="string">"normalize/html5"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Helpers */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"helpers/variables"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Base*/</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"base/font"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Layout */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"layout/main"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Components */</span> </div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"components/alerts"</span></div><div class="line">, <span class="string">"components/pop-stripe"</span></div><div class="line">, <span class="string">"components/banner"</span></div><div class="line">, <span class="string">"components/page-header"</span></div><div class="line">, <span class="string">"components/section-bottom"</span></div><div class="line">, <span class="string">"components/contentinfo"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Pages*/</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"pages/page-base"</span></div><div class="line">, <span class="string">"pages/index"</span></div><div class="line">, <span class="string">"pages/install"</span></div><div class="line">, <span class="string">"pages/guide"</span></div><div class="line">, <span class="string">"pages/community"</span></div><div class="line">, <span class="string">"pages/libsass"</span></div><div class="line">;</div></pre></td></tr></table></figure></p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;项目创建&quot;&gt;&lt;a href=&quot;#项目创建&quot; class=&quot;headerlink&quot; title=&quot;项目创建&quot;&gt;&lt;/a&gt;项目创建&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;
+    
     </summary>
     
+      <category term="SASS" scheme="https://itwanggj.github.io/categories/SASS/"/>
     
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
+      <category term="SCSS" scheme="https://itwanggj.github.io/categories/SASS/SCSS/"/>
     
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
-      <category term="hexo" scheme="https://itwanggj.github.io/tags/hexo/"/>
+      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="Sass" scheme="https://itwanggj.github.io/tags/Sass/"/>
     
   </entry>
   
   <entry>
-    <title>Sass安装</title>
+    <title>Sass安装步骤</title>
     <link href="https://itwanggj.github.io/2016/05/05/Sass%E5%AE%89%E8%A3%85/"/>
     <id>https://itwanggj.github.io/2016/05/05/Sass安装/</id>
     <published>2016-05-05T04:22:34.000Z</published>
-    <updated>2017-02-27T12:01:49.000Z</updated>
+    <updated>2017-02-27T12:06:06.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h2><p>Mac安装Ruby<br>Window安装Ruby</p>
 <h2 id="安装Sass"><a href="#安装Sass" class="headerlink" title="安装Sass"></a>安装Sass</h2><p>修改Ruby镜像 -&gt; 淘宝Ruby镜像<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div><div class="line">gem sources -a https://ruby.taobao.org/</div><div class="line">gem sources -l</div></pre></td></tr></table></figure></p>
@@ -326,7 +343,7 @@
 <p>编译Sass<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sass</span> <span class="selector-tag">main</span><span class="selector-class">.scss</span> <span class="selector-tag">main</span><span class="selector-class">.css</span></div></pre></td></tr></table></figure></p>
 <p>Compass安装<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> <span class="selector-tag">install</span> <span class="selector-tag">compass</span></div><div class="line"></div><div class="line"><span class="selector-tag">compass</span> <span class="selector-tag">-v</span></div><div class="line"></div><div class="line"><span class="selector-tag">compass</span> <span class="selector-tag">create</span> <span class="selector-tag">learn-compass-init</span></div></pre></td></tr></table></figure></p>
 <p>使用css原生@import的既定规则：</p>
-<p>1.当@import后边跟的文件名是以.css结尾的时候<br>2.当@import后边跟的是<a href="http://开头的字符串的时候" target="_blank" rel="external">http://开头的字符串的时候</a><br>3.当@import后边跟的是一个url()函数的时候<br>4.当@import后边带有media queries的时候</p>
+<p>1.当@import后边跟的文件名是以.css结尾的时候<br>2.当@import后边跟的是”<a href="http://&quot;开头的字符串的时候" target="_blank" rel="external">http://&quot;开头的字符串的时候</a><br>3.当@import后边跟的是一个url()函数的时候<br>4.当@import后边带有media queries的时候</p>
 <p>基于sass的既定规则</p>
 <p>1.没有文件后缀名的时候.sass会添加.scss或者.sass的后缀；<br>2.同一目录下，局部文件和非局部文件不能重名。</p>
 <p>变量操作</p>
@@ -652,9 +669,9 @@
     
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
-      <category term="hexo" scheme="https://itwanggj.github.io/tags/hexo/"/>
-    
       <category term="github" scheme="https://itwanggj.github.io/tags/github/"/>
+    
+      <category term="hexo" scheme="https://itwanggj.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -691,9 +708,9 @@
       <category term="hexo" scheme="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
