@@ -5,14 +5,32 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>Guojun Wang&#39;s Blog</title>
+  <title>SASS语法--高级 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Guojun Wang's Blog">
-<meta property="og:url" content="https://itwanggj.github.io/index.html">
+  <meta name="description" content="@if 三目运算
+For explame:1234$screenWidth: 500;body&amp;#123;  color: if($screenWidth &amp;gt; 768, blue, red);&amp;#125;
+is complied to:123body &amp;#123;  color: red;&amp;#125;
+@if
+For explame:12345@if $screenWidth &amp;gt; 76">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SASS语法--高级">
+<meta property="og:url" content="https://itwanggj.github.io/2016/07/13/SASS语法--高级/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
+<meta property="og:description" content="@if 三目运算
+For explame:1234$screenWidth: 500;body&amp;#123;  color: if($screenWidth &amp;gt; 768, blue, red);&amp;#125;
+is complied to:123body &amp;#123;  color: red;&amp;#125;
+@if
+For explame:12345@if $screenWidth &amp;gt; 76">
+<meta property="og:image" content="https://itwanggj.github.io/images/sass-script-advanced.png">
+<meta property="og:updated_time" content="2017-02-27T12:49:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guojun Wang's Blog">
+<meta name="twitter:title" content="SASS语法--高级">
+<meta name="twitter:description" content="@if 三目运算
+For explame:1234$screenWidth: 500;body&amp;#123;  color: if($screenWidth &amp;gt; 768, blue, red);&amp;#125;
+is complied to:123body &amp;#123;  color: red;&amp;#125;
+@if
+For explame:12345@if $screenWidth &amp;gt; 76">
+<meta name="twitter:image" content="https://itwanggj.github.io/images/sass-script-advanced.png">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
   
@@ -79,331 +97,7 @@
 
 
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-深入理解javascript原型和闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/03/24/深入理解javascript原型和闭包/" class="article-date">
-  <time datetime="2017-03-24T15:48:53.000Z" itemprop="datePublished">2017-03-24</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/原型/">原型</a>►<a class="article-category-link" href="/categories/原型/闭包/">闭包</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/24/深入理解javascript原型和闭包/">深入理解javascript原型和闭包（转）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>　　该教程绕开了javascript的一些基本的语法知识，直接讲解javascript中最难理解的两个部分，也是和其他主流面向对象语言区别最大的两个部分——原型和闭包，当然，肯定少不了原型链和作用域链。帮你揭开javascript最神秘的面纱。</p>
-<p>　　为什么要偏偏要讲这两个知识点？</p>
-<p>　　这是我在这么多年学习javascript的经历中，认为最难理解、最常犯错的地方，学习这两个知识点，会让你对javascript有更深层次的理解，至少理解了原型和作用域，就不能再算是javascript菜鸟了。另外，这两方面也是javascript与其他语言不同的地方，学习这样的设计，有助于你开阔眼界，帮助你了解编程语言的设计思路。毕竟，你不能只把眼睛盯在一门语言上。</p>
-<p>　　闲话不多讲，相信奔着这个话题来的朋友，也知道javascript原型和作用域的重要性。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/03/24/深入理解javascript原型和闭包/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizo3sixi000x5n3au8r2yt09" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-来自CSS3的黑科技－－如何实现环形进度条" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" class="article-date">
-  <time datetime="2017-02-08T09:49:50.000Z" itemprop="datePublished">2017-02-08</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/数据可视化/">数据可视化</a>►<a class="article-category-link" href="/categories/数据可视化/D3/">D3</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/">来自CSS3的黑科技－－如何实现环形进度条</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>CSS3的提出使得CSS不再是单纯的样式表，只要运用得到，就可以实现一些我们很棒的动画效果，最近项目有需求需要实现一个环形进度条，一开始没有思路，在看了《CSS Secret》之后觉得有受启发，便记录下这个过程。在过去，实现一个这样的进度条难免要拼接大量图片，CSS3和HTML5的出现使得这个过程变得简单无比。<br>首先，我们需要一个元素来承载我们的样式：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pie"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>事实上，如果要实现环形图，只要实现饼图，然后在其上覆盖一层遮罩即可，所以我们可以先从如何实现饼图开始：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.pie</span> &#123;</div><div class="line">    <span class="attribute">width </span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height </span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#ddd</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>我们首先通过.pie实现了一个圆形，并将其居中方便我们进行观察，效果如下：</p>
-<p><img src="https://itwanggj.github.io/images/circle-step-1.png" alt=""></p>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizo3sixd000n5n3aejbf15gf" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-说说Javascript函数" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2017/01/20/说说Javascript函数/" class="article-date">
-  <time datetime="2017-01-20T01:09:10.000Z" itemprop="datePublished">2017-01-20</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>►<a class="article-category-link" href="/categories/JavaScript/函数/">函数</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/20/说说Javascript函数/">说说Javascript函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。</p>
-<p>由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是什么？事实上，就好像一个组装好的玩具，如果不将其拆开，似乎也能玩得得心应手，但却总觉得少了些什么，不如拆拆看，说不定会有有趣的发现。</p>
-<h1 id="一、Javascript函数到底是什么？"><a href="#一、Javascript函数到底是什么？" class="headerlink" title="一、Javascript函数到底是什么？"></a>一、Javascript函数到底是什么？</h1><p>关于Javascript函数到底是什么，《Javascript高级程序设计》给出了定义————函数是对象，函数名是指针。是的，函数是对象，但它似乎与我们平常所见的Javascript对象有着诸多不同，比如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> foo); <span class="comment">//'function'</span></div></pre></td></tr></table></figure></p>
-<p>对函数使用typeof，会单独打印出function，除此以外，函数还有诸多奇怪之处。但不管怎么样，这并不影响函数是对象的事实，我们知道，Javascript的所有对象都存在一个构造器，而函数的构造器就是Function，观察如下代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> foo = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"num1"</span>, <span class="string">"num2"</span>, <span class="string">"return num1 + num2"</span>);</div><div class="line"><span class="built_in">console</span>.log(foo(<span class="number">1</span>, <span class="number">2</span>)); <span class="comment">//'3'</span></div></pre></td></tr></table></figure></p>
-<p>使用new + 构造函数的方式创建对象，这和我们平常所见到的创建对象的方式并没有什么两样，事实上，尽管我们并不推荐使用这种方法创建函数，但不论是用函数声明还是函数表达式都必然会经过这个过程，这对于我们理解函数是对象，函数名是指针有着重要意义。<br>
-        
-          <p class="article-more-link">
-            <a href="/2017/01/20/说说Javascript函数/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2017/01/20/说说Javascript函数/" data-id="cizo3sixj00115n3a01o6pcbc" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2017/01/20/说说Javascript函数/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-11" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/11/04/My-article-11/" class="article-date">
-  <time datetime="2016-11-04T15:32:04.000Z" itemprop="datePublished">2016-11-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/04/My-article-11/">My-article-11</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/require/">require</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizo3six3000a5n3aayh5og9b" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/11/04/My-article-11/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-10" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/10/04/My-article-10/" class="article-date">
-  <time datetime="2016-10-04T15:32:04.000Z" itemprop="datePublished">2016-10-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/04/My-article-10/">My-article-10</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizo3siwt00095n3af1a1zmjp" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/10/04/My-article-10/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-My-article-9" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/09/04/My-article-9/" class="article-date">
-  <time datetime="2016-09-04T15:32:04.000Z" itemprop="datePublished">2016-09-04</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/04/My-article-9/">My-article-9</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/09/04/My-article-9/" data-id="cizo3siwc00035n3ascvdj0m6" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/09/04/My-article-9/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-SASS语法--高级" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-SASS语法--高级" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2016/07/13/SASS语法--高级/" class="article-date">
   <time datetime="2016-07-13T03:02:24.000Z" itemprop="datePublished">2016-07-13</time>
@@ -422,8 +116,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/13/SASS语法--高级/">SASS语法--高级</a>
+    <h1 class="article-title" itemprop="name">
+      SASS语法--高级
     </h1>
   
 
@@ -475,194 +169,34 @@
   </div>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-SASS语法--进阶" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/06/02/SASS语法--进阶/" class="article-date">
-  <time datetime="2016-06-02T10:12:34.000Z" itemprop="datePublished">2016-06-02</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SASS语法/">SASS语法</a>►<a class="article-category-link" href="/categories/SASS语法/进阶/">进阶</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
+    <a href="/2016/09/04/My-article-9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/02/SASS语法--进阶/">SASS语法--进阶</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://itwanggj.github.io/images/sass-script-advanced.png" alt=""></p>
-<h2 id="数字类型-Number"><a href="#数字类型-Number" class="headerlink" title="数字类型(Number)"></a>数字类型(Number)</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 数字类型 */</div><div class="line">$n1: 1.2;</div><div class="line">$n2: 12;</div><div class="line">$n3: 14px;</div><div class="line"></div><div class="line">p&#123;</div><div class="line">  font-size: $n3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! 数字类型 */</span></div><div class="line"><span class="selector-tag">p</span> &#123;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="字符串类型-String"><a href="#字符串类型-String" class="headerlink" title="字符串类型(String)"></a>字符串类型(String)</h2><p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/*! 字符串类型*/</div><div class="line">$s1: container;</div><div class="line">$s2: 'container';</div><div class="line">$s3: "container";</div><div class="line"></div><div class="line">.#&#123;$s3&#125;&#123;</div><div class="line">  font-size: $n3;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2016/06/02/SASS语法--进阶/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cizo3sixf000s5n3az44juu40" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/#ds-thread" class="article-comment-link">Comments</a>
+          My-article-9
         
       </div>
-    </footer>
-  </div>
-  </div>
-  </div>
+    </a>
+  
+  
+    <a href="/2016/06/02/SASS语法--进阶/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SASS语法--进阶</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/07/13/SASS语法--高级/" data-title="SASS语法--高级" data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/"></div>
+  </section>
 
-  
-    <article id="post-SASS语法--基础" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/05/15/SASS语法--基础/" class="article-date">
-  <time datetime="2016-05-15T12:32:34.000Z" itemprop="datePublished">2016-05-15</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SASS语法/">SASS语法</a>►<a class="article-category-link" href="/categories/SASS语法/基础/">基础</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/15/SASS语法--基础/">SASS语法--基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://itwanggj.github.io/images/sass-script-advanced.png" alt=""></p>
-<h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm init</div><div class="line"></div><div class="line">compass create --bare</div></pre></td></tr></table></figure>
-<p>or<br>compass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”</p>
-<h2 id="自动化构建"><a href="#自动化构建" class="headerlink" title="自动化构建"></a>自动化构建</h2><p>在根目录下创建gulpfile.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm gulp gulp-compass browser-sync del run-sequence --save-dev</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2016/05/15/SASS语法--基础/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cizo3siwl00075n3a72q0snmr" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/05/15/SASS语法--基础/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-SASS语法--安装" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/05/05/SASS语法--安装/" class="article-date">
-  <time datetime="2016-05-05T04:22:34.000Z" itemprop="datePublished">2016-05-05</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SASS语法/">SASS语法</a>►<a class="article-category-link" href="/categories/SASS语法/安装/">安装</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/05/SASS语法--安装/">SASS语法--安装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h2><p>Mac安装Ruby<br>Window安装Ruby</p>
-<h2 id="安装Sass"><a href="#安装Sass" class="headerlink" title="安装Sass"></a>安装Sass</h2><p>修改Ruby镜像 -&gt; 淘宝Ruby镜像<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div><div class="line">gem sources -a https://ruby.taobao.org/</div><div class="line">gem sources -l</div></pre></td></tr></table></figure></p>
-<p>安装Sass<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> <span class="selector-tag">install</span> <span class="selector-tag">sass</span></div><div class="line"><span class="selector-tag">sass</span> <span class="selector-tag">-v</span></div></pre></td></tr></table></figure></p>
-<p>or<br>gem install sass —version=3.3</p>
-<p>列出所有安装包<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> <span class="selector-tag">list</span></div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2016/05/05/SASS语法--安装/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cizo3six5000d5n3aqu4mdq9q" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/05/05/SASS语法--安装/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 </section>
       
       <aside id="sidebar">
