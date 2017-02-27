@@ -129,7 +129,7 @@
     <entry>
       <title><![CDATA[Sass基础]]></title>
       <url>https://itwanggj.github.io/2016/05/15/Sass%E5%9F%BA%E7%A1%80/</url>
-      <content type="html"><![CDATA[<p><img src="" alt=""></p>
+      <content type="html"><![CDATA[<p><img src="https://itwanggj.github.io/images/sass-script-advanced.png" alt=""></p>
 <h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm init</div><div class="line"></div><div class="line">compass create --bare</div></pre></td></tr></table></figure>
 <p>or<br>compass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”</p>
 <h2 id="自动化构建"><a href="#自动化构建" class="headerlink" title="自动化构建"></a>自动化构建</h2><p>在根目录下创建gulpfile.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm gulp gulp-compass browser-sync del run-sequence --save-dev</div></pre></td></tr></table></figure></p>
