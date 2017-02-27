@@ -4,6 +4,33 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2016/05/05/Sass%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2017-02-27T11:58:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>Sass安装</title>
+        <pubTime>2016-05-05T04:22:34.000Z</pubTime>
+        
+        <tag>JS</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>Sass</tag>
+         
+         
+           
+             
+              <breadCrumb title="SASS" url="https://itwanggj.github.io/categories/SASS/"/>
+          
+             
+              <breadCrumb title="SCSS" url="https://itwanggj.github.io/categories/SASS/SCSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/01/20/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2017-02-26T13:30:10.000Z</lastmod>
     <data>
@@ -11,9 +38,9 @@
         <title>说说Javascript函数</title>
         <pubTime>2017-01-20T01:09:10.000Z</pubTime>
         
-        <tag>html</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>html</tag>
          
         <tag>CSS3</tag>
          
@@ -40,11 +67,11 @@
         <title>来自CSS3的黑科技－－如何实现环形进度条</title>
         <pubTime>2017-02-08T09:49:50.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>html</tag>
          
         <tag>D3</tag>
-         
-        <tag>JavaScript</tag>
          
         <tag>CSS3</tag>
          
@@ -158,9 +185,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>Html</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>Html</tag>
          
          
            
@@ -288,9 +315,9 @@
         
         <tag>Ionic</tag>
          
-        <tag>JS</tag>
-         
         <tag>Grunt</tag>
+         
+        <tag>JS</tag>
          
          
            
@@ -354,27 +381,6 @@
         <tag>Ionic</tag>
          
         <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/05/04/My-article-5/</loc>
-    <lastmod>2017-01-08T08:51:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>My-article-5</title>
-        <pubTime>2016-05-04T15:32:04.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-        <tag>Gulp</tag>
-         
-        <tag>JS</tag>
          
          
            
