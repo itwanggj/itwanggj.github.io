@@ -242,9 +242,9 @@
     
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
-      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
-    
       <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
+    
+      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
     
   </entry>
   
@@ -290,8 +290,8 @@
   
   <entry>
     <title>SASS语法--基础</title>
-    <link href="https://itwanggj.github.io/2016/05/15/Sass%E5%9F%BA%E7%A1%80/"/>
-    <id>https://itwanggj.github.io/2016/05/15/Sass基础/</id>
+    <link href="https://itwanggj.github.io/2016/05/15/SASS%E8%AF%AD%E6%B3%95--%E5%9F%BA%E7%A1%80/"/>
+    <id>https://itwanggj.github.io/2016/05/15/SASS语法--基础/</id>
     <published>2016-05-15T12:32:34.000Z</published>
     <updated>2017-02-27T12:21:37.000Z</updated>
     
