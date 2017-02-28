@@ -193,36 +193,36 @@
     <link href="https://itwanggj.github.io/2016/12/09/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEApache%E6%9C%8D%E5%8A%A1%E5%99%A8(Mac%E7%89%88)/"/>
     <id>https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/</id>
     <published>2016-12-09T03:12:34.000Z</published>
-    <updated>2017-02-28T14:09:34.000Z</updated>
+    <updated>2017-02-28T14:13:54.000Z</updated>
     
     <content type="html"><![CDATA[<p>有的时候，我们需要在内网工作组中分享一些文件或是后台接口没有及时给出，你又想要模拟真实数据，直接在项目里创建plist也可以做到这种需求，但难免让工程变得冗余且看起来比较Low。这个时候就看出配置本地服务器的重要性了，不用时刻等着后台接口的更新，只需要根据接口文档自己模拟真实数据，即方便又显得高大上。</p>
 <p>Mac自带了Apache环境，我们要做的只是稍微配置一下</p>
 <p>环境：Mac OS X 10.12</p>
 <h2 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h2><p>在终端输入：sudo apachectl start，这样就将Mac自带的Apache启动了，在浏览器输入“<a href="http://localhost”，会显示“It" target="_blank" rel="external">http://localhost”，会显示“It</a> works!”，说明服务器已经启动成功了。Apache默认的根目录在“/Library/WebServer/Documents/”下。</p>
-<h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>在Finder中创建一个”Sites”的文件夹，直接创建在/Users/wan(当前用户名)目录下，如图：<br><img src="" alt=""></p>
+<h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>在Finder中创建一个”Sites”的文件夹，直接创建在/Users/wan(当前用户名)目录下，如图：<br><img src="https://itwanggj.github.io/images/aaa.png" alt=""></p>
 <ul>
 <li>切换工作目录下：cd /etc/apache2</li>
 <li>备份文件，只需要执行一次：sudo cp httpd.conf httpd.conf.bak</li>
 <li>如果操作出现错误！可以使用命令，恢复备份的 httpd.conf 文件：sudo cp httpd.conf.bak httpd.conf</li>
 <li>用vim编辑httpd.conf文件，httpd.conf文件时Apache的配置文件：sudo vim httpd.conf</li>
 </ul>
-<p>这时候需要输入密码来获取权限，出现如下界面：<br><img src="" alt=""><br>回车进入到下面的界面：<br><img src="" alt=""></p>
+<p>这时候需要输入密码来获取权限，出现如下界面：<br><img src="https://itwanggj.github.io/images/bbb.png" alt=""><br>回车进入到下面的界面：<br><img src="https://itwanggj.github.io/images/ccc.png" alt=""></p>
 <ul>
 <li>按住shift键，并且输入“ ：”号进入vim命令模式，搜索/DocumentRoot，找到图中对应位置将圈内路径改为之前创建的Sites文件夹的路径。</li>
 </ul>
-<p><img src="" alt=""></p>
+<p><img src="https://itwanggj.github.io/images/ddd.png" alt=""></p>
 <ul>
 <li>之后找到Options FollowSymLinks：修改为Options Indexes FollowSymLinks，在两个单词间添加一个Indexes单词</li>
 <li>接下来查找php，:/php，定位到图中位置：</li>
 </ul>
-<p><img src="" alt=""></p>
+<p><img src="https://itwanggj.github.io/images/eee.png" alt=""></p>
 <ul>
 <li>将这句代码前面的＃去掉。最后:wq保存并退出</li>
 <li>切换工作目录：cd /etc</li>
 <li>拷贝php.ini文件：sudo cp php.ini.default php.ini</li>
 </ul>
 <h2 id="重新启动apache服务器"><a href="#重新启动apache服务器" class="headerlink" title="重新启动apache服务器"></a>重新启动apache服务器</h2><p>在终端输入：sudo apachectl -k restart</p>
-<p>这个时候如果在浏览器地址输入“<a href="http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。" target="_blank" rel="external">http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。</a><br><img src="" alt=""></p>
+<p>这个时候如果在浏览器地址输入“<a href="http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。" target="_blank" rel="external">http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。</a><br><img src="https://itwanggj.github.io/images/fff.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
