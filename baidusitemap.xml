@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2016/12/09/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEApache%E6%9C%8D%E5%8A%A1%E5%99%A8(Mac%E7%89%88)/</loc>
+    <lastmod>2017-02-28T14:09:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何配置Apache服务器（MAC版）</title>
+        <pubTime>2016-12-09T03:12:34.000Z</pubTime>
+        
+        <tag>D3</tag>
+         
+        <tag>Apache</tag>
+         
+        <tag>服务器</tag>
+         
+        <tag>数据可视化</tag>
+         
+         
+           
+             
+              <breadCrumb title="配置服务器" url="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+          
+             
+              <breadCrumb title="APACHE" url="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/"/>
+          
+             
+              <breadCrumb title="MAC版" url="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/07/13/SASS%E8%AF%AD%E6%B3%95--%E9%AB%98%E7%BA%A7/</loc>
     <lastmod>2017-02-27T12:54:03.000Z</lastmod>
     <data>
@@ -177,9 +209,9 @@
         <title>前端开发面试题整理以及解答思路</title>
         <pubTime>2016-04-01T02:32:22.000Z</pubTime>
         
-        <tag>Ionic</tag>
-         
         <tag>jQuery</tag>
+         
+        <tag>Ionic</tag>
          
         <tag>Html</tag>
          
@@ -264,9 +296,9 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -291,11 +323,11 @@
         <title>使用GitHub + Hexo搭建博客（Mac版）</title>
         <pubTime>2016-02-21T10:32:04.000Z</pubTime>
         
-        <tag>Ionic</tag>
-         
         <tag>Bootstrap</tag>
          
         <tag>jQuery</tag>
+         
+        <tag>Ionic</tag>
          
         <tag>github</tag>
          
@@ -373,30 +405,9 @@
         <title>My-article-10</title>
         <pubTime>2016-10-04T15:32:04.000Z</pubTime>
         
-        <tag>Ionic</tag>
-         
         <tag>Bootstrap</tag>
          
         <tag>jQuery</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/09/04/My-article-9/</loc>
-    <lastmod>2017-01-08T08:54:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>My-article-9</title>
-        <pubTime>2016-09-04T15:32:04.000Z</pubTime>
-        
-        <tag>Grunt</tag>
-         
-        <tag>JS</tag>
          
         <tag>Ionic</tag>
          
