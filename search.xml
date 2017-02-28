@@ -108,11 +108,12 @@
 <li>切换工作目录下：cd /etc/apache2</li>
 <li>备份文件，只需要执行一次：sudo cp httpd.conf httpd.conf.bak</li>
 <li>如果操作出现错误！可以使用命令，恢复备份的 httpd.conf 文件：sudo cp httpd.conf.bak httpd.conf</li>
-<li>用vim编辑httpd.conf文件，httpd.conf文件时Apache的配置文件：sudo vim httpd.conf</li>
-</ul>
+<li><p>用vim编辑httpd.conf文件，httpd.conf文件时Apache的配置文件：sudo vim httpd.conf</p>
+<a id="more"></a>
 <p>这时候需要输入密码来获取权限，出现如下界面：<br><img src="https://itwanggj.github.io/images/bbb.png" alt=""><br>回车进入到下面的界面：<br><img src="https://itwanggj.github.io/images/ccc.png" alt=""></p>
-<ul>
-<li>按住shift键，并且输入“ ：”号进入vim命令模式，搜索/DocumentRoot，找到图中对应位置将圈内路径改为之前创建的Sites文件夹的路径。</li>
+</li>
+<li><p>按住shift键，并且输入“ ：”号进入vim命令模式，搜索/DocumentRoot，找到图中对应位置将圈内路径改为之前创建的Sites文件夹的路径。</p>
+</li>
 </ul>
 <p><img src="https://itwanggj.github.io/images/ddd.png" alt=""></p>
 <ul>

@@ -125,7 +125,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizpm6etm000wbt3a5d01ubjh" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizpm8zws000vcg3anfdhoq7f" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -184,7 +184,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizpm6etj000tbt3aa54t58lb" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizpm8zwq000tcg3ayvbq8sdi" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -244,7 +244,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/20/说说Javascript函数/" data-id="cizpm6etn000zbt3anfse283j" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/20/说说Javascript函数/" data-id="cizpm8zwt000xcg3ax8au5c4e" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/20/说说Javascript函数/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -287,36 +287,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <p>有的时候，我们需要在内网工作组中分享一些文件或是后台接口没有及时给出，你又想要模拟真实数据，直接在项目里创建plist也可以做到这种需求，但难免让工程变得冗余且看起来比较Low。这个时候就看出配置本地服务器的重要性了，不用时刻等着后台接口的更新，只需要根据接口文档自己模拟真实数据，即方便又显得高大上。</p>
 <p>Mac自带了Apache环境，我们要做的只是稍微配置一下</p>
 <p>环境：Mac OS X 10.12</p>
-<h2 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h2><p>在终端输入：sudo apachectl start，这样就将Mac自带的Apache启动了，在浏览器输入“<a href="http://localhost”，会显示“It" target="_blank" rel="external">http://localhost”，会显示“It</a> works!”，说明服务器已经启动成功了。Apache默认的根目录在“/Library/WebServer/Documents/”下。</p>
+<h2 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h2><p>在终端输入：sudo apachectl start，这样就将Mac自带的Apache启动了，在浏览器输入“<a href="http://localhost”，会显示“It">http://localhost”，会显示“It</a> works!”，说明服务器已经启动成功了。Apache默认的根目录在“/Library/WebServer/Documents/”下。</p>
 <h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>在Finder中创建一个”Sites”的文件夹，直接创建在/Users/wan(当前用户名)目录下，如图：<br><img src="https://itwanggj.github.io/images/aaa.png" alt=""></p>
 <ul>
 <li>切换工作目录下：cd /etc/apache2</li>
 <li>备份文件，只需要执行一次：sudo cp httpd.conf httpd.conf.bak</li>
 <li>如果操作出现错误！可以使用命令，恢复备份的 httpd.conf 文件：sudo cp httpd.conf.bak httpd.conf</li>
-<li>用vim编辑httpd.conf文件，httpd.conf文件时Apache的配置文件：sudo vim httpd.conf</li>
-</ul>
-<p>这时候需要输入密码来获取权限，出现如下界面：<br><img src="https://itwanggj.github.io/images/bbb.png" alt=""><br>回车进入到下面的界面：<br><img src="https://itwanggj.github.io/images/ccc.png" alt=""></p>
-<ul>
-<li>按住shift键，并且输入“ ：”号进入vim命令模式，搜索/DocumentRoot，找到图中对应位置将圈内路径改为之前创建的Sites文件夹的路径。</li>
-</ul>
-<p><img src="https://itwanggj.github.io/images/ddd.png" alt=""></p>
-<ul>
-<li>之后找到Options FollowSymLinks：修改为Options Indexes FollowSymLinks，在两个单词间添加一个Indexes单词</li>
-<li>接下来查找php，:/php，定位到图中位置：</li>
-</ul>
-<p><img src="https://itwanggj.github.io/images/eee.png" alt=""></p>
-<ul>
-<li>将这句代码前面的＃去掉。最后:wq保存并退出</li>
-<li>切换工作目录：cd /etc</li>
-<li>拷贝php.ini文件：sudo cp php.ini.default php.ini</li>
-</ul>
-<h2 id="重新启动apache服务器"><a href="#重新启动apache服务器" class="headerlink" title="重新启动apache服务器"></a>重新启动apache服务器</h2><p>在终端输入：sudo apachectl -k restart</p>
-<p>这个时候如果在浏览器地址输入“<a href="http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。" target="_blank" rel="external">http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。</a><br><img src="https://itwanggj.github.io/images/fff.png" alt=""></p>
-
+<li><p>用vim编辑httpd.conf文件，httpd.conf文件时Apache的配置文件：sudo vim httpd.conf</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/12/09/如何配置Apache服务器(Mac版)/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -324,7 +309,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cizpm6eth000rbt3asxbjcskp" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cizpm8zwp000rcg3axpjfnd6h" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -372,7 +357,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/require/">require</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizpm6esz0009bt3anap28t7i" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/11/04/My-article-11/" data-id="cizpm8zwe000dcg3asmrukm7e" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/11/04/My-article-11/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -420,7 +405,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizpm6et2000dbt3aze31ircj" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/10/04/My-article-10/" data-id="cizpm8zwc000acg3a4uslfbsk" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/10/04/My-article-10/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -480,7 +465,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/" data-id="cizpm6et6000hbt3aeulvk7bl" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/" data-id="cizpm8zwm000ncg3aa3mzge10" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/07/13/SASS语法--高级/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -539,7 +524,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cizpm6et4000ebt3a735eyqfc" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cizpm8zwg000ecg3amjnzva8w" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -598,7 +583,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cizpm6et0000abt3afe4xp3c6" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cizpm8zwb0009cg3a2it95vzl" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/15/SASS语法--基础/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -658,7 +643,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cizpm6esv0007bt3ay2f28zfi" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cizpm8zw70007cg3afw7f8lr0" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/05/SASS语法--安装/#ds-thread" class="article-comment-link">Comments</a>
         
