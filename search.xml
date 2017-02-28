@@ -127,7 +127,7 @@
 <li>拷贝php.ini文件：sudo cp php.ini.default php.ini</li>
 </ul>
 <h2 id="重新启动apache服务器"><a href="#重新启动apache服务器" class="headerlink" title="重新启动apache服务器"></a>重新启动apache服务器</h2><p>在终端输入：sudo apachectl -k restart</p>
-<p>这个时候如果在浏览器地址输入（<a href="http://127.0.0.1/），就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。" target="_blank" rel="external">http://127.0.0.1/），就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。</a><br><img src="https://itwanggj.github.io/images/fff.png" alt=""></p>
+<p>这个时候如果在浏览器地址输入<a href="http://127.0.0.1/" target="_blank" rel="external">http://127.0.0.1/</a>，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。<br><img src="https://itwanggj.github.io/images/fff.png" alt=""></p>
 ]]></content>
     </entry>
     
