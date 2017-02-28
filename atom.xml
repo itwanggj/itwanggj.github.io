@@ -193,7 +193,7 @@
     <link href="https://itwanggj.github.io/2016/12/09/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEApache%E6%9C%8D%E5%8A%A1%E5%99%A8(Mac%E7%89%88)/"/>
     <id>https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/</id>
     <published>2016-12-09T03:12:34.000Z</published>
-    <updated>2017-02-28T14:15:55.000Z</updated>
+    <updated>2017-02-28T14:18:59.000Z</updated>
     
     <content type="html"><![CDATA[<p>有的时候，我们需要在内网工作组中分享一些文件或是后台接口没有及时给出，你又想要模拟真实数据，直接在项目里创建plist也可以做到这种需求，但难免让工程变得冗余且看起来比较Low。这个时候就看出配置本地服务器的重要性了，不用时刻等着后台接口的更新，只需要根据接口文档自己模拟真实数据，即方便又显得高大上。</p>
 <p>Mac自带了Apache环境，我们要做的只是稍微配置一下</p>
@@ -223,7 +223,7 @@
 <li>拷贝php.ini文件：sudo cp php.ini.default php.ini</li>
 </ul>
 <h2 id="重新启动apache服务器"><a href="#重新启动apache服务器" class="headerlink" title="重新启动apache服务器"></a>重新启动apache服务器</h2><p>在终端输入：sudo apachectl -k restart</p>
-<p>这个时候如果在浏览器地址输入“<a href="http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。" target="_blank" rel="external">http://127.0.0.1/”，就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。</a><br><img src="https://itwanggj.github.io/images/fff.png" alt=""></p>
+<p>这个时候如果在浏览器地址输入（<a href="http://127.0.0.1/），就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。" target="_blank" rel="external">http://127.0.0.1/），就会将Sites文件夹中的目录列出来了。同一工作组里的电脑可以通过本电脑的ip地址来访问本电脑上的文件。</a><br><img src="https://itwanggj.github.io/images/fff.png" alt=""></p>
 ]]></content>
     
     <summary type="html">
