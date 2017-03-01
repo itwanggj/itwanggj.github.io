@@ -430,13 +430,51 @@
       <category term="Gulp" scheme="https://itwanggj.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Gulp/"/>
     
     
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
-    
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
+    
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
     
       <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jquery插件开发</title>
+    <link href="https://itwanggj.github.io/2016/09/02/jquery%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    <id>https://itwanggj.github.io/2016/09/02/jquery插件开发/</id>
+    <published>2016-09-02T11:12:34.000Z</published>
+    <updated>2017-03-01T14:25:57.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。</p>
+<h2 id="1-jQuery插件开发方式"><a href="#1-jQuery插件开发方式" class="headerlink" title="1.jQuery插件开发方式"></a>1.jQuery插件开发方式</h2><p>jQuery插件开发方式主要有三种：<br>通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建</p>
+<h2 id="2-插件中的this"><a href="#2-插件中的this" class="headerlink" title="2.插件中的this"></a>2.插件中的this</h2><p>在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。这里的this已经是jQuery元素，无需再用美元符包装。</p>
+<h2 id="3-jQuery链式调用"><a href="#3-jQuery链式调用" class="headerlink" title="3.jQuery链式调用"></a>3.jQuery链式调用</h2><p>jQuery支持链式调用，要让插件不打破这个链式调用，只需要return一下，实例如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = function()&#123;</div><div class="line">    //这里面this指的是jquery选中的元素</div><div class="line">    this.css(&apos;color&apos;,&apos;red&apos;);</div><div class="line">    return this.each(function()&#123;</div><div class="line">        //对每个元素进行操作</div><div class="line">        ¥(this).append(&apos; &apos;+¥(this).attr(&apos;href&apos;));</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="4-让插件接受参数"><a href="#4-让插件接受参数" class="headerlink" title="4.让插件接受参数"></a>4.让插件接受参数</h2><p>在处理插件参数的接收上，通常用jQuery的extend方法，当给extend传递单个对象时，这个对象会合并到jquery身上，直接可以调用，当给extend方法传递一个以上参数时，它会将所有参数对象合并<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> defaults = &#123;</div><div class="line">        <span class="string">'color'</span>:<span class="string">'red'</span>,</div><div class="line">        <span class="string">'fontSize'</span>:<span class="string">'12px'</span></div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> setting = ¥.extend(defaults,options);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.css(&#123;</div><div class="line">        <span class="string">'color'</span>:setting.color,</div><div class="line">        <span class="string">'fontSize'</span>:setting.fontSize</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>说明：由于博客markdown对“💲”有特殊处理，所以文中全部用“#”替换。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。&lt;/p&gt;
+&lt;h2 id=&quot;1-jQuery插件开发方式&quot;&gt;&lt;a href=&quot;#1-jQuery插件开发方式&quot; class=&quot;headerlink&quot; title=&quot;1.jQuery插件开发方式&quot;&gt;&lt;/a&gt;1.jQuery插件开发方式&lt;/h2&gt;&lt;p&gt;jQuery插件开发方式主要有三种：&lt;br&gt;通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建&lt;/p&gt;
+&lt;h2 id=&quot;2-插件中的this&quot;&gt;&lt;a href=&quot;#2-插件中的this&quot; class=&quot;headerlink&quot; title=&quot;2.插件中的this&quot;&gt;&lt;/a&gt;2.插件中的this&lt;/h2&gt;&lt;p&gt;在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。这里的this已经是jQuery元素，无需再用美元符包装。&lt;/p&gt;
+&lt;h2 id=&quot;3-jQuery链式调用&quot;&gt;&lt;a href=&quot;#3-jQuery链式调用&quot; class=&quot;headerlink&quot; title=&quot;3.jQuery链式调用&quot;&gt;&lt;/a&gt;3.jQuery链式调用&lt;/h2&gt;&lt;p&gt;jQuery支持链式调用，要让插件不打破这个链式调用，只需要return一下，实例如下&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;¥.fn.myPlugin = function()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    //这里面this指的是jquery选中的元素&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    this.css(&amp;apos;color&amp;apos;,&amp;apos;red&amp;apos;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    return this.each(function()&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        //对每个元素进行操作&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        ¥(this).append(&amp;apos; &amp;apos;+¥(this).attr(&amp;apos;href&amp;apos;));&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &amp;#125;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Jqery插件" scheme="https://itwanggj.github.io/categories/Jqery%E6%8F%92%E4%BB%B6/"/>
+    
+      <category term="Javascript" scheme="https://itwanggj.github.io/categories/Jqery%E6%8F%92%E4%BB%B6/Javascript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
+    
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
   </entry>
   
@@ -980,9 +1018,9 @@
       <category term="博客优化" scheme="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
-    
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
+    
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     

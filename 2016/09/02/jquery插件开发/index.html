@@ -5,21 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>JS代码让Markdown自动生成目录 | Guojun Wang&#39;s Blog</title>
+  <title>jquery插件开发 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言已经习惯了使用Markdown书写文章，既方便也通用。但一直在想：应该生成一个方便的导航目录，这样查看文章更方便。于是有了本文。
-实现方法页面结构1234567//放入在文章页内容前面&amp;lt;div class=&quot;BlogAnchor&quot;&amp;gt;    &amp;lt;p&amp;gt;        &amp;lt;b id=&quot;AnchorContentToggle&quot; title=&quot;收起&quot; style=&quot;cursor">
+  <meta name="description" content="由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。
+1.jQuery插件开发方式jQuery插件开发方式主要有三种：通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建
+2.插件中的this在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS代码让Markdown自动生成目录">
-<meta property="og:url" content="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/index.html">
+<meta property="og:title" content="jquery插件开发">
+<meta property="og:url" content="https://itwanggj.github.io/2016/09/02/jquery插件开发/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
-<meta property="og:description" content="前言已经习惯了使用Markdown书写文章，既方便也通用。但一直在想：应该生成一个方便的导航目录，这样查看文章更方便。于是有了本文。
-实现方法页面结构1234567//放入在文章页内容前面&amp;lt;div class=&quot;BlogAnchor&quot;&amp;gt;    &amp;lt;p&amp;gt;        &amp;lt;b id=&quot;AnchorContentToggle&quot; title=&quot;收起&quot; style=&quot;cursor">
-<meta property="og:updated_time" content="2017-02-26T06:41:31.000Z">
+<meta property="og:description" content="由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。
+1.jQuery插件开发方式jQuery插件开发方式主要有三种：通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建
+2.插件中的this在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。">
+<meta property="og:updated_time" content="2017-03-01T14:25:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS代码让Markdown自动生成目录">
-<meta name="twitter:description" content="前言已经习惯了使用Markdown书写文章，既方便也通用。但一直在想：应该生成一个方便的导航目录，这样查看文章更方便。于是有了本文。
-实现方法页面结构1234567//放入在文章页内容前面&amp;lt;div class=&quot;BlogAnchor&quot;&amp;gt;    &amp;lt;p&amp;gt;        &amp;lt;b id=&quot;AnchorContentToggle&quot; title=&quot;收起&quot; style=&quot;cursor">
+<meta name="twitter:title" content="jquery插件开发">
+<meta name="twitter:description" content="由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。
+1.jQuery插件开发方式jQuery插件开发方式主要有三种：通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建
+2.插件中的this在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
   
@@ -86,14 +89,14 @@
 
     <a class="github-fork" href="https://github.com/itwanggj" style="position:fixed;right:0;top:0;" target="_blank"><img src="https://itwanggj.github.io/images/forkme.png"></a>
     <div class="outer">
-      <section id="main"><article id="post-JS代码让Markdown自动生成目录" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-jquery插件开发" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2016/03/03/JS代码让Markdown自动生成目录/" class="article-date">
-  <time datetime="2016-03-03T12:32:04.000Z" itemprop="datePublished">2016-03-03</time>
+    <h3 href="/2016/09/02/jquery插件开发/" class="article-date">
+  <time datetime="2016-09-02T11:12:34.000Z" itemprop="datePublished">2016-09-02</time>
 </h3>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Markdown/">Markdown</a>►<a class="article-category-link" href="/categories/Markdown/hexo目录/">hexo目录</a>
+    <a class="article-category-link" href="/categories/Jqery插件/">Jqery插件</a>►<a class="article-category-link" href="/categories/Jqery插件/Javascript/">Javascript</a>
   </div>
 
   </div>
@@ -106,7 +109,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JS代码让Markdown自动生成目录
+      jquery插件开发
     </h1>
   
 
@@ -115,23 +118,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>已经习惯了使用Markdown书写文章，既方便也通用。<br>但一直在想：应该生成一个方便的导航目录，这样查看文章更方便。于是有了本文。</p>
-<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><h3 id="页面结构"><a href="#页面结构" class="headerlink" title="页面结构"></a>页面结构</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//放入在文章页内容前面</div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"BlogAnchor"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">b</span> <span class="attr">id</span>=<span class="string">"AnchorContentToggle"</span> <span class="attr">title</span>=<span class="string">"收起"</span> <span class="attr">style</span>=<span class="string">"cursor:pointer;"</span>&gt;</span>目录[-]<span class="tag">&lt;/<span class="name">b</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"AnchorContent"</span> <span class="attr">id</span>=<span class="string">"AnchorContent"</span>&gt;</span> <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+        <p>由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。</p>
+<h2 id="1-jQuery插件开发方式"><a href="#1-jQuery插件开发方式" class="headerlink" title="1.jQuery插件开发方式"></a>1.jQuery插件开发方式</h2><p>jQuery插件开发方式主要有三种：<br>通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建</p>
+<h2 id="2-插件中的this"><a href="#2-插件中的this" class="headerlink" title="2.插件中的this"></a>2.插件中的this</h2><p>在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。这里的this已经是jQuery元素，无需再用美元符包装。</p>
+<h2 id="3-jQuery链式调用"><a href="#3-jQuery链式调用" class="headerlink" title="3.jQuery链式调用"></a>3.jQuery链式调用</h2><p>jQuery支持链式调用，要让插件不打破这个链式调用，只需要return一下，实例如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = function()&#123;</div><div class="line">    //这里面this指的是jquery选中的元素</div><div class="line">    this.css(&apos;color&apos;,&apos;red&apos;);</div><div class="line">    return this.each(function()&#123;</div><div class="line">        //对每个元素进行操作</div><div class="line">        ¥(this).append(&apos; &apos;+¥(this).attr(&apos;href&apos;));</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
-<h3 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在文章中查找title并填充到div AnchorContent中</span></div><div class="line">$(<span class="string">".post-content"</span>).find(<span class="string">"h2,h3,h4,h5,h6"</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i,item</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> tag = $(item).get(<span class="number">0</span>).localName;</div><div class="line">    $(item).attr(<span class="string">"id"</span>,<span class="string">"wow"</span>+i);</div><div class="line">    $(<span class="string">"#AnchorContent"</span>).append(<span class="string">'&lt;li&gt;&lt;a class="new'</span>+tag+<span class="string">' anchor-link" onclick="return false;" href="#" link="#wow'</span>+i+<span class="string">'"&gt;'</span>+(i+<span class="number">1</span>)+<span class="string">" · "</span>+$(<span class="keyword">this</span>).text()+<span class="string">'&lt;/a&gt;&lt;/li&gt;'</span>);</div><div class="line">    $(<span class="string">".newh2"</span>).css(<span class="string">"margin-left"</span>,<span class="number">0</span>);</div><div class="line">    $(<span class="string">".newh3"</span>).css(<span class="string">"margin-left"</span>,<span class="number">20</span>);</div><div class="line">    $(<span class="string">".newh4"</span>).css(<span class="string">"margin-left"</span>,<span class="number">40</span>);</div><div class="line">    $(<span class="string">".newh5"</span>).css(<span class="string">"margin-left"</span>,<span class="number">60</span>);</div><div class="line">    $(<span class="string">".newh6"</span>).css(<span class="string">"margin-left"</span>,<span class="number">80</span>);</div><div class="line">&#125;);</div><div class="line">$(<span class="string">"#AnchorContentToggle"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> text = $(<span class="keyword">this</span>).html();</div><div class="line">    <span class="keyword">if</span>(text==<span class="string">"目录[-]"</span>)&#123;</div><div class="line">        $(<span class="keyword">this</span>).html(<span class="string">"目录[+]"</span>);</div><div class="line">        $(<span class="keyword">this</span>).attr(&#123;<span class="string">"title"</span>:<span class="string">"展开"</span>&#125;);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        $(<span class="keyword">this</span>).html(<span class="string">"目录[-]"</span>);</div><div class="line">        $(<span class="keyword">this</span>).attr(&#123;<span class="string">"title"</span>:<span class="string">"收起"</span>&#125;);</div><div class="line">    &#125;</div><div class="line">    $(<span class="string">"#AnchorContent"</span>).toggle();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*导航*/</span></div><div class="line"><span class="selector-class">.BlogAnchor</span> &#123;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#f4f7f9</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">180%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.BlogAnchor</span> <span class="selector-tag">p</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">18px</span>;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#15a230</span>;</div><div class="line">    <span class="attribute">margin-bottom</span>: <span class="number">0.3em</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.BlogAnchor</span> <span class="selector-class">.AnchorContent</span> &#123;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">5px</span> <span class="number">0px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.BlogAnchor</span> <span class="selector-tag">li</span>&#123;</div><div class="line">    <span class="attribute">text-indent</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#AnchorContentToggle</span> &#123;</div><div class="line">    <span class="attribute">font-size</span>: <span class="number">13px</span>;</div><div class="line">    <span class="attribute">font-weight</span>: normal;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#FFF</span>;</div><div class="line">    <span class="attribute">display</span>: inline-block;</div><div class="line">    <span class="attribute">line-height</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#5cc26f</span>;</div><div class="line">    <span class="attribute">font-style</span>: normal;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">8px</span>;</div><div class="line">    <span class="attribute">margin-right</span>: <span class="number">10px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.BlogAnchor</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</div><div class="line">    <span class="attribute">color</span>: <span class="number">#5cc26f</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.BlogAnchor</span> <span class="selector-tag">a</span> &#123;</div><div class="line">    <span class="attribute">text-decoration</span>: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="导航扩展"><a href="#导航扩展" class="headerlink" title="导航扩展"></a>导航扩展</h3><p>同时也可以实现锚点之间的平滑滚动，使用jquery animate<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">".anchor-link"</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">    $(<span class="string">"html,body"</span>).animate(&#123;scrollTop: $($(this).attr(<span class="string">"link"</span>)).offset().top&#125;, 1000);</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<h2 id="4-让插件接受参数"><a href="#4-让插件接受参数" class="headerlink" title="4.让插件接受参数"></a>4.让插件接受参数</h2><p>在处理插件参数的接收上，通常用jQuery的extend方法，当给extend传递单个对象时，这个对象会合并到jquery身上，直接可以调用，当给extend方法传递一个以上参数时，它会将所有参数对象合并<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> defaults = &#123;</div><div class="line">        <span class="string">'color'</span>:<span class="string">'red'</span>,</div><div class="line">        <span class="string">'fontSize'</span>:<span class="string">'12px'</span></div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> setting = ¥.extend(defaults,options);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.css(&#123;</div><div class="line">        <span class="string">'color'</span>:setting.color,</div><div class="line">        <span class="string">'fontSize'</span>:setting.fontSize</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>说明：由于博客markdown对“💲”有特殊处理，所以文中全部用“#”替换。</p>
 
       
     </div>
     <footer class="article-footer">
       <div class="article-footer-content">
         
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HEXO/">HEXO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/" data-id="cizr21tta0001kc3abyxv5iuz" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/" data-id="cizr21ttq0009kc3aiy7flk8u" class="article-share-link">Share</a>
         
-          <a href="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/#ds-thread" class="article-comment-link">Comments</a>
+          <a href="https://itwanggj.github.io/2016/09/02/jquery插件开发/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -142,19 +146,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/17/Http状态码/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/10/08/前端自动化工程搭建--Gulp/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Http状态码
+          前端自动化工程搭建--Gulp（Windows版）
         
       </div>
     </a>
   
   
-    <a href="/2016/02/21/使用GitHub + Hexo搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/08/16/如何使用text-algin实现文本两端对齐/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">使用GitHub + Hexo搭建博客（Mac版）</div>
+      <div class="article-nav-title">如何使用text-algin:justify实现文本两端对齐</div>
     </a>
   
 </nav>
@@ -164,7 +168,7 @@
 
 
   <section id="comments">
-    <div id="ds-thread" class="ds-thread" data-thread-key="2016/03/03/JS代码让Markdown自动生成目录/" data-title="JS代码让Markdown自动生成目录" data-url="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/"></div>
+    <div id="ds-thread" class="ds-thread" data-thread-key="2016/09/02/jquery插件开发/" data-title="jquery插件开发" data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/"></div>
   </section>
 
 </section>

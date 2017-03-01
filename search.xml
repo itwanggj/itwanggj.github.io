@@ -249,6 +249,19 @@
     </entry>
     
     <entry>
+      <title><![CDATA[jquery插件开发]]></title>
+      <url>https://itwanggj.github.io/2016/09/02/jquery%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</url>
+      <content type="html"><![CDATA[<p>由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。</p>
+<h2 id="1-jQuery插件开发方式"><a href="#1-jQuery插件开发方式" class="headerlink" title="1.jQuery插件开发方式"></a>1.jQuery插件开发方式</h2><p>jQuery插件开发方式主要有三种：<br>通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建</p>
+<h2 id="2-插件中的this"><a href="#2-插件中的this" class="headerlink" title="2.插件中的this"></a>2.插件中的this</h2><p>在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。这里的this已经是jQuery元素，无需再用美元符包装。</p>
+<h2 id="3-jQuery链式调用"><a href="#3-jQuery链式调用" class="headerlink" title="3.jQuery链式调用"></a>3.jQuery链式调用</h2><p>jQuery支持链式调用，要让插件不打破这个链式调用，只需要return一下，实例如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = function()&#123;</div><div class="line">    //这里面this指的是jquery选中的元素</div><div class="line">    this.css(&apos;color&apos;,&apos;red&apos;);</div><div class="line">    return this.each(function()&#123;</div><div class="line">        //对每个元素进行操作</div><div class="line">        ¥(this).append(&apos; &apos;+¥(this).attr(&apos;href&apos;));</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="4-让插件接受参数"><a href="#4-让插件接受参数" class="headerlink" title="4.让插件接受参数"></a>4.让插件接受参数</h2><p>在处理插件参数的接收上，通常用jQuery的extend方法，当给extend传递单个对象时，这个对象会合并到jquery身上，直接可以调用，当给extend方法传递一个以上参数时，它会将所有参数对象合并<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> defaults = &#123;</div><div class="line">        <span class="string">'color'</span>:<span class="string">'red'</span>,</div><div class="line">        <span class="string">'fontSize'</span>:<span class="string">'12px'</span></div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">var</span> setting = ¥.extend(defaults,options);</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.css(&#123;</div><div class="line">        <span class="string">'color'</span>:setting.color,</div><div class="line">        <span class="string">'fontSize'</span>:setting.fontSize</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>说明：由于博客markdown对“💲”有特殊处理，所以文中全部用“#”替换。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[如何使用text-algin:justify实现文本两端对齐]]></title>
       <url>https://itwanggj.github.io/2016/08/16/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8text-algin%E5%AE%9E%E7%8E%B0%E6%96%87%E6%9C%AC%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90/</url>
       <content type="html"><![CDATA[<p>最近在写页面的时候遇到了一个问题—当行文本双端对齐，大家都知道CSS属性中有一个“text-align:justify”，但是这个属性使用的时候，要求还是挺多的，尤其是要实现单行文本双端对齐。关于两端对齐，大漠和张鑫旭的博客中都有文章讲，非常不错，推荐给大家：<br><a href="http://www.zhangxinxu.com/wordpress/2011/03/displayinline-blocktext-alignjustify下列表的两端对齐布局/" target="_blank" rel="external">display:inline-block/text-align:justify下列表的两端对齐布局</a><br><a href="http://www.w3cplus.com/css/text-align-justify-and-rwd.html" target="_blank" rel="external">Text-align:Justify和RWD</a></p>
