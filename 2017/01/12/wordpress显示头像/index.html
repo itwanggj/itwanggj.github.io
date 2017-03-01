@@ -5,14 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>Category: Javascript | Guojun Wang&#39;s Blog</title>
+  <title>wordpress显示头像 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Guojun Wang's Blog">
-<meta property="og:url" content="https://itwanggj.github.io/categories/Jqery插件/Javascript/index.html">
+  <meta name="description" content="方法一安装插件，搜索avatar，选择WP User Avatar，点击现在安装
+方法二调用ssl 头像链接https还是没被墙的，而且速度还不错，直接调用这个最简单了。如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码12345function get_ssl_avatar($avatar) &amp;#123;  $avatar = preg_replace(&apos;/.*\/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="wordpress显示头像">
+<meta property="og:url" content="https://itwanggj.github.io/2017/01/12/wordpress显示头像/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
+<meta property="og:description" content="方法一安装插件，搜索avatar，选择WP User Avatar，点击现在安装
+方法二调用ssl 头像链接https还是没被墙的，而且速度还不错，直接调用这个最简单了。如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码12345function get_ssl_avatar($avatar) &amp;#123;  $avatar = preg_replace(&apos;/.*\/">
+<meta property="og:image" content="https://itwanggj.github.io/images/search-plugins.png">
+<meta property="og:updated_time" content="2017-03-01T15:04:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Guojun Wang's Blog">
+<meta name="twitter:title" content="wordpress显示头像">
+<meta name="twitter:description" content="方法一安装插件，搜索avatar，选择WP User Avatar，点击现在安装
+方法二调用ssl 头像链接https还是没被墙的，而且速度还不错，直接调用这个最简单了。如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码12345function get_ssl_avatar($avatar) &amp;#123;  $avatar = preg_replace(&apos;/.*\/">
+<meta name="twitter:image" content="https://itwanggj.github.io/images/search-plugins.png">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
   
@@ -79,40 +88,92 @@
 
     <a class="github-fork" href="https://github.com/itwanggj" style="position:fixed;right:0;top:0;" target="_blank"><img src="https://itwanggj.github.io/images/forkme.png"></a>
     <div class="outer">
-      <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <h3 href="/2016/09/02/jquery插件开发/" class="archive-article-date">
-  <time datetime="2016-09-02T11:12:34.000Z" itemprop="datePublished">Sep 2</time>
+      <section id="main"><article id="post-wordpress显示头像" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/01/12/wordpress显示头像/" class="article-date">
+  <time datetime="2017-01-12T11:12:34.000Z" itemprop="datePublished">2017-01-12</time>
 </h3>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/wordpress/">wordpress</a>►<a class="article-category-link" href="/categories/wordpress/javascript/">javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/09/02/jquery插件开发/">jquery插件开发</a>
+    <h1 class="article-title" itemprop="name">
+      wordpress显示头像
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="调用ssl-头像链接"><a href="#调用ssl-头像链接" class="headerlink" title="调用ssl 头像链接"></a>调用ssl 头像链接</h3><p>https还是没被墙的，而且速度还不错，直接调用这个最简单了。<br>如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ssl_avatar</span>(<span class="params">$avatar</span>) </span>&#123;</div><div class="line">  $avatar = preg_replace(<span class="string">'/.*\/avatar\/(.*)\?s=([\d]+)&amp;.*/'</span>,<span class="string">'&lt;img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2"&gt;'</span>,$avatar);</div><div class="line">  <span class="keyword">return</span> $avatar;</div><div class="line">&#125;</div><div class="line">add_filter(<span class="string">'get_avatar'</span>, <span class="string">'get_ssl_avatar'</span>);</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>优点：简单稳定</p>
+<p>缺点: 当头像特别大时速度可能略慢</p>
+<h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><h3 id="本地缓存"><a href="#本地缓存" class="headerlink" title="本地缓存"></a>本地缓存</h3><p>下面的代码加到functions.php中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">my_avatar</span>(<span class="params">$avatar</span>) </span>&#123;</div><div class="line">  $tmp = strpos($avatar, <span class="string">'http'</span>);</div><div class="line">  $g = substr($avatar, $tmp, strpos($avatar, <span class="string">"'"</span>, $tmp) - $tmp);</div><div class="line">  $tmp = strpos($g, <span class="string">'avatar/'</span>) + <span class="number">7</span>;</div><div class="line">  $f = substr($g, $tmp, strpos($g, <span class="string">"?"</span>, $tmp) - $tmp);</div><div class="line">  $w = get_bloginfo(<span class="string">'wpurl'</span>);</div><div class="line">  $e = ABSPATH .<span class="string">'avatar/'</span>. $f .<span class="string">'.jpg'</span>;</div><div class="line">  $t = <span class="number">1209600</span>; <span class="comment">//設定14天, 單位:秒</span></div><div class="line">  <span class="keyword">if</span> ( !is_file($e) || (time() - filemtime($e)) &gt; $t ) &#123; <span class="comment">//當頭像不存在或文件超過14天才更新</span></div><div class="line">    copy(htmlspecialchars_decode($g), $e);</div><div class="line">  &#125; <span class="keyword">else</span>  $avatar = strtr($avatar, array(<span class="function"><span class="params">$g</span> =&gt;</span> $w.<span class="string">'/avatar/'</span>.$f.<span class="string">'.jpg'</span>));</div><div class="line">  <span class="keyword">if</span> (filesize($e) &lt; <span class="number">500</span>) copy($w.<span class="string">'/avatar/default.jpg'</span>, $e);</div><div class="line">  <span class="keyword">return</span> $avatar;</div><div class="line">&#125;</div><div class="line">add_filter(<span class="string">'get_avatar'</span>, <span class="string">'my_avatar'</span>);</div></pre></td></tr></table></figure></p>
+<p>在WordPress安装根目（即跟wp-content等文件夹同一目录下）下新建一个名为 avatar 的文件夹 ，并给予写权限。放入一张同尺寸的头像图片命名为default.jpg。</p>
+<p>优点:和主机速度挂钩，如果你的服务器特别快则头像加载也特别快</p>
+<p>缺点:只能缓存一个尺寸的头像，国内主机无法使用</p>
+<h3 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h3><p>七牛缓存</p>
+<p>请度娘或Google.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/" data-id="cizr3faiy000iux3ab9oh7u57" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2017/01/12/wordpress显示头像/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
   </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/01/说说Javascript函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          说说Javascript函数(转)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/04/wordpress发送邮件/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">wordpress发送邮件</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
-  
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2017/01/12/wordpress显示头像/" data-title="wordpress显示头像" data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/"></div>
+  </section>
+
 </section>
       
       <aside id="sidebar">

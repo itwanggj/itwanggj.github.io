@@ -125,7 +125,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizr3e1fd001gug3ajjxya69j" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/" data-id="cizr3fajt0019ux3al9n7dr6d" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/24/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -184,7 +184,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizr3e1f60015ug3afbm8ayel" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cizr3fajn0013ux3am1c48lpv" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -244,7 +244,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/01/说说Javascript函数/" data-id="cizr3e1f9001bug3axpwii5pd" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/01/说说Javascript函数/" data-id="cizr3faju001bux3ag35mcrj1" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/01/说说Javascript函数/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -259,10 +259,10 @@
 
 
   
-    <article id="post-wordpress发送邮件" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-wordpress显示头像" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/01/12/wordpress发送邮件/" class="article-date">
-  <time datetime="2017-01-12T03:11:34.000Z" itemprop="datePublished">2017-01-12</time>
+    <h3 href="/2017/01/12/wordpress显示头像/" class="article-date">
+  <time datetime="2017-01-12T11:12:34.000Z" itemprop="datePublished">2017-01-12</time>
 </h3>
     
   <div class="article-category">
@@ -279,7 +279,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/12/wordpress发送邮件/">wordpress发送邮件</a>
+      <a class="article-title" href="/2017/01/12/wordpress显示头像/">wordpress显示头像</a>
     </h1>
   
 
@@ -287,10 +287,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>安装插件搜索WP SMTP，从搜索结果中选择Easy WP SMTP点击现在安装，如下图：<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""><br>配置邮件服务信息<br><img src="https://itwanggj.github.io/images/settings.png" alt=""><br>
+        <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="调用ssl-头像链接"><a href="#调用ssl-头像链接" class="headerlink" title="调用ssl 头像链接"></a>调用ssl 头像链接</h3><p>https还是没被墙的，而且速度还不错，直接调用这个最简单了。<br>如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ssl_avatar</span>(<span class="params">$avatar</span>) </span>&#123;</div><div class="line">  $avatar = preg_replace(<span class="string">'/.*\/avatar\/(.*)\?s=([\d]+)&amp;.*/'</span>,<span class="string">'&lt;img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2"&gt;'</span>,$avatar);</div><div class="line">  <span class="keyword">return</span> $avatar;</div><div class="line">&#125;</div><div class="line">add_filter(<span class="string">'get_avatar'</span>, <span class="string">'get_ssl_avatar'</span>);</div></pre></td></tr></table></figure></p>
         
           <p class="article-more-link">
-            <a href="/2017/01/12/wordpress发送邮件/#more">Read More</a>
+            <a href="/2017/01/12/wordpress显示头像/#more">Read More</a>
           </p>
         
       
@@ -300,9 +301,9 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress发送邮件/" data-id="cizr3e1ep000bug3ar6umbktx" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/" data-id="cizr3faiy000iux3ab9oh7u57" class="article-share-link">Share</a>
         
-          <a href="https://itwanggj.github.io/2017/01/12/wordpress发送邮件/#ds-thread" class="article-comment-link">Comments</a>
+          <a href="https://itwanggj.github.io/2017/01/12/wordpress显示头像/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -315,10 +316,10 @@
 
 
   
-    <article id="post-wordpress显示头像" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-wordpress发送邮件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/01/04/wordpress显示头像/" class="article-date">
-  <time datetime="2017-01-04T11:12:34.000Z" itemprop="datePublished">2017-01-04</time>
+    <h3 href="/2017/01/04/wordpress发送邮件/" class="article-date">
+  <time datetime="2017-01-04T03:11:34.000Z" itemprop="datePublished">2017-01-04</time>
 </h3>
     
   <div class="article-category">
@@ -335,7 +336,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/04/wordpress显示头像/">wordpress显示头像</a>
+      <a class="article-title" href="/2017/01/04/wordpress发送邮件/">wordpress发送邮件</a>
     </h1>
   
 
@@ -343,11 +344,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="调用ssl-头像链接"><a href="#调用ssl-头像链接" class="headerlink" title="调用ssl 头像链接"></a>调用ssl 头像链接</h3><p>https还是没被墙的，而且速度还不错，直接调用这个最简单了。<br>如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ssl_avatar</span>(<span class="params">$avatar</span>) </span>&#123;</div><div class="line">  $avatar = preg_replace(<span class="string">'/.*\/avatar\/(.*)\?s=([\d]+)&amp;.*/'</span>,<span class="string">'&lt;img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2"&gt;'</span>,$avatar);</div><div class="line">  <span class="keyword">return</span> $avatar;</div><div class="line">&#125;</div><div class="line">add_filter(<span class="string">'get_avatar'</span>, <span class="string">'get_ssl_avatar'</span>);</div></pre></td></tr></table></figure></p>
+        <p>安装插件搜索WP SMTP，从搜索结果中选择Easy WP SMTP点击现在安装，如下图：<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""><br>配置邮件服务信息<br><img src="https://itwanggj.github.io/images/settings.png" alt=""><br>
         
           <p class="article-more-link">
-            <a href="/2017/01/04/wordpress显示头像/#more">Read More</a>
+            <a href="/2017/01/04/wordpress发送邮件/#more">Read More</a>
           </p>
         
       
@@ -357,9 +357,9 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/04/wordpress显示头像/" data-id="cizr3e1ew000kug3a0zq0vagn" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/04/wordpress发送邮件/" data-id="cizr3fait000eux3a96xu5air" class="article-share-link">Share</a>
         
-          <a href="https://itwanggj.github.io/2017/01/04/wordpress显示头像/#ds-thread" class="article-comment-link">Comments</a>
+          <a href="https://itwanggj.github.io/2017/01/04/wordpress发送邮件/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -422,7 +422,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cizr3e1f40011ug3aroowec9f" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cizr3fajk000zux3a9lowl5x7" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -483,7 +483,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LESS/">LESS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SCSS/">SCSS</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/" data-id="cizr3e1f70017ug3ag77cr8l0" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/" data-id="cizr3fajp0015ux3ag37mh3a6" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -551,7 +551,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/" data-id="cizr3e1f1000uug3aabzjr6tj" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/" data-id="cizr3fajg000xux3aco0k21ts" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -610,7 +610,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/" data-id="cizr3e1ek0007ug3a4yubl05p" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/" data-id="cizr3faip0009ux3a39t6kgeh" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/09/02/jquery插件开发/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -668,7 +668,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/" data-id="cizr3e1f2000yug3a5dnv2f8h" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/" data-id="cizr3fajd000uux3a8mzydbes" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -711,11 +711,11 @@
           </li>
         
           <li>
-            <a href="/2017/01/12/wordpress发送邮件/">wordpress发送邮件</a>
+            <a href="/2017/01/12/wordpress显示头像/">wordpress显示头像</a>
           </li>
         
           <li>
-            <a href="/2017/01/04/wordpress显示头像/">wordpress显示头像</a>
+            <a href="/2017/01/04/wordpress发送邮件/">wordpress发送邮件</a>
           </li>
         
       </ul>
