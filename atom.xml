@@ -113,9 +113,9 @@
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
@@ -248,11 +248,11 @@
       <category term="MAC版" scheme="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
     
     
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
       <category term="Apache" scheme="https://itwanggj.github.io/tags/Apache/"/>
     
       <category term="服务器" scheme="https://itwanggj.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="数据可视化" scheme="https://itwanggj.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
@@ -263,7 +263,7 @@
     <link href="https://itwanggj.github.io/2016/11/21/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3vertical-align%E6%80%BB%E7%BB%93/"/>
     <id>https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/</id>
     <published>2016-11-21T01:12:34.000Z</published>
-    <updated>2017-03-01T13:50:33.000Z</updated>
+    <updated>2017-03-01T13:59:26.000Z</updated>
     
     <content type="html"><![CDATA[<p>看了慕课网关于vertical-align的视频讲解，感觉讲的挺深，所以总结了一下<br>vertical-align的百分比值相对于line-height计算<br>IE6/7下line-height不支持小数</p>
 <h2 id="vertical-align起作用的前提"><a href="#vertical-align起作用的前提" class="headerlink" title="vertical-align起作用的前提"></a>vertical-align起作用的前提</h2><p>该属性应用于inline水平或者table-cell元素</p>
@@ -317,7 +317,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"30%"</span> <span class="attr">src</span>=<span class="string">"./111.jpg"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">     <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">     <span class="attribute">background-color</span>: yellowgreen;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*主体元素inline-block化img本身是inline，</span></div><div class="line">但是里面的content为inline-block*/</div><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">40%</span>; </div><div class="line">    <span class="attribute">vertical-align</span>:middle;         </div><div class="line">&#125;</div><div class="line"><span class="comment">/*宽度为0，高度100%的辅助元素*/</span></div><div class="line"><span class="selector-tag">i</span> &#123;</div><div class="line">     <span class="attribute">display</span>: inline-block;</div><div class="line">     <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">     <span class="attribute">vertical-align</span>:middle;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*给以上 img 和 i 元素添加 vertical-align:middle;  */</span></div></pre></td></tr></table></figure>
 <p>实现垂直居中，效果如下：<br><img src="https://itwanggj.github.io/images/center.png" alt=""><br>b.大小不固定的文字垂直居中：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">  	<span class="tag">&lt;<span class="name">span</span>&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;<span class="name">br</span>/&gt;</span>测试文字垂直居中<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">     <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">     <span class="attribute">background-color</span>: yellowgreen;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">span</span>&#123;</div><div class="line">     <span class="attribute">display</span>: inline-block;</div><div class="line">     <span class="attribute">vertical-align</span>:middle;         </div><div class="line">&#125;</div><div class="line"><span class="selector-tag">i</span>&#123;</div><div class="line">     <span class="attribute">display</span>: inline-block;</div><div class="line">     <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">     <span class="attribute">vertical-align</span>:middle;</div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">``` <span class="selector-tag">css</span></div><div class="line"><span class="selector-tag">p</span>&#123;</div><div class="line">     <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">     <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">     <span class="attribute">background-color</span>: yellowgreen;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*主体元素inline-block化img本身是inline，</span></div><div class="line">但是里面的content为inline-block*/</div><div class="line"><span class="selector-tag">img</span>&#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">40%</span>; </div><div class="line">    <span class="attribute">vertical-align</span>:middle;         </div><div class="line">&#125;</div><div class="line"><span class="comment">/*宽度为0，高度100%的辅助元素*/</span></div><div class="line"><span class="selector-tag">i</span> &#123;</div><div class="line">     <span class="attribute">display</span>: inline-block;</div><div class="line">     <span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">     <span class="attribute">vertical-align</span>:middle;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*给以上 img 和 i 元素添加 vertical-align:middle;  */</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">p &#123;</div><div class="line">   width: 500px;</div><div class="line">   height: 200px;</div><div class="line">   background-color: yellowgreen;</div><div class="line">&#125;</div><div class="line">span &#123;</div><div class="line">     display: inline-block;</div><div class="line">     vertical-align:middle;         </div><div class="line">&#125;</div><div class="line">i &#123;</div><div class="line">     display: inline-block;</div><div class="line">     height: 100%;</div><div class="line">     vertical-align:middle;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
@@ -430,13 +430,37 @@
       <category term="Gulp" scheme="https://itwanggj.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Gulp/"/>
     
     
-      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
       <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
+    
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
     
       <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用text-algin:justify实现文本两端对齐</title>
+    <link href="https://itwanggj.github.io/2016/08/16/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8text-algin%E5%AE%9E%E7%8E%B0%E6%96%87%E6%9C%AC%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90/"/>
+    <id>https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/</id>
+    <published>2016-08-15T16:00:00.000Z</published>
+    <updated>2017-03-01T14:01:09.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="text-align" scheme="https://itwanggj.github.io/categories/text-align/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/categories/text-align/CSS/"/>
+    
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
   </entry>
   
@@ -776,15 +800,15 @@
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
+    
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
+    
       <category term="css" scheme="https://itwanggj.github.io/tags/css/"/>
     
       <category term="js" scheme="https://itwanggj.github.io/tags/js/"/>
     
       <category term="bootstrap" scheme="https://itwanggj.github.io/tags/bootstrap/"/>
-    
-      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
@@ -944,11 +968,11 @@
       <category term="博客优化" scheme="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     
     
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
+    
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
-    
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="github" scheme="https://itwanggj.github.io/tags/github/"/>
     
