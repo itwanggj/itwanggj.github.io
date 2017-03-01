@@ -113,9 +113,9 @@
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
-      <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
-    
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
+      <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
@@ -189,13 +189,44 @@
   </entry>
   
   <entry>
+    <title>wordpress发送邮件</title>
+    <link href="https://itwanggj.github.io/2017/01/12/wordpress%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/"/>
+    <id>https://itwanggj.github.io/2017/01/12/wordpress发送邮件/</id>
+    <published>2017-01-12T03:11:34.000Z</published>
+    <updated>2017-03-01T15:03:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>安装插件搜索WP SMTP，从搜索结果中选择Easy WP SMTP点击现在安装，如下图：<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""><br>配置邮件服务信息<br><img src="https://itwanggj.github.io/images/settings.png" alt=""><br><a id="more"></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安装插件搜索WP SMTP，从搜索结果中选择Easy WP SMTP点击现在安装，如下图：&lt;br&gt;&lt;img src=&quot;https://itwanggj.github.io/images/search-plugins.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;配置邮件服务信息&lt;br&gt;&lt;img src=&quot;https://itwanggj.github.io/images/settings.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="wordpress" scheme="https://itwanggj.github.io/categories/wordpress/"/>
+    
+      <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
+    
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
+    
+      <category term="wordpress" scheme="https://itwanggj.github.io/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
     <title>wordpress显示头像</title>
     <link href="https://itwanggj.github.io/2017/01/04/wordpress%E6%98%BE%E7%A4%BA%E5%A4%B4%E5%83%8F/"/>
     <id>https://itwanggj.github.io/2017/01/04/wordpress显示头像/</id>
     <published>2017-01-04T11:12:34.000Z</published>
-    <updated>2017-03-01T14:54:30.000Z</updated>
+    <updated>2017-03-01T15:01:39.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://maoqiq.github.io/images/search-plugins.png" alt=""></p>
+    <content type="html"><![CDATA[<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""></p>
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="调用ssl-头像链接"><a href="#调用ssl-头像链接" class="headerlink" title="调用ssl 头像链接"></a>调用ssl 头像链接</h3><p>https还是没被墙的，而且速度还不错，直接调用这个最简单了。<br>如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ssl_avatar</span>(<span class="params">$avatar</span>) </span>&#123;</div><div class="line">  $avatar = preg_replace(<span class="string">'/.*\/avatar\/(.*)\?s=([\d]+)&amp;.*/'</span>,<span class="string">'&lt;img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2"&gt;'</span>,$avatar);</div><div class="line">  <span class="keyword">return</span> $avatar;</div><div class="line">&#125;</div><div class="line">add_filter(<span class="string">'get_avatar'</span>, <span class="string">'get_ssl_avatar'</span>);</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>优点：简单稳定</p>
@@ -210,7 +241,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h2&gt;&lt;p&gt;安装插件，搜索avatar，选择WP User Avatar，点击现在安装&lt;br&gt;&lt;img src=&quot;https://maoqiq.github.io/images/search-plugins.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;方法一&quot;&gt;&lt;a href=&quot;#方法一&quot; class=&quot;headerlink&quot; title=&quot;方法一&quot;&gt;&lt;/a&gt;方法一&lt;/h2&gt;&lt;p&gt;安装插件，搜索avatar，选择WP User Avatar，点击现在安装&lt;br&gt;&lt;img src=&quot;https://itwanggj.github.io/images/search-plugins.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;方法二&quot;&gt;&lt;a href=&quot;#方法二&quot; class=&quot;headerlink&quot; title=&quot;方法二&quot;&gt;&lt;/a&gt;方法二&lt;/h2&gt;&lt;h3 id=&quot;调用ssl-头像链接&quot;&gt;&lt;a href=&quot;#调用ssl-头像链接&quot; class=&quot;headerlink&quot; title=&quot;调用ssl 头像链接&quot;&gt;&lt;/a&gt;调用ssl 头像链接&lt;/h3&gt;&lt;p&gt;https还是没被墙的，而且速度还不错，直接调用这个最简单了。&lt;br&gt;如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;get_ssl_avatar&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;$avatar&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  $avatar = preg_replace(&lt;span class=&quot;string&quot;&gt;&#39;/.*\/avatar\/(.*)\?s=([\d]+)&amp;amp;.*/&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;&amp;lt;img src=&quot;https://secure.gravatar.com/avatar/$1?s=$2&quot; class=&quot;avatar avatar-$2&quot; height=&quot;$2&quot; width=&quot;$2&quot;&amp;gt;&#39;&lt;/span&gt;,$avatar);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; $avatar;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;add_filter(&lt;span class=&quot;string&quot;&gt;&#39;get_avatar&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;get_ssl_avatar&#39;&lt;/span&gt;);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
@@ -220,9 +251,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -290,11 +321,11 @@
       <category term="MAC版" scheme="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
     
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="Apache" scheme="https://itwanggj.github.io/tags/Apache/"/>
     
       <category term="服务器" scheme="https://itwanggj.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="数据可视化" scheme="https://itwanggj.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
@@ -548,9 +579,9 @@
       <category term="CSS" scheme="https://itwanggj.github.io/categories/text-align/CSS/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1009,9 +1040,9 @@
       <category term="error" scheme="https://itwanggj.github.io/categories/npm/error/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1042,9 +1073,9 @@
       <category term="error" scheme="https://itwanggj.github.io/categories/npm/error/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1145,47 +1176,6 @@
       <category term="github" scheme="https://itwanggj.github.io/tags/github/"/>
     
       <category term="hexo" scheme="https://itwanggj.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://itwanggj.github.io/2015/12/20/hello-world/"/>
-    <id>https://itwanggj.github.io/2015/12/20/hello-world/</id>
-    <published>2015-12-19T16:00:00.000Z</published>
-    <updated>2017-02-26T06:48:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Hello World" scheme="https://itwanggj.github.io/categories/Hello-World/"/>
-    
-      <category term="hexo" scheme="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
-    
-    
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
-      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
   </entry>
   

@@ -4,6 +4,64 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/01/12/wordpress%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/</loc>
+    <lastmod>2017-03-01T15:03:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>wordpress发送邮件</title>
+        <pubTime>2017-01-12T03:11:34.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>Html</tag>
+         
+        <tag>wordpress</tag>
+         
+         
+           
+             
+              <breadCrumb title="wordpress" url="https://itwanggj.github.io/categories/wordpress/"/>
+          
+             
+              <breadCrumb title="javascript" url="https://itwanggj.github.io/categories/wordpress/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2017/01/04/wordpress%E6%98%BE%E7%A4%BA%E5%A4%B4%E5%83%8F/</loc>
+    <lastmod>2017-03-01T15:01:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>wordpress显示头像</title>
+        <pubTime>2017-01-04T11:12:34.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>Html</tag>
+         
+        <tag>wordpress</tag>
+         
+         
+           
+             
+              <breadCrumb title="wordpress" url="https://itwanggj.github.io/categories/wordpress/"/>
+          
+             
+              <breadCrumb title="javascript" url="https://itwanggj.github.io/categories/wordpress/javascript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/02/01/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2017-03-01T14:57:57.000Z</lastmod>
     <data>
@@ -33,35 +91,6 @@
 
     
   <url>
-    <loc>https://itwanggj.github.io/2017/01/04/wordpress%E6%98%BE%E7%A4%BA%E5%A4%B4%E5%83%8F/</loc>
-    <lastmod>2017-03-01T14:54:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>wordpress显示头像</title>
-        <pubTime>2017-01-04T11:12:34.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>CSS</tag>
-         
-        <tag>Html</tag>
-         
-        <tag>wordpress</tag>
-         
-         
-           
-             
-              <breadCrumb title="wordpress" url="https://itwanggj.github.io/categories/wordpress/"/>
-          
-             
-              <breadCrumb title="javascript" url="https://itwanggj.github.io/categories/wordpress/javascript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://itwanggj.github.io/2016/02/11/%E4%BD%BF%E7%94%A8npm%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%8C%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
     <lastmod>2017-03-01T14:43:20.000Z</lastmod>
     <data>
@@ -69,9 +98,9 @@
         <title>使用npm安装一些包失败解决办法</title>
         <pubTime>2016-02-11T05:12:34.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>Html</tag>
          
@@ -98,9 +127,9 @@
         <title>npm-error</title>
         <pubTime>2016-01-18T11:12:34.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>Html</tag>
          
@@ -158,9 +187,9 @@
         <title>如何使用text-algin:justify实现文本两端对齐</title>
         <pubTime>2016-08-16T03:12:34.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>Html</tag>
          
@@ -270,11 +299,11 @@
         <title>如何配置Apache服务器（MAC版）</title>
         <pubTime>2016-12-09T03:12:34.000Z</pubTime>
         
-        <tag>D3</tag>
-         
         <tag>Apache</tag>
          
         <tag>服务器</tag>
+         
+        <tag>D3</tag>
          
         <tag>数据可视化</tag>
          
@@ -412,9 +441,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>CSS3</tag>
-         
         <tag>D3</tag>
+         
+        <tag>CSS3</tag>
          
         <tag>html</tag>
          
@@ -526,9 +555,9 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>Html</tag>
          

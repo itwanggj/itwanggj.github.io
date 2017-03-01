@@ -97,9 +97,16 @@
     </entry>
     
     <entry>
+      <title><![CDATA[wordpress发送邮件]]></title>
+      <url>https://itwanggj.github.io/2017/01/12/wordpress%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<p>安装插件搜索WP SMTP，从搜索结果中选择Easy WP SMTP点击现在安装，如下图：<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""><br>配置邮件服务信息<br><img src="https://itwanggj.github.io/images/settings.png" alt=""><br><a id="more"></a></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[wordpress显示头像]]></title>
       <url>https://itwanggj.github.io/2017/01/04/wordpress%E6%98%BE%E7%A4%BA%E5%A4%B4%E5%83%8F/</url>
-      <content type="html"><![CDATA[<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://maoqiq.github.io/images/search-plugins.png" alt=""></p>
+      <content type="html"><![CDATA[<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>安装插件，搜索avatar，选择WP User Avatar，点击现在安装<br><img src="https://itwanggj.github.io/images/search-plugins.png" alt=""></p>
 <h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><h3 id="调用ssl-头像链接"><a href="#调用ssl-头像链接" class="headerlink" title="调用ssl 头像链接"></a>调用ssl 头像链接</h3><p>https还是没被墙的，而且速度还不错，直接调用这个最简单了。<br>如果你的网站启用了ssl则不需要了，否则functions.php 加入如下代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_ssl_avatar</span>(<span class="params">$avatar</span>) </span>&#123;</div><div class="line">  $avatar = preg_replace(<span class="string">'/.*\/avatar\/(.*)\?s=([\d]+)&amp;.*/'</span>,<span class="string">'&lt;img src="https://secure.gravatar.com/avatar/$1?s=$2" class="avatar avatar-$2" height="$2" width="$2"&gt;'</span>,$avatar);</div><div class="line">  <span class="keyword">return</span> $avatar;</div><div class="line">&#125;</div><div class="line">add_filter(<span class="string">'get_avatar'</span>, <span class="string">'get_ssl_avatar'</span>);</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>优点：简单稳定</p>
