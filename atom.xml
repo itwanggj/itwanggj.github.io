@@ -113,20 +113,20 @@
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
   </entry>
   
   <entry>
-    <title>说说Javascript函数</title>
-    <link href="https://itwanggj.github.io/2017/01/20/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/"/>
-    <id>https://itwanggj.github.io/2017/01/20/说说Javascript函数/</id>
-    <published>2017-01-20T01:09:10.000Z</published>
-    <updated>2017-02-26T13:30:10.000Z</updated>
+    <title>说说Javascript函数(转)</title>
+    <link href="https://itwanggj.github.io/2017/02/01/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/"/>
+    <id>https://itwanggj.github.io/2017/02/01/说说Javascript函数/</id>
+    <published>2017-02-01T01:09:10.000Z</published>
+    <updated>2017-03-01T14:57:57.000Z</updated>
     
     <content type="html"><![CDATA[<p>相信凡是接触过编程的人对函数这个概念必然不会陌生，几乎所有的编程语言都会引入函数这个概念，而函数的实质就是封装一丢执行流程的组合，方便我们在各处进行调用，在面向对象没有出现之前，函数式编程曾经是主流的编程模式。</p>
 <p>由于需要在团队做一个有关Javascript函数的分享，顺便就整理了一些内容记录下来。Javascript的函数是我们在coding时不可避免的工具，然而我们很少会去追本溯源地挖掘函数究竟是什么？事实上，就好像一个组装好的玩具，如果不将其拆开，似乎也能玩得得心应手，但却总觉得少了些什么，不如拆拆看，说不定会有有趣的发现。</p>
@@ -160,7 +160,7 @@
 <p>call和apply的主要区别就是传参的方式有所不同，apply是将参数作为数组的形式传入，而call则是将参数逐个传入。</p>
 <p>除了call和apply外，ECMAScript 5提供的bind也可以改变函数的this:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">    <span class="string">'a'</span> : <span class="number">1</span>,</div><div class="line">    <span class="string">'b'</span> : <span class="number">2</span></div><div class="line"> &#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">num1, num2</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.a = num1;</div><div class="line">    <span class="keyword">this</span>.b = num2;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> goo = foo.bind(obj);</div><div class="line"></div><div class="line">goo(<span class="number">2</span>, <span class="number">3</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(obj); <span class="comment">// &#123;'a': 2, 'b': 3&#125;</span></div></pre></td></tr></table></figure></p>
 <p>另外之前提过，函数还带有toString方法可以返回函数的代码，这里就不在赘述。</p>
-<p>本文主要通过解剖的方式分析了Javascript函数对象的种种，当然，对函数的研究还远不止于此，接下来我会在其他文章中逐一描述。</p>
+<p>本文主要通过解剖的方式分析了Javascript函数对象的种种，当然，对函数的研究还远不止于此，接下来我会在其他文章中逐一描述。<br>说明：原文转载于<a href="https://lightechen.github.io" target="_blank" rel="external">https://lightechen.github.io</a></p>
 ]]></content>
     
     <summary type="html">
@@ -220,9 +220,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -290,11 +290,11 @@
       <category term="MAC版" scheme="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
     
     
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
       <category term="Apache" scheme="https://itwanggj.github.io/tags/Apache/"/>
     
       <category term="服务器" scheme="https://itwanggj.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="数据可视化" scheme="https://itwanggj.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
@@ -548,9 +548,9 @@
       <category term="CSS" scheme="https://itwanggj.github.io/categories/text-align/CSS/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1009,9 +1009,9 @@
       <category term="error" scheme="https://itwanggj.github.io/categories/npm/error/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1042,9 +1042,9 @@
       <category term="error" scheme="https://itwanggj.github.io/categories/npm/error/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1181,9 +1181,9 @@
       <category term="hexo" scheme="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     

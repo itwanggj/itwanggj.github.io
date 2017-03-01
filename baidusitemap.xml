@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/02/01/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/</loc>
+    <lastmod>2017-03-01T14:57:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>说说Javascript函数(转)</title>
+        <pubTime>2017-02-01T01:09:10.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>CSS3</tag>
+         
+        <tag>html</tag>
+         
+        <tag>HTML5</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
+          
+             
+              <breadCrumb title="函数" url="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/01/04/wordpress%E6%98%BE%E7%A4%BA%E5%A4%B4%E5%83%8F/</loc>
     <lastmod>2017-03-01T14:54:30.000Z</lastmod>
     <data>
@@ -11,9 +40,9 @@
         <title>wordpress显示头像</title>
         <pubTime>2017-01-04T11:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -40,9 +69,9 @@
         <title>使用npm安装一些包失败解决办法</title>
         <pubTime>2016-02-11T05:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -69,9 +98,9 @@
         <title>npm-error</title>
         <pubTime>2016-01-18T11:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -129,9 +158,9 @@
         <title>如何使用text-algin:justify实现文本两端对齐</title>
         <pubTime>2016-08-16T03:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -241,11 +270,11 @@
         <title>如何配置Apache服务器（MAC版）</title>
         <pubTime>2016-12-09T03:12:34.000Z</pubTime>
         
+        <tag>D3</tag>
+         
         <tag>Apache</tag>
          
         <tag>服务器</tag>
-         
-        <tag>D3</tag>
          
         <tag>数据可视化</tag>
          
@@ -374,35 +403,6 @@
 
     
   <url>
-    <loc>https://itwanggj.github.io/2017/01/20/%E8%AF%B4%E8%AF%B4Javascript%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2017-02-26T13:30:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>说说Javascript函数</title>
-        <pubTime>2017-01-20T01:09:10.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>CSS3</tag>
-         
-        <tag>html</tag>
-         
-        <tag>HTML5</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
-          
-             
-              <breadCrumb title="函数" url="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://itwanggj.github.io/2017/02/08/%E6%9D%A5%E8%87%AACSS3%E7%9A%84%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%8D%EF%BC%8D%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%8E%AF%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/</loc>
     <lastmod>2017-02-26T13:12:44.000Z</lastmod>
     <data>
@@ -412,9 +412,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>D3</tag>
-         
         <tag>CSS3</tag>
+         
+        <tag>D3</tag>
          
         <tag>html</tag>
          
@@ -526,9 +526,9 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
