@@ -111,11 +111,11 @@
       <category term="D3" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -178,9 +178,9 @@
       <category term="函数" scheme="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -279,22 +279,26 @@
   </entry>
   
   <entry>
-    <title>My-article-10</title>
-    <link href="https://itwanggj.github.io/2016/10/04/My-article-10/"/>
-    <id>https://itwanggj.github.io/2016/10/04/My-article-10/</id>
-    <published>2016-10-04T15:32:04.000Z</published>
-    <updated>2017-01-08T08:54:57.000Z</updated>
+    <title>前端自动化工程搭建--Gulp</title>
+    <link href="https://itwanggj.github.io/2016/10/08/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA--Gulp/"/>
+    <id>https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/</id>
+    <published>2016-10-08T12:12:04.000Z</published>
+    <updated>2017-03-01T12:33:11.000Z</updated>
     
     <summary type="html">
     
     </summary>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/categories/D3/"/>
     
     
       <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
+      <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
+    
+      <category term="Grunt" scheme="https://itwanggj.github.io/tags/Grunt/"/>
     
   </entry>
   
@@ -632,11 +636,11 @@
       <category term="面试题总结" scheme="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/"/>
     
     
+      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
+    
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
-    
-      <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
       <category term="css" scheme="https://itwanggj.github.io/tags/css/"/>
     
@@ -847,9 +851,9 @@
       <category term="hexo" scheme="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     

@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2016/10/08/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA--Gulp/</loc>
+    <lastmod>2017-03-01T12:33:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端自动化工程搭建--Gulp</title>
+        <pubTime>2016-10-08T12:12:04.000Z</pubTime>
+        
+        <tag>Bootstrap</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>Gulp</tag>
+         
+        <tag>Grunt</tag>
+         
+         
+           
+             
+              <breadCrumb title="D3" url="https://itwanggj.github.io/categories/D3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/12/09/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEApache%E6%9C%8D%E5%8A%A1%E5%99%A8(Mac%E7%89%88)/</loc>
     <lastmod>2017-02-28T14:20:31.000Z</lastmod>
     <data>
@@ -151,9 +177,9 @@
         <title>说说Javascript函数</title>
         <pubTime>2017-01-20T01:09:10.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>html</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>CSS3</tag>
          
@@ -180,11 +206,11 @@
         <title>来自CSS3的黑科技－－如何实现环形进度条</title>
         <pubTime>2017-02-08T09:49:50.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>html</tag>
          
         <tag>D3</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>CSS3</tag>
          
@@ -209,11 +235,11 @@
         <title>前端开发面试题整理以及解答思路</title>
         <pubTime>2016-04-01T02:32:22.000Z</pubTime>
         
+        <tag>Html</tag>
+         
         <tag>jQuery</tag>
          
         <tag>Ionic</tag>
-         
-        <tag>Html</tag>
          
         <tag>css</tag>
          
@@ -296,9 +322,9 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>Html</tag>
          
@@ -389,27 +415,6 @@
         <tag>D3</tag>
          
         <tag>require</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/10/04/My-article-10/</loc>
-    <lastmod>2017-01-08T08:54:57.000Z</lastmod>
-    <data>
-        <display>
-        <title>My-article-10</title>
-        <pubTime>2016-10-04T15:32:04.000Z</pubTime>
-        
-        <tag>Bootstrap</tag>
-         
-        <tag>jQuery</tag>
-         
-        <tag>Ionic</tag>
          
          
            
