@@ -111,11 +111,11 @@
       <category term="D3" scheme="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -178,9 +178,9 @@
       <category term="函数" scheme="https://itwanggj.github.io/categories/JavaScript/%E5%87%BD%E6%95%B0/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
@@ -279,11 +279,11 @@
   </entry>
   
   <entry>
-    <title>前端自动化工程搭建--Gulp</title>
+    <title>前端自动化工程搭建--Gulp（Windows版）</title>
     <link href="https://itwanggj.github.io/2016/10/08/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA--Gulp/"/>
     <id>https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/</id>
     <published>2016-10-08T12:12:04.000Z</published>
-    <updated>2017-03-01T12:53:39.000Z</updated>
+    <updated>2017-03-01T12:57:23.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="搭建准备工作"><a href="#搭建准备工作" class="headerlink" title="搭建准备工作"></a>搭建准备工作</h2><h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><p>首先Gulp是基于Nodejs的，所以安装Nodejs是前提，Node可以说是前端神器，基于Node有各种各样的工具，正是因为这些工具让我们非常方便的构建前端工程。</p>
 <h3 id="更改Node插件默认安装位置"><a href="#更改Node插件默认安装位置" class="headerlink" title="更改Node插件默认安装位置"></a>更改Node插件默认安装位置</h3><p>Windows电脑的话，我自己一般不喜欢在C盘安装太多与系统无关的东西，而通过Node自带的npm安装的插件默认在C盘，但是我将Node安装到D盘后，想让插件就安装在Nodejs的主目录下，怎么办呢？</p>
@@ -298,6 +298,7 @@
 </ol>
 <p>经过这四步的设置就可以让安装的Node插件放在Nodejs的主目录了。</p>
 <h3 id="安装Gulp"><a href="#安装Gulp" class="headerlink" title="安装Gulp"></a>安装Gulp</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//全局安装Gulp</div><div class="line">npm install -g gulp</div><div class="line">//在项目中安装Gulp</div><div class="line">npm install --save-dev gulp</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>运行gulp -v,如果不报错，表示安装成功</p>
 <p>然后在命令行运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init</div></pre></td></tr></table></figure></p>
 <p>让项目生产package.json文件</p>
@@ -340,7 +341,19 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;搭建准备工作&quot;&gt;&lt;a href=&quot;#搭建准备工作&quot; class=&quot;headerlink&quot; title=&quot;搭建准备工作&quot;&gt;&lt;/a&gt;搭建准备工作&lt;/h2&gt;&lt;h3 id=&quot;安装Node&quot;&gt;&lt;a href=&quot;#安装Node&quot; class=&quot;headerlink&quot; titl
+      &lt;h2 id=&quot;搭建准备工作&quot;&gt;&lt;a href=&quot;#搭建准备工作&quot; class=&quot;headerlink&quot; title=&quot;搭建准备工作&quot;&gt;&lt;/a&gt;搭建准备工作&lt;/h2&gt;&lt;h3 id=&quot;安装Node&quot;&gt;&lt;a href=&quot;#安装Node&quot; class=&quot;headerlink&quot; title=&quot;安装Node&quot;&gt;&lt;/a&gt;安装Node&lt;/h3&gt;&lt;p&gt;首先Gulp是基于Nodejs的，所以安装Nodejs是前提，Node可以说是前端神器，基于Node有各种各样的工具，正是因为这些工具让我们非常方便的构建前端工程。&lt;/p&gt;
+&lt;h3 id=&quot;更改Node插件默认安装位置&quot;&gt;&lt;a href=&quot;#更改Node插件默认安装位置&quot; class=&quot;headerlink&quot; title=&quot;更改Node插件默认安装位置&quot;&gt;&lt;/a&gt;更改Node插件默认安装位置&lt;/h3&gt;&lt;p&gt;Windows电脑的话，我自己一般不喜欢在C盘安装太多与系统无关的东西，而通过Node自带的npm安装的插件默认在C盘，但是我将Node安装到D盘后，想让插件就安装在Nodejs的主目录下，怎么办呢？&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在Node主目录下新建”node_global”及”node_cache”两个文件夹&lt;/li&gt;
+&lt;li&gt;启动cmd，输入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//后面的设置目录根据你的目录结构自行更改&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm config &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; prefix &lt;span class=&quot;string&quot;&gt;&quot;D:\Program\nodejs\node_global&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm config &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; cache &lt;span class=&quot;string&quot;&gt;&quot;D:\Program\nodejs\node_cache&quot;&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ol&gt;
+&lt;li&gt;关闭cmd，打开系统对话框，“我的电脑”右键“属性”-“高级系统设置”-“高级”-“环境变量”。&lt;/li&gt;
+&lt;li&gt;进入环境变量对话框，在系统变量下新建”NODE_PATH”，输入”D:\Program\nodejs\node_global\node_module”。 由于改变了module的默认地址，所以上面的用户变量都要跟着改变一下（用户变量”PATH”修改为”D:\Program\nodejs\node_global\”），要不使用module的时候会导致输入命令出现“xxx不是内部或外部命令，也不是可运行的程序或批处理文件”这个错误。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;经过这四步的设置就可以让安装的Node插件放在Nodejs的主目录了。&lt;/p&gt;
+&lt;h3 id=&quot;安装Gulp&quot;&gt;&lt;a href=&quot;#安装Gulp&quot; class=&quot;headerlink&quot; title=&quot;安装Gulp&quot;&gt;&lt;/a&gt;安装Gulp&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;//全局安装Gulp&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm install -g gulp&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;//在项目中安装Gulp&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;npm install --save-dev gulp&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
