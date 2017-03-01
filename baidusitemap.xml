@@ -4,6 +4,62 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2015/12/28/npm-error/</loc>
+    <lastmod>2017-03-01T14:33:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>npm-error</title>
+        <pubTime>2015-12-28T11:12:34.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>Html</tag>
+         
+        <tag>npm</tag>
+         
+         
+           
+             
+              <breadCrumb title="npm" url="https://itwanggj.github.io/categories/npm/"/>
+          
+             
+              <breadCrumb title="error" url="https://itwanggj.github.io/categories/npm/error/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2016/08/16/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8text-algin%E5%AE%9E%E7%8E%B0%E6%96%87%E6%9C%AC%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90/</loc>
+    <lastmod>2017-03-01T14:31:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何使用text-algin:justify实现文本两端对齐</title>
+        <pubTime>2016-08-16T03:12:34.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>Html</tag>
+         
+         
+           
+             
+              <breadCrumb title="text-align" url="https://itwanggj.github.io/categories/text-align/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://itwanggj.github.io/categories/text-align/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/09/02/jquery%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2017-03-01T14:27:58.000Z</lastmod>
     <data>
@@ -24,33 +80,6 @@
           
              
               <breadCrumb title="Javascript" url="https://itwanggj.github.io/categories/Jqery%E6%8F%92%E4%BB%B6/Javascript/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/08/16/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8text-algin%E5%AE%9E%E7%8E%B0%E6%96%87%E6%9C%AC%E4%B8%A4%E7%AB%AF%E5%AF%B9%E9%BD%90/</loc>
-    <lastmod>2017-03-01T14:09:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何使用text-algin:justify实现文本两端对齐</title>
-        <pubTime>2016-08-15T16:00:00.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>CSS</tag>
-         
-        <tag>Html</tag>
-         
-         
-           
-             
-              <breadCrumb title="text-align" url="https://itwanggj.github.io/categories/text-align/"/>
-          
-             
-              <breadCrumb title="CSS" url="https://itwanggj.github.io/categories/text-align/CSS/"/>
           
         </display>
     </data>
