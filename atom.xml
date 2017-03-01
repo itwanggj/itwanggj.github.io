@@ -430,9 +430,9 @@
       <category term="Gulp" scheme="https://itwanggj.github.io/categories/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Gulp/"/>
     
     
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
-    
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
+    
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="Gulp" scheme="https://itwanggj.github.io/tags/Gulp/"/>
     
@@ -776,15 +776,15 @@
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
-      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
-    
-      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
-    
       <category term="css" scheme="https://itwanggj.github.io/tags/css/"/>
     
       <category term="js" scheme="https://itwanggj.github.io/tags/js/"/>
     
       <category term="bootstrap" scheme="https://itwanggj.github.io/tags/bootstrap/"/>
+    
+      <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
+    
+      <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
     
   </entry>
   
@@ -944,11 +944,11 @@
       <category term="博客优化" scheme="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
-    
       <category term="jQuery" scheme="https://itwanggj.github.io/tags/jQuery/"/>
     
       <category term="Ionic" scheme="https://itwanggj.github.io/tags/Ionic/"/>
+    
+      <category term="Bootstrap" scheme="https://itwanggj.github.io/tags/Bootstrap/"/>
     
       <category term="github" scheme="https://itwanggj.github.io/tags/github/"/>
     
