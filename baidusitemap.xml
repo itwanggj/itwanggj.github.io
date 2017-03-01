@@ -4,8 +4,37 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2016/11/21/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3vertical-align%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2017-03-01T13:23:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>深入理解vertical-align总结</title>
+        <pubTime>2016-11-21T01:12:34.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>SASS</tag>
+         
+        <tag>LESS</tag>
+         
+        <tag>SCSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="vertical-align" url="https://itwanggj.github.io/categories/vertical-align/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://itwanggj.github.io/categories/vertical-align/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/10/08/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA--Gulp/</loc>
-    <lastmod>2017-03-01T12:57:23.000Z</lastmod>
+    <lastmod>2017-03-01T13:00:54.000Z</lastmod>
     <data>
         <display>
         <title>前端自动化工程搭建--Gulp（Windows版）</title>
@@ -182,9 +211,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>html</tag>
-         
         <tag>CSS3</tag>
+         
+        <tag>html</tag>
          
         <tag>HTML5</tag>
          
@@ -211,11 +240,11 @@
         
         <tag>JavaScript</tag>
          
-        <tag>html</tag>
+        <tag>CSS3</tag>
          
         <tag>D3</tag>
          
-        <tag>CSS3</tag>
+        <tag>html</tag>
          
          
            
@@ -404,26 +433,5 @@
     
     
     
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/11/04/My-article-11/</loc>
-    <lastmod>2017-01-08T08:55:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>My-article-11</title>
-        <pubTime>2016-11-04T15:32:04.000Z</pubTime>
-        
-        <tag>html</tag>
-         
-        <tag>D3</tag>
-         
-        <tag>require</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
     
 </urlset>
