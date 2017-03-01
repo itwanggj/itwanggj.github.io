@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://itwanggj.github.io/2015/12/28/npm-error/</loc>
-    <lastmod>2017-03-01T14:33:50.000Z</lastmod>
+    <loc>https://itwanggj.github.io/2016/01/18/npm-error/</loc>
+    <lastmod>2017-03-01T14:37:40.000Z</lastmod>
     <data>
         <display>
         <title>npm-error</title>
-        <pubTime>2015-12-28T11:12:34.000Z</pubTime>
+        <pubTime>2016-01-18T11:12:34.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -26,6 +26,37 @@
           
              
               <breadCrumb title="error" url="https://itwanggj.github.io/categories/npm/error/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2015/12/24/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-03-01T14:37:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
+        <pubTime>2015-12-24T10:32:04.000Z</pubTime>
+        
+        <tag>jQuery</tag>
+         
+        <tag>Bootstrap</tag>
+         
+        <tag>Ionic</tag>
+         
+        <tag>github</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
+             
+              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
           
         </display>
     </data>
@@ -152,11 +183,11 @@
         <title>如何配置Apache服务器（MAC版）</title>
         <pubTime>2016-12-09T03:12:34.000Z</pubTime>
         
-        <tag>D3</tag>
-         
         <tag>Apache</tag>
          
         <tag>服务器</tag>
+         
+        <tag>D3</tag>
          
         <tag>数据可视化</tag>
          
@@ -323,9 +354,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>CSS3</tag>
-         
         <tag>D3</tag>
+         
+        <tag>CSS3</tag>
          
         <tag>html</tag>
          
@@ -450,37 +481,6 @@
           
              
               <breadCrumb title="hexo" url="https://itwanggj.github.io/categories/Hello-World/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2016/02/21/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-02-26T06:41:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
-        <pubTime>2016-02-21T10:32:04.000Z</pubTime>
-        
-        <tag>jQuery</tag>
-         
-        <tag>Bootstrap</tag>
-         
-        <tag>Ionic</tag>
-         
-        <tag>github</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-          
-             
-              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
           
         </display>
     </data>
