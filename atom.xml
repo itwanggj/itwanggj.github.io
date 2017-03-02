@@ -113,9 +113,9 @@
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
@@ -321,11 +321,11 @@
       <category term="MAC版" scheme="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
     
     
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
+    
       <category term="Apache" scheme="https://itwanggj.github.io/tags/Apache/"/>
     
       <category term="服务器" scheme="https://itwanggj.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="数据可视化" scheme="https://itwanggj.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
@@ -1012,7 +1012,7 @@
     <link href="https://itwanggj.github.io/2016/02/24/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E9%97%AD%E5%8C%85/"/>
     <id>https://itwanggj.github.io/2016/02/24/聊聊JS那些事--闭包/</id>
     <published>2016-02-24T14:12:34.000Z</published>
-    <updated>2017-03-02T11:51:37.000Z</updated>
+    <updated>2017-03-02T11:53:39.000Z</updated>
     
     <content type="html"><![CDATA[<p>闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。</p>
 <h2 id="一、变量的作用域"><a href="#一、变量的作用域" class="headerlink" title="一、变量的作用域"></a>一、变量的作用域</h2><p>要理解闭包，首先必须理解Javascript特殊的变量作用域。<br>变量的作用域无非就是两种：全局变量和局部变量。<br>Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　alert(n);</div><div class="line">&#125;</div><div class="line">f1(); <span class="comment">// 999</span></div></pre></td></tr></table></figure></p>
