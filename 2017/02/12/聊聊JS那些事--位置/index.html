@@ -8,27 +8,24 @@
   <title>聊聊JS那些事--位置 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1.元素的偏移量元素的偏移量包括元素在屏幕上占用的所有可见的空间。元素的可见大小由其高度、宽度决定，包括所有内边距、滚动条和边框大小（注意：这里并不包括外边距）。
-2.客户区大小元素的客户区大小指的是元素内容机器内边距占据空间的大小。要确定浏览器可见窗口的大小，可以使用document.documentElement或document.body（IE7之前的版本中）。
-从以上两个我们可以看出元素偏">
+2.客户区大小元素的客户区大小指的是元素内容机器内边距占据空间的大小。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="聊聊JS那些事--位置">
 <meta property="og:url" content="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
 <meta property="og:description" content="1.元素的偏移量元素的偏移量包括元素在屏幕上占用的所有可见的空间。元素的可见大小由其高度、宽度决定，包括所有内边距、滚动条和边框大小（注意：这里并不包括外边距）。
-2.客户区大小元素的客户区大小指的是元素内容机器内边距占据空间的大小。要确定浏览器可见窗口的大小，可以使用document.documentElement或document.body（IE7之前的版本中）。
-从以上两个我们可以看出元素偏">
+2.客户区大小元素的客户区大小指的是元素内容机器内边距占据空间的大小。">
 <meta property="og:image" content="https://itwanggj.github.io/images/offset_table.png">
 <meta property="og:image" content="https://itwanggj.github.io/images/offset.png">
 <meta property="og:image" content="https://itwanggj.github.io/images/client_table.png">
 <meta property="og:image" content="https://itwanggj.github.io/images/client.png">
 <meta property="og:image" content="https://itwanggj.github.io/images/scroll_table.png">
 <meta property="og:image" content="https://itwanggj.github.io/images/scroll.png">
-<meta property="og:updated_time" content="2017-03-02T12:18:20.000Z">
+<meta property="og:updated_time" content="2017-03-02T12:24:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊JS那些事--位置">
 <meta name="twitter:description" content="1.元素的偏移量元素的偏移量包括元素在屏幕上占用的所有可见的空间。元素的可见大小由其高度、宽度决定，包括所有内边距、滚动条和边框大小（注意：这里并不包括外边距）。
-2.客户区大小元素的客户区大小指的是元素内容机器内边距占据空间的大小。要确定浏览器可见窗口的大小，可以使用document.documentElement或document.body（IE7之前的版本中）。
-从以上两个我们可以看出元素偏">
+2.客户区大小元素的客户区大小指的是元素内容机器内边距占据空间的大小。">
 <meta name="twitter:image" content="https://itwanggj.github.io/images/offset_table.png">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
@@ -126,7 +123,7 @@
       
         
         <h2 id="1-元素的偏移量"><a href="#1-元素的偏移量" class="headerlink" title="1.元素的偏移量"></a>1.元素的偏移量</h2><p>元素的偏移量包括元素在屏幕上占用的所有可见的空间。元素的可见大小由其高度、宽度决定，包括所有内边距、滚动条和边框大小（注意：这里并不包括外边距）。<br><img src="https://itwanggj.github.io/images/offset_table.png" alt=""><br><img src="https://itwanggj.github.io/images/offset.png" alt=""></p>
-<h2 id="2-客户区大小"><a href="#2-客户区大小" class="headerlink" title="2.客户区大小"></a>2.客户区大小</h2><p>元素的客户区大小指的是元素内容机器内边距占据空间的大小。<br><img src="https://itwanggj.github.io/images/client_table.png" alt=""><br><img src="https://itwanggj.github.io/images/client.png" alt=""><br>要确定浏览器可见窗口的大小，可以使用document.documentElement或document.body（IE7之前的版本中）。</p>
+<h2 id="2-客户区大小"><a href="#2-客户区大小" class="headerlink" title="2.客户区大小"></a>2.客户区大小</h2><p>元素的客户区大小指的是元素内容机器内边距占据空间的大小。<br><img src="https://itwanggj.github.io/images/client_table.png" alt=""><br><a id="more"></a><br><img src="https://itwanggj.github.io/images/client.png" alt=""><br>要确定浏览器可见窗口的大小，可以使用document.documentElement或document.body（IE7之前的版本中）。</p>
 <p>从以上两个我们可以看出元素偏移量（offset）与客户区大小（client）的区别在于有没有包含边框，客户区大小不包含边框。</p>
 <h2 id="3-滚动大小"><a href="#3-滚动大小" class="headerlink" title="3.滚动大小"></a>3.滚动大小</h2><p><img src="https://itwanggj.github.io/images/scroll_table.png" alt=""><br>scrollWidth和scrollHeight主要用于确定元素内容的实际大小。所以带有垂直滚动条的页面总高度就是document.documentElement.scrollHeight。<br><img src="https://itwanggj.github.io/images/scroll.png" alt=""></p>
 <h2 id="4-窗口大小"><a href="#4-窗口大小" class="headerlink" title="4.窗口大小"></a>4.窗口大小</h2><p>在现代主流浏览器中提供了四个属性确定窗口的大小，分别为：innerWidth、innerHeight、outerWidth和outerHeight。</p>
@@ -134,7 +131,12 @@
 <h3 id="4-2-innerWidth和innerHeight"><a href="#4-2-innerWidth和innerHeight" class="headerlink" title="4.2. innerWidth和innerHeight"></a>4.2. innerWidth和innerHeight</h3><p>返回该容器中页面试图去的大小（减去边框宽度）</p>
 <h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>这里在《javascript高级程序设计》（第三版）中写道在chrome中outer与inner返回的值是一样的，这算是chrome的一个bug，我在chrome 53中已经修复，但是在QQ浏览器中（内核为chromium47）依旧是相等的，这需要注意！<br>clientWidth和clientHeight。</p>
 <p>在主流浏览器中，document.docuementElement.clientWidth和document.documentElement.clientHeight中保存的是页面视口信息。返回的值与window.innerHeight，window.innerWidth一样。<br>但是window.innerHeight在IE8及以下浏览器中结果是undefined，而document.documentElement.clientHeight还有值。所以在各个浏览器下取得页面视口大小的代码如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> pageWidth=<span class="built_in">window</span>.innerWidth,</div><div class="line">    pageHeight=<span class="built_in">window</span>.innerHeight;</div><div class="line"><span class="keyword">if</span>(<span class="keyword">typeof</span> pageWidth !== <span class="string">'number'</span>)&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="built_in">document</span>.compatMode === <span class="string">'CSS1Compat'</span>)&#123;</div><div class="line">        pageWidth=<span class="built_in">document</span>.documentElement.clientWidth;</div><div class="line">        pageHeight=<span class="built_in">document</span>.documentElement.clientHeight;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        pageWidth=<span class="built_in">document</span>.body.clientWidth;</div><div class="line">        pageHeight=<span class="built_in">document</span>.body.clientHeight;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>代码中document.compatMode用于判断浏览器处于什么模式，它有两个值：<br>BackCompat:浏览器处于怪异模式<br>CSS1Compat:浏览器处于标准模式<br>不同模式下，获取浏览器的宽度的方法不同，在代码中已经做了判断。</p>
+<p>代码中document.compatMode用于判断浏览器处于什么模式，它有两个值：</p>
+<ul>
+<li>BackCompat:浏览器处于怪异模式</li>
+<li>CSS1Compat:浏览器处于标准模式</li>
+</ul>
+<p>不同模式下，获取浏览器的宽度的方法不同，在代码中已经做了判断。</p>
 
       
     </div>
@@ -143,7 +145,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/" data-id="cizscxsq10019te3a238vm2kg" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/" data-id="cizsd5ukp0015va3as0uhy9nc" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/#ds-thread" class="article-comment-link">Comments</a>
         
