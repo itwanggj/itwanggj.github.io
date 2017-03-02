@@ -81,6 +81,64 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-如何使用text-algin实现文本两端对齐" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2016/08/16/如何使用text-algin实现文本两端对齐/" class="article-date">
+  <time datetime="2016-08-16T03:12:34.000Z" itemprop="datePublished">2016-08-16</time>
+</h3>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/text-align/">text-align</a>►<a class="article-category-link" href="/categories/text-align/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/16/如何使用text-algin实现文本两端对齐/">如何使用text-algin:justify实现文本两端对齐</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近在写页面的时候遇到了一个问题—当行文本双端对齐，大家都知道CSS属性中有一个“text-align:justify”，但是这个属性使用的时候，要求还是挺多的，尤其是要实现单行文本双端对齐。关于两端对齐，大漠和张鑫旭的博客中都有文章讲，非常不错，推荐给大家：<br><a href="http://www.zhangxinxu.com/wordpress/2011/03/displayinline-blocktext-alignjustify下列表的两端对齐布局/">display:inline-block/text-align:justify下列表的两端对齐布局</a><br><a href="http://www.w3cplus.com/css/text-align-justify-and-rwd.html">Text-align:Justify和RWD</a></p>
+<h2 id="text-align-justify与text-align-last-justify"><a href="#text-align-justify与text-align-last-justify" class="headerlink" title="text-align:justify与text-align-last:justify"></a>text-align:justify与text-align-last:justify</h2><h3 id="1-text-align"><a href="#1-text-align" class="headerlink" title="1.text-align"></a>1.text-align</h3><p>MDN中这样介绍到：“text-align CSS属性定义行内内容（例如文字）如何相对它的块父元素对齐。text-align并不控制块元素自己的对齐，只控制它的行内内容的对齐。”从这里可以看出，控制文本居中对齐直接写text-align:justify就可以。但是这对于多行文本（即有文本换行）除了最后一行都可以实现两端对齐，最后一行依旧左对齐。所以就需要控制最后一行文本对齐方式的CSS属性：text-align-last。</p>
+<h3 id="2-text-align-last"><a href="#2-text-align-last" class="headerlink" title="2.text-align-last"></a>2.text-align-last</h3><p>text-align-last 属性规定如何对齐文本的最后一行。但是这里注意一点text-align-last 属性只有在 text-align 属性设置为 “justify” 时才起作用。所以，利用这个属性就可以控制最后一行文本的对齐方式。我们可以想象，如果是单行文本，就可以当作最后一行文本处理，直接设置text-align-last:justify来实现当行文本两端对齐，可惜的是，这样的方法兼容性并不好。<br><img src="https://itwanggj.github.io/images/text-algin-last.png" alt=""><br>
+        
+          <p class="article-more-link">
+            <a href="/2016/08/16/如何使用text-algin实现文本两端对齐/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/" data-id="cizsc3tm70010n53ar8eqbk6i" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-SASS语法--高级" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2016/07/13/SASS语法--高级/" class="article-date">
@@ -126,7 +184,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/" data-id="cizsc1uef000dm63abharvyx9" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/" data-id="cizsc3tli0006n53aqfi45mug" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/07/13/SASS语法--高级/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -185,7 +243,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cizsc1uee000am63alpg72e2l" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cizsc3tlh0005n53a4ha0mgz2" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -244,7 +302,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cizsc1uea0007m63ahciwrpzr" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cizsc3tln000bn53ag5266j2s" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/15/SASS语法--基础/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -304,7 +362,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cizsc1uec0009m63auhqa44nc" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cizsc3tli0007n53ahm4b8ssj" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/05/SASS语法--安装/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -377,7 +435,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bootstrap/">bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/04/01/前端开发面试题整理以及解答思路/" data-id="cizsc1ueu000vm63a6md8le17" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/04/01/前端开发面试题整理以及解答思路/" data-id="cizsc3tm1000sn53acu91g1ap" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/04/01/前端开发面试题整理以及解答思路/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -435,7 +493,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/404/">404</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/">Http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/03/17/Http状态码/" data-id="cizsc1ue50003m63ad03k34lt" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/03/17/Http状态码/" data-id="cizsc3tl60001n53acr9gnbl0" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/03/17/Http状态码/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -492,76 +550,9 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HEXO/">HEXO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/" data-id="cizsc1ue00001m63aa16lg27i" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/" data-id="cizsc3tlc0002n53adps5oovl" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/03/03/JS代码让Markdown自动生成目录/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-聊聊JS那些事--闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/02/24/聊聊JS那些事--闭包/" class="article-date">
-  <time datetime="2016-02-24T14:12:34.000Z" itemprop="datePublished">2016-02-24</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Javascript/">Javascript</a>►<a class="article-category-link" href="/categories/Javascript/闭包/">闭包</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/24/聊聊JS那些事--闭包/">聊聊JS那些事--闭包</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <p>闭包（closure）是Javascript语言的一个难点，也是它的特色，很多高级应用都要依靠闭包实现。</p>
-<h2 id="一、变量的作用域"><a href="#一、变量的作用域" class="headerlink" title="一、变量的作用域"></a>一、变量的作用域</h2><p>要理解闭包，首先必须理解Javascript特殊的变量作用域。<br>变量的作用域无非就是两种：全局变量和局部变量。<br>Javascript语言的特殊之处，就在于函数内部可以直接读取全局变量。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　alert(n);</div><div class="line">&#125;</div><div class="line">f1(); <span class="comment">// 999</span></div></pre></td></tr></table></figure></p>
-<p>另一方面，在函数外部自然无法读取函数内的局部变量。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">&#125;</div><div class="line">alert(n); <span class="comment">// error</span></div></pre></td></tr></table></figure></p>
-<p>这里有一个地方需要注意，函数内部声明变量的时候，一定要使用var命令。如果不用的话，你实际上声明了一个全局变量！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　n=<span class="number">999</span>;</div><div class="line">&#125;</div><div class="line">f1();</div><div class="line">alert(n); <span class="comment">// 999</span></div></pre></td></tr></table></figure></p>
-<h2 id="二、如何从外部读取局部变量？"><a href="#二、如何从外部读取局部变量？" class="headerlink" title="二、如何从外部读取局部变量？"></a>二、如何从外部读取局部变量？</h2><p>出于种种原因，我们有时候需要得到函数内的局部变量。但是，前面已经说过了，正常情况下，这是办不到的，只有通过变通方法才能实现。<br>那就是在函数的内部，再定义一个函数。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　alert(n); <span class="comment">// 999</span></div><div class="line">　　&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>在上面的代码中，函数f2就被包括在函数f1内部，这时f1内部的所有局部变量，对f2都是可见的。但是反过来就不行，f2内部的局部变量，对f1就是不可见的。这就是Javascript语言特有的”链式作用域”结构（chain scope），子对象会一级一级地向上寻找所有父对象的变量。所以，父对象的所有变量，对子对象都是可见的，反之则不成立。<br>既然f2可以读取f1中的局部变量，那么只要把f2作为返回值，我们不就可以在f1外部读取它的内部变量了吗！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　alert(n); </div><div class="line">　　&#125;</div><div class="line">　　<span class="keyword">return</span> f2;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> result=f1();</div><div class="line">result(); <span class="comment">// 999</span></div></pre></td></tr></table></figure></p>
-<h2 id="三、闭包的概念"><a href="#三、闭包的概念" class="headerlink" title="三、闭包的概念"></a>三、闭包的概念</h2><p>上一节代码中的f2函数，就是闭包。<br>各种专业文献上的”闭包”（closure）定义非常抽象，很难看懂。我的理解是，闭包就是能够读取其他函数内部变量的函数。<br>由于在Javascript语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成”定义在一个函数内部的函数”。<br>所以，在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</p>
-<h2 id="四、闭包的用途"><a href="#四、闭包的用途" class="headerlink" title="四、闭包的用途"></a>四、闭包的用途</h2><p>闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。<br>怎么来理解这句话呢？请看下面的代码。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　<span class="keyword">var</span> n=<span class="number">999</span>;</div><div class="line">　　nAdd=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;n+=<span class="number">1</span>&#125;</div><div class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　alert(n);</div><div class="line">　　&#125;</div><div class="line">　　<span class="keyword">return</span> f2;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> result=f1();</div><div class="line">result(); <span class="comment">// 999</span></div><div class="line">nAdd();</div><div class="line">result(); <span class="comment">// 1000</span></div></pre></td></tr></table></figure></p>
-<p>在这段代码中，result实际上就是闭包f2函数。它一共运行了两次，第一次的值是999，第二次的值是1000。这证明了，函数f1中的局部变量n一直保存在内存中，并没有在f1调用后被自动清除。<br>为什么会这样呢？原因就在于f1是f2的父函数，而f2被赋给了一个全局变量，这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收。<br>这段代码中另一个值得注意的地方，就是”nAdd=function(){n+=1}”这一行，首先在nAdd前面没有使用var关键字，因此nAdd是一个全局变量，而不是局部变量。其次，nAdd的值是一个匿名函数（anonymous function），而这个匿名函数本身也是一个闭包，所以nAdd相当于是一个setter，可以在函数外部对函数内部的局部变量进行操作。</p>
-<h2 id="五、使用闭包的注意点"><a href="#五、使用闭包的注意点" class="headerlink" title="五、使用闭包的注意点"></a>五、使用闭包的注意点</h2><ol>
-<li>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</li>
-<li>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</li>
-</ol>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>代码片段一：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">  <span class="attr">name</span> : <span class="string">"My Object"</span>,</div><div class="line">　<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　 　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　 　 <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">　　　 &#125;;</div><div class="line">　　&#125;</div><div class="line">&#125;;</div><div class="line">alert(object.getNameFunc()());</div></pre></td></tr></table></figure></p>
-<p>代码片段二：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"The Window"</span>;</div><div class="line"><span class="keyword">var</span> object = &#123;</div><div class="line">　　<span class="attr">name</span> : <span class="string">"My Object"</span>,</div><div class="line">　　<span class="attr">getNameFunc</span> : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　<span class="keyword">var</span> that = <span class="keyword">this</span>;</div><div class="line">　　　　<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">　　　　　　<span class="keyword">return</span> that.name;</div><div class="line">　　　　&#125;;</div><div class="line">　　&#125;</div><div class="line">&#125;;</div><div class="line">alert(object.getNameFunc()());</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/02/24/聊聊JS那些事--闭包/" data-id="cizsc1uf4001em63aafw0c01l" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/02/24/聊聊JS那些事--闭包/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -620,7 +611,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/02/11/使用npm安装一些包失败解决办法/" data-id="cizsc1uet000tm63aptqalpf0" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/02/11/使用npm安装一些包失败解决办法/" data-id="cizsc3tlx000on53a6mqfoala" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/02/11/使用npm安装一些包失败解决办法/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -676,7 +667,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/01/18/npm-error/" data-id="cizsc1uek000im63aayrrcx0j" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/01/18/npm-error/" data-id="cizsc3tlk000an53axamtr41d" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/01/18/npm-error/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -711,6 +702,10 @@
           </li>
         
           <li>
+            <a href="/2017/02/24/聊聊JS那些事--闭包/">聊聊JS那些事--闭包</a>
+          </li>
+        
+          <li>
             <a href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/">来自CSS3的黑科技－－如何实现环形进度条</a>
           </li>
         
@@ -720,10 +715,6 @@
         
           <li>
             <a href="/2017/01/12/wordpress显示头像/">wordpress显示头像</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/04/wordpress发送邮件/">wordpress发送邮件</a>
           </li>
         
       </ul>
@@ -744,7 +735,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
