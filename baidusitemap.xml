@@ -4,48 +4,16 @@
 
     
   <url>
-    <loc>https://itwanggj.github.io/2017/04/03/Http%E7%8A%B6%E6%80%81%E7%A0%81%E7%9A%84%E5%89%AF%E6%9C%AC/</loc>
-    <lastmod>2017-04-05T15:31:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>聊聊JS那些事--继承</title>
-        <pubTime>2017-04-03T15:51:19.000Z</pubTime>
-        
-        <tag>CSS3</tag>
-         
-        <tag>JavaScript</tag>
-         
-        <tag>html</tag>
-         
-        <tag>HTML5</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
-          
-             
-              <breadCrumb title="继承" url="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/"/>
-          
-             
-              <breadCrumb title="原型" url="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/%E5%8E%9F%E5%9E%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://itwanggj.github.io/2017/04/03/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF/</loc>
-    <lastmod>2017-04-05T15:27:05.000Z</lastmod>
+    <lastmod>2017-04-05T15:35:02.000Z</lastmod>
     <data>
         <display>
         <title>聊聊JS那些事--继承</title>
         <pubTime>2017-04-03T15:51:19.000Z</pubTime>
         
-        <tag>CSS3</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS3</tag>
          
         <tag>html</tag>
          
@@ -75,9 +43,9 @@
         <title>Javascript继承机制的设计思想</title>
         <pubTime>2017-04-05T13:17:10.000Z</pubTime>
         
-        <tag>CSS3</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS3</tag>
          
         <tag>html</tag>
          
@@ -245,9 +213,9 @@
         <title>说说Javascript函数(转)</title>
         <pubTime>2017-02-01T01:09:10.000Z</pubTime>
         
-        <tag>CSS3</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS3</tag>
          
         <tag>html</tag>
          
@@ -615,9 +583,9 @@
         <title>来自CSS3的黑科技－－如何实现环形进度条</title>
         <pubTime>2017-02-08T09:49:50.000Z</pubTime>
         
-        <tag>CSS3</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS3</tag>
          
         <tag>html</tag>
          
@@ -731,11 +699,11 @@
         <title>JS代码让Markdown自动生成目录</title>
         <pubTime>2016-03-03T12:32:04.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>HEXO</tag>
          
         <tag>Markdown</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
