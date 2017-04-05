@@ -81,6 +81,71 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-如何配置Apache服务器(Mac版)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2016/12/09/如何配置Apache服务器(Mac版)/" class="article-date">
+  <time datetime="2016-12-09T03:12:34.000Z" itemprop="datePublished">2016-12-09</time>
+</h3>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/配置服务器/">配置服务器</a>►<a class="article-category-link" href="/categories/配置服务器/APACHE/">APACHE</a>►<a class="article-category-link" href="/categories/配置服务器/APACHE/MAC版/">MAC版</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/09/如何配置Apache服务器(Mac版)/">如何配置Apache服务器（MAC版）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>有的时候，我们需要在内网工作组中分享一些文件或是后台接口没有及时给出，你又想要模拟真实数据，直接在项目里创建plist也可以做到这种需求，但难免让工程变得冗余且看起来比较Low。这个时候就看出配置本地服务器的重要性了，不用时刻等着后台接口的更新，只需要根据接口文档自己模拟真实数据，即方便又显得高大上。</p>
+<p>Mac自带了Apache环境，我们要做的只是稍微配置一下</p>
+<p>环境：Mac OS X 10.12</p>
+<h2 id="启动Apache"><a href="#启动Apache" class="headerlink" title="启动Apache"></a>启动Apache</h2><p>在终端输入：sudo apachectl start，这样就将Mac自带的Apache启动了，在浏览器输入“<a href="http://localhost”，会显示“It">http://localhost”，会显示“It</a> works!”，说明服务器已经启动成功了。Apache默认的根目录在“/Library/WebServer/Documents/”下。</p>
+<h2 id="配置服务器"><a href="#配置服务器" class="headerlink" title="配置服务器"></a>配置服务器</h2><p>在Finder中创建一个”Sites”的文件夹，直接创建在/Users/wan(当前用户名)目录下，如图：<br><img src="https://itwanggj.github.io/images/aaa.png" alt=""></p>
+<ul>
+<li>切换工作目录下：cd /etc/apache2</li>
+<li>备份文件，只需要执行一次：sudo cp httpd.conf httpd.conf.bak</li>
+<li>如果操作出现错误！可以使用命令，恢复备份的 httpd.conf 文件：sudo cp httpd.conf.bak httpd.conf</li>
+<li><p>用vim编辑httpd.conf文件，httpd.conf文件时Apache的配置文件：sudo vim httpd.conf</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/12/09/如何配置Apache服务器(Mac版)/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cj154tbo10017at3abwtuwszj" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-深入理解vertical-align总结" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2016/11/21/深入理解vertical-align总结/" class="article-date">
@@ -127,7 +192,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LESS/">LESS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SCSS/">SCSS</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/" data-id="cj154rx3w001e9r3aw88irksw" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/" data-id="cj154tbo5001hat3a2wk35kai" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -195,7 +260,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/" data-id="cj154rx3p000z9r3av7uyiu44" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/" data-id="cj154tbny0012at3aqt3ykxnz" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -254,7 +319,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/" data-id="cj154rx3f000i9r3a0mlrq957" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/" data-id="cj154tbno000jat3a480qjlhl" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/09/02/jquery插件开发/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -312,7 +377,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/" data-id="cj154rx3r00139r3almhgy90r" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/" data-id="cj154tbnx0011at3agos40pw9" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/08/16/如何使用text-algin实现文本两端对齐/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -372,7 +437,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/" data-id="cj154rx3c000e9r3an6fdyahv" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/07/13/SASS语法--高级/" data-id="cj154tbnb0008at3ant49tdl5" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/07/13/SASS语法--高级/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -431,7 +496,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cj154rx3a000d9r3aq9q3fj0h" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/" data-id="cj154tbnm000fat3an42nx4mp" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/06/02/SASS语法--进阶/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -490,7 +555,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cj154rx3600099r3aax3omfw8" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/15/SASS语法--基础/" data-id="cj154tbnj000cat3asfzx4ugt" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/15/SASS语法--基础/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -550,7 +615,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Sass/">Sass</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cj154rx37000a9r3awjrxc1ch" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/05/05/SASS语法--安装/" data-id="cj154tbng000bat3a2dsymfu0" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/05/05/SASS语法--安装/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -623,67 +688,9 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ionic/">Ionic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bootstrap/">bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/04/01/前端开发面试题整理以及解答思路/" data-id="cj154rx3n000x9r3as1tppz6i" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/04/01/前端开发面试题整理以及解答思路/" data-id="cj154tbnw000xat3a743inmxg" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/04/01/前端开发面试题整理以及解答思路/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Http状态码" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/03/17/Http状态码/" class="article-date">
-  <time datetime="2016-03-17T04:08:54.000Z" itemprop="datePublished">2016-03-17</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/HTTP状态码/">HTTP状态码</a>►<a class="article-category-link" href="/categories/HTTP状态码/Ajax请求/">Ajax请求</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/17/Http状态码/">Http状态码</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Http状态码"><a href="#Http状态码" class="headerlink" title="Http状态码"></a>Http状态码</h1><p>一些常见的状态代码为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">200 - 服务器成功返回网页</div><div class="line">404 - 请求的网页不存在</div><div class="line">503 - 服务器暂时不可用</div></pre></td></tr></table></figure></p>
-<h2 id="1xx（临时响应）"><a href="#1xx（临时响应）" class="headerlink" title="1xx（临时响应）"></a>1xx（临时响应）</h2><p>用于表示临时响应并需要请求者执行操作才能继续的状态代码。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">100（继续） 请求者应当继续提出请求。服务器返回此代码则意味着，服务器已收到了请求的第一部分，现正在等待接收其余部分。</div><div class="line">101（切换协议） 请求者已要求服务器切换协议，服务器已确认并准备进行切换。</div></pre></td></tr></table></figure></p>
-<h2 id="2xx（成功）"><a href="#2xx（成功）" class="headerlink" title="2xx（成功）"></a>2xx（成功）</h2><p>用于表示服务器已成功处理了请求的状态代码。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">200（成功） 服务器已成功处理了请求。通常，这表示服务器提供了请求的网页。如果您的 robots.txt 文件显示为此状态，那么，这表示 Googlebot 已成功检索到该文件。</div><div class="line">201（已创建） 请求成功且服务器已创建了新的资源。</div><div class="line">202（已接受） 服务器已接受了请求，但尚未对其进行处理。</div><div class="line">203（非授权信息） 服务器已成功处理了请求，但返回了可能来自另一来源的信息。</div><div class="line">204（无内容） 服务器成功处理了请求，但未返回任何内容。</div><div class="line">205（重置内容） 服务器成功处理了请求，但未返回任何内容。与 204 响应不同，此响应要求请求者重置文档视图（例如清除表单内容以输入新内容）。</div><div class="line">206（部分内容） 服务器成功处理了部分 GET 请求。</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2016/03/17/Http状态码/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/404/">404</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Http/">Http</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ajax/">ajax</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/03/17/Http状态码/" data-id="cj154rx2t00019r3akedlxr1k" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/03/17/Http状态码/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -720,15 +727,15 @@
           </li>
         
           <li>
+            <a href="/2017/04/03/Http状态码的副本/">聊聊JS那些事--继承</a>
+          </li>
+        
+          <li>
             <a href="/2017/03/01/深入理解javascript原型和闭包/">深入理解javascript原型和闭包（转）</a>
           </li>
         
           <li>
             <a href="/2017/02/24/聊聊JS那些事--闭包/">聊聊JS那些事--闭包</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/12/聊聊JS那些事--位置/">聊聊JS那些事--位置</a>
           </li>
         
       </ul>
@@ -740,7 +747,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/404/">404</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache/">Apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/D3/">D3</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Grunt/">Grunt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gulp/">Gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/">HTML5</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ionic/">Ionic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">15</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LESS/">LESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型/">原型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据可视化/">数据可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/闭包/">闭包</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/404/">404</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache/">Apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/D3/">D3</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Grunt/">Grunt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gulp/">Gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/">HTML5</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ionic/">Ionic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LESS/">LESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型/">原型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据可视化/">数据可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/闭包/">闭包</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -749,7 +756,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -758,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Bootstrap/" style="font-size: 11.67px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 18.33px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/D3/" style="font-size: 11.67px;">D3</a> <a href="/tags/Grunt/" style="font-size: 10px;">Grunt</a> <a href="/tags/Gulp/" style="font-size: 10px;">Gulp</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/HTML5/" style="font-size: 13.33px;">HTML5</a> <a href="/tags/Html/" style="font-size: 16.67px;">Html</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Ionic/" style="font-size: 11.67px;">Ionic</a> <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/LESS/" style="font-size: 10px;">LESS</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/SCSS/" style="font-size: 10px;">SCSS</a> <a href="/tags/Sass/" style="font-size: 15px;">Sass</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/npm/" style="font-size: 11.67px;">npm</a> <a href="/tags/wordpress/" style="font-size: 11.67px;">wordpress</a> <a href="/tags/原型/" style="font-size: 10px;">原型</a> <a href="/tags/数据可视化/" style="font-size: 10px;">数据可视化</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/闭包/" style="font-size: 11.67px;">闭包</a>
+      <a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Bootstrap/" style="font-size: 11.67px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 18.33px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/D3/" style="font-size: 11.67px;">D3</a> <a href="/tags/Grunt/" style="font-size: 10px;">Grunt</a> <a href="/tags/Gulp/" style="font-size: 10px;">Gulp</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/HTML5/" style="font-size: 13.33px;">HTML5</a> <a href="/tags/Html/" style="font-size: 16.67px;">Html</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Ionic/" style="font-size: 11.67px;">Ionic</a> <a href="/tags/JS/" style="font-size: 13.33px;">JS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/LESS/" style="font-size: 10px;">LESS</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/SCSS/" style="font-size: 10px;">SCSS</a> <a href="/tags/Sass/" style="font-size: 13.33px;">Sass</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 15px;">html</a> <a href="/tags/jQuery/" style="font-size: 13.33px;">jQuery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/npm/" style="font-size: 11.67px;">npm</a> <a href="/tags/wordpress/" style="font-size: 11.67px;">wordpress</a> <a href="/tags/原型/" style="font-size: 10px;">原型</a> <a href="/tags/数据可视化/" style="font-size: 10px;">数据可视化</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/闭包/" style="font-size: 11.67px;">闭包</a>
     </div>
   </div>
 
