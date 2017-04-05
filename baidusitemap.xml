@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://itwanggj.github.io/2017/04/05/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF/</loc>
-    <lastmod>2017-04-05T15:19:33.000Z</lastmod>
+    <lastmod>2017-04-05T15:20:50.000Z</lastmod>
     <data>
         <display>
         <title>聊聊JS那些事--继承</title>
@@ -132,9 +132,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>闭包</tag>
-         
         <tag>原型</tag>
+         
+        <tag>闭包</tag>
          
          
            
@@ -445,11 +445,11 @@
         <title>如何配置Apache服务器（MAC版）</title>
         <pubTime>2016-12-09T03:12:34.000Z</pubTime>
         
+        <tag>D3</tag>
+         
         <tag>Apache</tag>
          
         <tag>服务器</tag>
-         
-        <tag>D3</tag>
          
         <tag>数据可视化</tag>
          
