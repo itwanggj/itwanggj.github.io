@@ -63,10 +63,10 @@
   
   <entry>
     <title>聊聊JS那些事--继承</title>
-    <link href="https://itwanggj.github.io/2017/04/03/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF/"/>
-    <id>https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承/</id>
-    <published>2017-04-03T15:51:19.000Z</published>
-    <updated>2017-04-05T15:35:02.000Z</updated>
+    <link href="https://itwanggj.github.io/2017/04/04/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF/"/>
+    <id>https://itwanggj.github.io/2017/04/04/聊聊JS那些事--继承/</id>
+    <published>2017-04-04T15:51:19.000Z</published>
+    <updated>2017-04-05T15:39:04.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1、思考"><a href="#1、思考" class="headerlink" title="1、思考"></a>1、思考</h2><p>我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。</p>
 <p>在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.property = <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SuperType.prototype.getSuperValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.property;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.subproperty = <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.getSubValue = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.subproperty;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> instance = <span class="keyword">new</span> SubType();</div><div class="line">alert(instance.getSuperValue());</div></pre></td></tr></table></figure></p>
@@ -99,6 +99,8 @@
     
       <category term="原型" scheme="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/%E5%8E%9F%E5%9E%8B/"/>
     
+      <category term="原型链" scheme="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/%E5%8E%9F%E5%9E%8B/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
@@ -107,6 +109,12 @@
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
     
       <category term="HTML5" scheme="https://itwanggj.github.io/tags/HTML5/"/>
+    
+      <category term="原型" scheme="https://itwanggj.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="继承" scheme="https://itwanggj.github.io/tags/%E7%BB%A7%E6%89%BF/"/>
+    
+      <category term="原型链" scheme="https://itwanggj.github.io/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
     
   </entry>
   
@@ -515,11 +523,11 @@
       <category term="MAC版" scheme="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
     
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="Apache" scheme="https://itwanggj.github.io/tags/Apache/"/>
     
       <category term="服务器" scheme="https://itwanggj.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="数据可视化" scheme="https://itwanggj.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
