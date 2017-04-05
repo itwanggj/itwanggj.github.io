@@ -81,6 +81,71 @@
     <div class="outer">
       <section id="main">
   
+    <article id="post-Javascript继承机制的设计思想" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/04/05/Javascript继承机制的设计思想/" class="article-date">
+  <time datetime="2017-04-05T13:17:10.000Z" itemprop="datePublished">2017-04-05</time>
+</h3>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>►<a class="article-category-link" href="/categories/JavaScript/继承/">继承</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/05/Javascript继承机制的设计思想/">Javascript继承机制的设计思想</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>我一直很难理解Javascript语言的继承机制。<br>它没有”子类”和”父类”的概念，也没有”类”（class）和”实例”（instance）的区分，全靠一种很奇特的”原型链”（prototype）模式，来实现继承。<br>我花了很多时间，学习这个部分，还做了很多笔记。但是都属于强行记忆，无法从根本上理解。<br><img src="" alt=""><br>下面，我尝试用自己的语言，来解释它的设计思想。彻底说明白prototype对象到底是怎么回事。其实根本就没那么复杂，真相非常简单。</p>
+<h2 id="1、从历史说起"><a href="#1、从历史说起" class="headerlink" title="1、从历史说起"></a>1、从历史说起</h2><p>要理解Javascript的设计思想，必须从它的诞生说起。<br>1994年，网景公司（Netscape）发布了Navigator浏览器0.9版。这是历史上第一个比较成熟的网络浏览器，轰动一时。但是，这个版本的浏览器只能用来浏览，不具备与访问者互动的能力。比如，如果网页上有一栏”用户名”要求填写，浏览器就无法判断访问者是否真的填写了，只有让服务器端判断。如果没有填写，服务器端就返回错误，要求用户重新填写，这太浪费时间和服务器资源了。<br><img src="" alt=""><br>因此，网景公司急需一种网页脚本语言，使得浏览器可以与网页互动。工程师Brendan Eich负责开发这种新语言。他觉得，没必要设计得很复杂，这种语言只要能够完成一些简单操作就够了，比如判断用户有没有填写表单。<br><img src="" alt=""><br>1994年正是面向对象编程最兴盛的时期，C++是当时最流行的语言，而Java语言的1.0版即将于第二年推出，Sun公司正在大肆造势。<br>Brendan Eich无疑受到了影响，Javascript里面所有的数据类型都是对象（object），这一点与Java非常相似。但是，他随即就遇到了一个难题，到底要不要设计”继承”机制呢？</p>
+<h2 id="2、Brendan-Eich的选择"><a href="#2、Brendan-Eich的选择" class="headerlink" title="2、Brendan Eich的选择"></a>2、Brendan Eich的选择</h2><p>如果真的是一种简易的脚本语言，其实不需要有”继承”机制。但是，Javascript里面都是对象，必须有一种机制，将所有对象联系起来。所以，Brendan Eich最后还是设计了”继承”。<br>但是，他不打算引入”类”（class）的概念，因为一旦有了”类”，Javascript就是一种完整的面向对象编程语言了，这好像有点太正式了，而且增加了初学者的入门难度。<br>他考虑到，C++和Java语言都使用new命令，生成实例。<br>C++的写法是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ClassName *object = new ClassName(param);</div></pre></td></tr></table></figure></p>
+<p>Java的写法是：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Foo foo = <span class="keyword">new</span> Foo();</div></pre></td></tr></table></figure></p>
+<p>因此，他就把new命令引入了Javascript，用来从原型对象生成一个实例对象。但是，Javascript没有”类”，怎么来表示原型对象呢？<br>这时，他想到C++和Java使用new命令时，都会调用”类”的构造函数（constructor）。他就做了一个简化的设计，在Javascript语言中，new命令后面跟的不是类，而是构造函数。<br>举例来说，现在有一个叫做DOG的构造函数，表示狗对象的原型。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DOG</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">　　<span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对这个构造函数使用new，就会生成一个狗对象的实例。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dogA = <span class="keyword">new</span> DOG(<span class="string">'大毛'</span>);</div><div class="line">alert(dogA.name); <span class="comment">// 大毛</span></div></pre></td></tr></table></figure></p>
+<p>注意构造函数中的this关键字，它就代表了新创建的实例对象。</p>
+<h2 id="3、new运算符的缺点"><a href="#3、new运算符的缺点" class="headerlink" title="3、new运算符的缺点"></a>3、new运算符的缺点</h2><p>用构造函数生成实例对象，有一个缺点，那就是无法共享属性和方法。<br>比如，在DOG对象的构造函数中，设置一个实例对象的共有属性species。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DOG</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">　　<span class="keyword">this</span>.name = name;</div><div class="line">　　<span class="keyword">this</span>.species = <span class="string">'犬科'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后，生成两个实例对象：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dogA = <span class="keyword">new</span> DOG(<span class="string">'大毛'</span>);</div><div class="line"><span class="keyword">var</span> dogB = <span class="keyword">new</span> DOG(<span class="string">'二毛'</span>);</div></pre></td></tr></table></figure></p>
+<p>这两个对象的species属性是独立的，修改其中一个，不会影响到另一个。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">dogA.species = <span class="string">'猫科'</span>;</div><div class="line">alert(dogB.species); <span class="comment">// 显示"犬科"，不受dogA的影响</span></div></pre></td></tr></table></figure></p>
+<p>每一个实例对象，都有自己的属性和方法的副本。这不仅无法做到数据共享，也是极大的资源浪费。</p>
+<h2 id="4、prototype属性的引入"><a href="#4、prototype属性的引入" class="headerlink" title="4、prototype属性的引入"></a>4、prototype属性的引入</h2><p>考虑到这一点，Brendan Eich决定为构造函数设置一个prototype属性。<br>这个属性包含一个对象（以下简称”prototype对象”），所有实例对象需要共享的属性和方法，都放在这个对象里面；那些不需要共享的属性和方法，就放在构造函数里面。<br>实例对象一旦创建，将自动引用prototype对象的属性和方法。也就是说，实例对象的属性和方法，分成两种，一种是本地的，另一种是引用的。<br>还是以DOG构造函数为例，现在用prototype属性进行改写：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">DOG</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">　 <span class="keyword">this</span>.name = name;</div><div class="line">&#125;</div><div class="line">DOG.prototype = &#123; <span class="attr">species</span> : <span class="string">'犬科'</span> &#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> dogA = <span class="keyword">new</span> DOG(<span class="string">'大毛'</span>);</div><div class="line"><span class="keyword">var</span> dogB = <span class="keyword">new</span> DOG(<span class="string">'二毛'</span>);</div><div class="line"></div><div class="line">alert(dogA.species); <span class="comment">// 犬科</span></div><div class="line">alert(dogB.species); <span class="comment">// 犬科</span></div><div class="line"><span class="string">``</span><span class="string">`　　</span></div><div class="line">现在，species属性放在prototype对象里，是两个实例对象共享的。只要修改了prototype对象，就会同时影响到两个实例对象。</div><div class="line">`<span class="string">``</span> js</div><div class="line">DOG.prototype.species = <span class="string">'猫科'</span>;</div><div class="line"></div><div class="line">alert(dogA.species); <span class="comment">// 猫科</span></div><div class="line">alert(dogB.species); <span class="comment">// 猫科</span></div></pre></td></tr></table></figure></p>
+<h2 id="5、总结"><a href="#5、总结" class="headerlink" title="5、总结"></a>5、总结</h2><p>由于所有的实例对象共享同一个prototype对象，那么从外界看起来，prototype对象就好像是实例对象的原型，而实例对象则好像”继承”了prototype对象一样。<br>这就是Javascript继承机制的设计思想。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2017/04/05/Javascript继承机制的设计思想/" data-id="cj150kxmz0001lp3azcbgoowb" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2017/04/05/Javascript继承机制的设计思想/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-深入理解javascript原型和闭包" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/03/01/深入理解javascript原型和闭包/" class="article-date">
@@ -125,7 +190,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/" data-id="cizy42ho2000uku3a1b7c32le" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/" data-id="cj150kxo1001alp3aftqvlndq" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -185,7 +250,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/24/聊聊JS那些事--闭包/" data-id="cizy42hod001eku3a4ccu3rhc" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/24/聊聊JS那些事--闭包/" data-id="cj150kxo4001klp3a42ufpi3x" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/24/聊聊JS那些事--闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -242,9 +307,68 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/" data-id="cizy42hoc001bku3a33c4dlgw" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/" data-id="cj150kxo3001elp3al83g1dbr" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-来自CSS3的黑科技－－如何实现环形进度条" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" class="article-date">
+  <time datetime="2017-02-08T09:49:50.000Z" itemprop="datePublished">2017-02-08</time>
+</h3>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/数据可视化/">数据可视化</a>►<a class="article-category-link" href="/categories/数据可视化/D3/">D3</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/">来自CSS3的黑科技－－如何实现环形进度条</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CSS3的提出使得CSS不再是单纯的样式表，只要运用得到，就可以实现一些我们很棒的动画效果，最近项目有需求需要实现一个环形进度条，一开始没有思路，在看了《CSS Secret》之后觉得有受启发，便记录下这个过程。在过去，实现一个这样的进度条难免要拼接大量图片，CSS3和HTML5的出现使得这个过程变得简单无比。<br>首先，我们需要一个元素来承载我们的样式：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"pie"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>事实上，如果要实现环形图，只要实现饼图，然后在其上覆盖一层遮罩即可，所以我们可以先从如何实现饼图开始：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.pie</span> &#123;</div><div class="line">    <span class="attribute">width </span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">height </span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</div><div class="line">    <span class="attribute">background</span>: <span class="number">#ddd</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>我们首先通过.pie实现了一个圆形，并将其居中方便我们进行观察，效果如下：</p>
+<p><img src="https://itwanggj.github.io/images/circle-step-1.png" alt=""></p>
+        
+          <p class="article-more-link">
+            <a href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cj150kxo00018lp3a4g56xa0o" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -302,7 +426,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/01/说说Javascript函数/" data-id="cizy42hob0019ku3axkcl6k79" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/01/说说Javascript函数/" data-id="cj150kxo5001mlp3aj51mxjsy" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/01/说说Javascript函数/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -359,7 +483,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/" data-id="cizy42ho0000rku3al06877ut" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/" data-id="cj150kxnq000plp3a8x9eosp9" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/12/wordpress显示头像/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -415,7 +539,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/04/wordpress发送邮件/" data-id="cizy42hnw000lku3a4d5ryy46" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/04/wordpress发送邮件/" data-id="cj150kxnm000ilp3a3ztpg3w6" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/04/wordpress发送邮件/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -480,7 +604,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Apache/">Apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cizy42ho90015ku3af3gnitj3" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/" data-id="cj150kxnw0010lp3amqwl9416" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/12/09/如何配置Apache服务器(Mac版)/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -541,136 +665,9 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LESS/">LESS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SASS/">SASS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SCSS/">SCSS</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/" data-id="cizy42ho6000zku3a5g9ftu5s" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/" data-id="cj150kxo3001glp3a4oilztw6" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2016/11/21/深入理解vertical-align总结/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-前端自动化工程搭建--Gulp" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/10/08/前端自动化工程搭建--Gulp/" class="article-date">
-  <time datetime="2016-10-08T12:12:04.000Z" itemprop="datePublished">2016-10-08</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/自动化构建工具/">自动化构建工具</a>►<a class="article-category-link" href="/categories/自动化构建工具/Gulp/">Gulp</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/08/前端自动化工程搭建--Gulp/">前端自动化工程搭建--Gulp（Windows版）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="搭建准备工作"><a href="#搭建准备工作" class="headerlink" title="搭建准备工作"></a>搭建准备工作</h2><h3 id="安装Node"><a href="#安装Node" class="headerlink" title="安装Node"></a>安装Node</h3><p>首先Gulp是基于Nodejs的，所以安装Nodejs是前提，Node可以说是前端神器，基于Node有各种各样的工具，正是因为这些工具让我们非常方便的构建前端工程。</p>
-<h3 id="更改Node插件默认安装位置"><a href="#更改Node插件默认安装位置" class="headerlink" title="更改Node插件默认安装位置"></a>更改Node插件默认安装位置</h3><p>Windows电脑的话，我自己一般不喜欢在C盘安装太多与系统无关的东西，而通过Node自带的npm安装的插件默认在C盘，但是我将Node安装到D盘后，想让插件就安装在Nodejs的主目录下，怎么办呢？</p>
-<ol>
-<li>在Node主目录下新建”node_global”及”node_cache”两个文件夹</li>
-<li>启动cmd，输入</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//后面的设置目录根据你的目录结构自行更改</div><div class="line">npm config <span class="built_in">set</span> prefix <span class="string">"D:\Program\nodejs\node_global"</span></div><div class="line">npm config <span class="built_in">set</span> cache <span class="string">"D:\Program\nodejs\node_cache"</span></div></pre></td></tr></table></figure>
-<ol>
-<li>关闭cmd，打开系统对话框，“我的电脑”右键“属性”-“高级系统设置”-“高级”-“环境变量”。</li>
-<li>进入环境变量对话框，在系统变量下新建”NODE_PATH”，输入”D:\Program\nodejs\node_global\node_module”。 由于改变了module的默认地址，所以上面的用户变量都要跟着改变一下（用户变量”PATH”修改为”D:\Program\nodejs\node_global\”），要不使用module的时候会导致输入命令出现“xxx不是内部或外部命令，也不是可运行的程序或批处理文件”这个错误。</li>
-</ol>
-<p>经过这四步的设置就可以让安装的Node插件放在Nodejs的主目录了。</p>
-<h3 id="安装Gulp"><a href="#安装Gulp" class="headerlink" title="安装Gulp"></a>安装Gulp</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//全局安装Gulp</div><div class="line">npm install -g gulp</div><div class="line">//在项目中安装Gulp</div><div class="line">npm install --save-dev gulp</div></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2016/10/08/前端自动化工程搭建--Gulp/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/" data-id="cizy42ho80013ku3asj49b0tg" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/10/08/前端自动化工程搭建--Gulp/#ds-thread" class="article-comment-link">Comments</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-jquery插件开发" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/09/02/jquery插件开发/" class="article-date">
-  <time datetime="2016-09-02T11:12:34.000Z" itemprop="datePublished">2016-09-02</time>
-</h3>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Jqery插件/">Jqery插件</a>►<a class="article-category-link" href="/categories/Jqery插件/Javascript/">Javascript</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/02/jquery插件开发/">jquery插件开发</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>由于公司需要写一个功能，而公司的中使用的框架是jquery，所以想到了开发jquery框架。</p>
-<h2 id="1-jQuery插件开发方式"><a href="#1-jQuery插件开发方式" class="headerlink" title="1.jQuery插件开发方式"></a>1.jQuery插件开发方式</h2><p>jQuery插件开发方式主要有三种：<br>通过$.extend（），通过$.fn向jQuery添加新的方法，通过$weight（）应用jQueryUI的部件工厂方式创建</p>
-<h2 id="2-插件中的this"><a href="#2-插件中的this" class="headerlink" title="2.插件中的this"></a>2.插件中的this</h2><p>在插件名字定义的这个函数内部，this指代的是在调用该插件时，用jQuery选择器选中的元素。这里的this已经是jQuery元素，无需再用美元符包装。</p>
-<h2 id="3-jQuery链式调用"><a href="#3-jQuery链式调用" class="headerlink" title="3.jQuery链式调用"></a>3.jQuery链式调用</h2><p>jQuery支持链式调用，要让插件不打破这个链式调用，只需要return一下，实例如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">¥.fn.myPlugin = function()&#123;</div><div class="line">    //这里面this指的是jquery选中的元素</div><div class="line">    this.css(&apos;color&apos;,&apos;red&apos;);</div><div class="line">    return this.each(function()&#123;</div><div class="line">        //对每个元素进行操作</div><div class="line">        ¥(this).append(&apos; &apos;+¥(this).attr(&apos;href&apos;));</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-        
-          <p class="article-more-link">
-            <a href="/2016/09/02/jquery插件开发/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-        <a data-url="https://itwanggj.github.io/2016/09/02/jquery插件开发/" data-id="cizy42hns000hku3ah5x7rju6" class="article-share-link">Share</a>
-        
-          <a href="https://itwanggj.github.io/2016/09/02/jquery插件开发/#ds-thread" class="article-comment-link">Comments</a>
         
       </div>
     </footer>
@@ -699,6 +696,10 @@
       <ul>
         
           <li>
+            <a href="/2017/04/05/Javascript继承机制的设计思想/">Javascript继承机制的设计思想</a>
+          </li>
+        
+          <li>
             <a href="/2017/03/01/深入理解javascript原型和闭包/">深入理解javascript原型和闭包（转）</a>
           </li>
         
@@ -711,11 +712,7 @@
           </li>
         
           <li>
-            <a href="/2017/02/01/说说Javascript函数/">说说Javascript函数(转)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/12/wordpress显示头像/">wordpress显示头像</a>
+            <a href="/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/">来自CSS3的黑科技－－如何实现环形进度条</a>
           </li>
         
       </ul>
@@ -727,7 +724,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/404/">404</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache/">Apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/D3/">D3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Grunt/">Grunt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gulp/">Gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/">HTML5</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ionic/">Ionic</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LESS/">LESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型/">原型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据可视化/">数据可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/闭包/">闭包</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/404/">404</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache/">Apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/D3/">D3</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Grunt/">Grunt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gulp/">Gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/">HTML5</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ionic/">Ionic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LESS/">LESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型/">原型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据可视化/">数据可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/闭包/">闭包</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -736,7 +733,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -745,7 +742,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Bootstrap/" style="font-size: 11.67px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/D3/" style="font-size: 10px;">D3</a> <a href="/tags/Grunt/" style="font-size: 10px;">Grunt</a> <a href="/tags/Gulp/" style="font-size: 10px;">Gulp</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/Html/" style="font-size: 16.67px;">Html</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Ionic/" style="font-size: 10px;">Ionic</a> <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/JavaScript/" style="font-size: 18.33px;">JavaScript</a> <a href="/tags/LESS/" style="font-size: 10px;">LESS</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/SCSS/" style="font-size: 10px;">SCSS</a> <a href="/tags/Sass/" style="font-size: 15px;">Sass</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 13.33px;">jQuery</a> <a href="/tags/npm/" style="font-size: 11.67px;">npm</a> <a href="/tags/wordpress/" style="font-size: 11.67px;">wordpress</a> <a href="/tags/原型/" style="font-size: 10px;">原型</a> <a href="/tags/数据可视化/" style="font-size: 10px;">数据可视化</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/闭包/" style="font-size: 11.67px;">闭包</a>
+      <a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Bootstrap/" style="font-size: 11.67px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 18.33px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/D3/" style="font-size: 11.67px;">D3</a> <a href="/tags/Grunt/" style="font-size: 10px;">Grunt</a> <a href="/tags/Gulp/" style="font-size: 10px;">Gulp</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/HTML5/" style="font-size: 11.67px;">HTML5</a> <a href="/tags/Html/" style="font-size: 16.67px;">Html</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Ionic/" style="font-size: 11.67px;">Ionic</a> <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/LESS/" style="font-size: 10px;">LESS</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/SCSS/" style="font-size: 10px;">SCSS</a> <a href="/tags/Sass/" style="font-size: 15px;">Sass</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 13.33px;">html</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/npm/" style="font-size: 11.67px;">npm</a> <a href="/tags/wordpress/" style="font-size: 11.67px;">wordpress</a> <a href="/tags/原型/" style="font-size: 10px;">原型</a> <a href="/tags/数据可视化/" style="font-size: 10px;">数据可视化</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/闭包/" style="font-size: 11.67px;">闭包</a>
     </div>
   </div>
 

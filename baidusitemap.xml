@@ -4,6 +4,35 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/04/05/Javascript%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2017-04-05T13:32:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript继承机制的设计思想</title>
+        <pubTime>2017-04-05T13:17:10.000Z</pubTime>
+        
+        <tag>CSS3</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>html</tag>
+         
+        <tag>HTML5</tag>
+         
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
+          
+             
+              <breadCrumb title="继承" url="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/02/12/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E4%BD%8D%E7%BD%AE/</loc>
     <lastmod>2017-03-02T12:24:49.000Z</lastmod>
     <data>
@@ -152,9 +181,9 @@
         <title>说说Javascript函数(转)</title>
         <pubTime>2017-02-01T01:09:10.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>CSS3</tag>
+         
+        <tag>JavaScript</tag>
          
         <tag>html</tag>
          
@@ -515,6 +544,68 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/02/08/%E6%9D%A5%E8%87%AACSS3%E7%9A%84%E9%BB%91%E7%A7%91%E6%8A%80%EF%BC%8D%EF%BC%8D%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E7%8E%AF%E5%BD%A2%E8%BF%9B%E5%BA%A6%E6%9D%A1/</loc>
+    <lastmod>2017-02-26T13:12:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>来自CSS3的黑科技－－如何实现环形进度条</title>
+        <pubTime>2017-02-08T09:49:50.000Z</pubTime>
+        
+        <tag>CSS3</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>html</tag>
+         
+        <tag>D3</tag>
+         
+         
+           
+             
+              <breadCrumb title="数据可视化" url="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+          
+             
+              <breadCrumb title="D3" url="https://itwanggj.github.io/categories/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/D3/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2016/04/01/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95%E9%A2%98%E6%95%B4%E7%90%86%E4%BB%A5%E5%8F%8A%E8%A7%A3%E7%AD%94%E6%80%9D%E8%B7%AF/</loc>
+    <lastmod>2017-02-26T12:48:57.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端开发面试题整理以及解答思路</title>
+        <pubTime>2016-04-01T02:32:22.000Z</pubTime>
+        
+        <tag>Html</tag>
+         
+        <tag>jQuery</tag>
+         
+        <tag>Ionic</tag>
+         
+        <tag>css</tag>
+         
+        <tag>js</tag>
+         
+        <tag>bootstrap</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端面试" url="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/"/>
+          
+             
+              <breadCrumb title="面试题总结" url="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%80%BB%E7%BB%93/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2016/03/17/Http%E7%8A%B6%E6%80%81%E7%A0%81/</loc>
     <lastmod>2017-02-26T07:05:45.000Z</lastmod>
     <data>
@@ -576,11 +667,11 @@
         <title>JS代码让Markdown自动生成目录</title>
         <pubTime>2016-03-03T12:32:04.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>HEXO</tag>
          
         <tag>Markdown</tag>
-         
-        <tag>JavaScript</tag>
          
          
            
