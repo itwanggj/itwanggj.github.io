@@ -7,20 +7,20 @@
   
   <title>聊聊JS那些事--继承 | Guojun Wang&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、思考我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。
-在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：12345678910111213141516171819function SuperType()&amp;#123;    this.property = true;&amp;#125;Su">
+  <meta name="description" content="1、小思考我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。
+在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：12345678910111213141516171819function SuperType()&amp;#123;    this.property = true;&amp;#125;S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="聊聊JS那些事--继承">
 <meta property="og:url" content="https://itwanggj.github.io/2017/04/04/聊聊JS那些事--继承/index.html">
 <meta property="og:site_name" content="Guojun Wang's Blog">
-<meta property="og:description" content="1、思考我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。
-在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：12345678910111213141516171819function SuperType()&amp;#123;    this.property = true;&amp;#125;Su">
+<meta property="og:description" content="1、小思考我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。
+在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：12345678910111213141516171819function SuperType()&amp;#123;    this.property = true;&amp;#125;S">
 <meta property="og:image" content="https://itwanggj.github.io/images/articlex.png">
-<meta property="og:updated_time" content="2017-04-05T15:39:04.000Z">
+<meta property="og:updated_time" content="2017-04-05T15:41:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊JS那些事--继承">
-<meta name="twitter:description" content="1、思考我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。
-在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：12345678910111213141516171819function SuperType()&amp;#123;    this.property = true;&amp;#125;Su">
+<meta name="twitter:description" content="1、小思考我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。
+在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：12345678910111213141516171819function SuperType()&amp;#123;    this.property = true;&amp;#125;S">
 <meta name="twitter:image" content="https://itwanggj.github.io/images/articlex.png">
   
     <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
@@ -117,10 +117,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <h2 id="1、思考"><a href="#1、思考" class="headerlink" title="1、思考"></a>1、思考</h2><p>我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。</p>
+        <h2 id="1、小思考"><a href="#1、小思考" class="headerlink" title="1、小思考"></a>1、小思考</h2><p>我记得初学js时，最难懂的概念就是js的原型，而且这个概念在笔试面试中常常提到，因此今天我们把这个概念拿出来，好好聊一聊。</p>
 <p>在仔细讲解之前，我们先来看一道题，这道题来自JavaScript高级程序设计中原型链那一节：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.property = <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SuperType.prototype.getSuperValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.property;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.subproperty = <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">SubType.prototype = <span class="keyword">new</span> SuperType();</div><div class="line">SubType.prototype.getSubValue = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.subproperty;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> instance = <span class="keyword">new</span> SubType();</div><div class="line">alert(instance.getSuperValue());</div></pre></td></tr></table></figure></p>
-<p>请大家猜一猜最后alert出的结果是什么？</p>
-<p>大家先思考一下再看下面的内容。</p>
+<p>可以猜一猜最后alert出的结果是什么？</p>
+<p>先思考一下再看下面的内容。<br><a id="more"></a></p>
 <h2 id="2、知识点"><a href="#2、知识点" class="headerlink" title="2、知识点"></a>2、知识点</h2><p>如果上面的题没解出来，也不要灰心丧气，因为有可能有的人解出来的结果也不一定对。要想弄明白原型等一系列概念，其实只需要记住这几个知识点。</p>
 <h3 id="2-1-先弄懂什么是prototype以及proto"><a href="#2-1-先弄懂什么是prototype以及proto" class="headerlink" title="2.1 先弄懂什么是prototype以及proto"></a>2.1 先弄懂什么是prototype以及<em>proto</em></h3><p><em>proto</em>:任何一个对象Object都有<em>proto</em>，它是每一个对象的私有属性，是天生自带的。<br>prototype:不是任何对象都有prototype，只有构造函数有prototype，是后天赋予的。</p>
 <h3 id="2-2-什么是原型链查找"><a href="#2-2-什么是原型链查找" class="headerlink" title="2.2 什么是原型链查找"></a>2.2 什么是原型链查找</h3><p>其实只需要记住一句话：调用一个对象的属性或方法，一但这个对象中没有，就去这个对象的<em>proto</em>中查找。这个对象的<em>proto</em>指向自己构造函数的prototype属性<br>然后我们来看一张图：<br><img src="https://itwanggj.github.io/images/articlex.png" alt=""><br>再来看一个例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.sleep = <span class="string">'Zzzzz...'</span></div><div class="line">&#125;</div><div class="line">Person.prototype.sayHello = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'hello world'</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> zhangsan = <span class="keyword">new</span> Person();</div><div class="line">zhangsan.sayHello();</div></pre></td></tr></table></figure></p>
@@ -142,7 +142,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型链/">原型链</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/04/聊聊JS那些事--继承/" data-id="cj1552qal001id33ag5nvzh4o" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/04/聊聊JS那些事--继承/" data-id="cj15556lm001jdx3alar6121c" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/04/聊聊JS那些事--继承/#ds-thread" class="article-comment-link">Comments</a>
         
