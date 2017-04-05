@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>https://itwanggj.github.io/2017/04/04/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF/</loc>
-    <lastmod>2017-04-05T15:41:05.000Z</lastmod>
+    <loc>https://itwanggj.github.io/2017/04/03/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/</loc>
+    <lastmod>2017-04-05T15:43:05.000Z</lastmod>
     <data>
         <display>
-        <title>聊聊JS那些事--继承</title>
-        <pubTime>2017-04-04T15:51:19.000Z</pubTime>
+        <title>聊聊JS那些事--继承机制的设计思想</title>
+        <pubTime>2017-04-03T13:17:10.000Z</pubTime>
         
         <tag>JavaScript</tag>
          
@@ -19,7 +19,36 @@
          
         <tag>HTML5</tag>
          
+         
+           
+             
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
+          
+             
+              <breadCrumb title="继承" url="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://itwanggj.github.io/2017/04/05/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E7%BB%A7%E6%89%BF/</loc>
+    <lastmod>2017-04-05T15:42:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>聊聊JS那些事--继承</title>
+        <pubTime>2017-04-05T15:51:19.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>CSS3</tag>
+         
+        <tag>html</tag>
+         
         <tag>原型</tag>
+         
+        <tag>HTML5</tag>
          
         <tag>继承</tag>
          
@@ -37,35 +66,6 @@
               <breadCrumb title="原型" url="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/%E5%8E%9F%E5%9E%8B/"/>
           
              
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2017/04/05/Javascript%E7%BB%A7%E6%89%BF%E6%9C%BA%E5%88%B6%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/</loc>
-    <lastmod>2017-04-05T13:51:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Javascript继承机制的设计思想</title>
-        <pubTime>2017-04-05T13:17:10.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>CSS3</tag>
-         
-        <tag>html</tag>
-         
-        <tag>HTML5</tag>
-         
-         
-           
-             
-              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
-          
-             
-              <breadCrumb title="继承" url="https://itwanggj.github.io/categories/JavaScript/%E7%BB%A7%E6%89%BF/"/>
-          
         </display>
     </data>
     </url>
@@ -592,11 +592,11 @@
         
         <tag>JavaScript</tag>
          
+        <tag>D3</tag>
+         
         <tag>CSS3</tag>
          
         <tag>html</tag>
-         
-        <tag>D3</tag>
          
          
            
