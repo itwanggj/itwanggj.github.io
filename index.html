@@ -109,117 +109,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <p>网页布局（layout）是CSS的一个重点应用。</p>
 <p><img src="https://itwanggj.github.io/images/bg2015071004.png" alt=""></p>
 <p>布局的传统解决方案，基于盒状模型，依赖 display属性 + position属性 + float属性。它对于那些特殊布局非常不方便，比如，垂直居中就不容易实现。</p>
 <p><img src="https://itwanggj.github.io/images/bg2015071002.png" alt=""></p>
 <p>2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。</p>
 <p><img src="https://itwanggj.github.io/images/bg2015071003.jpg" alt=""></p>
-<h2 id="一、Flex布局是什么？"><a href="#一、Flex布局是什么？" class="headerlink" title="一、Flex布局是什么？"></a>一、Flex布局是什么？</h2><p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。<br>任何一个容器都可以指定为Flex布局。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>行内元素也可以使用Flex布局。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">display</span>: inline-flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>Webkit内核的浏览器，必须加上-webkit前缀。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari */</span></div><div class="line">  <span class="attribute">display</span>: flex;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>注：设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。</p>
-<h2 id="二、基本概念"><a href="#二、基本概念" class="headerlink" title="二、基本概念"></a>二、基本概念</h2><p>采用Flex布局的元素，称为Flex容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目”。</p>
-<p><img src="https://itwanggj.github.io/images/bg2015071004.png" alt=""></p>
-<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。<br>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
-<h2 id="三、容器的属性"><a href="#三、容器的属性" class="headerlink" title="三、容器的属性"></a>三、容器的属性</h2><p>以下6个属性设置在容器上。</p>
-<ol>
-<li>flex-direction</li>
-<li>flex-wrap</li>
-<li>flex-flow</li>
-<li>justify-content</li>
-<li>align-items</li>
-<li>align-content</li>
-</ol>
-<h3 id="3-1-flex-direction属性"><a href="#3-1-flex-direction属性" class="headerlink" title="3.1 flex-direction属性"></a>3.1 flex-direction属性</h3><p>flex-direction属性决定主轴的方向（即项目的排列方向）。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071005.png" alt=""></p>
-<p>它可能有4个值。</p>
-<ul>
-<li>row（默认值）：主轴为水平方向，起点在左端。</li>
-<li>row-reverse：主轴为水平方向，起点在右端。</li>
-<li>column：主轴为垂直方向，起点在上沿。</li>
-<li>column-reverse：主轴为垂直方向，起点在下沿。</li>
-</ul>
-<h3 id="3-2-flex-wrap属性"><a href="#3-2-flex-wrap属性" class="headerlink" title="3.2 flex-wrap属性"></a>3.2 flex-wrap属性</h3><p>默认情况下，项目都排在一条线（又称”轴线”）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。</p>
-<p><img src="https://itwanggj.github.io/images/bg2015071006.png" alt=""></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span>&#123;</div><div class="line">  <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>它可能取三个值。<br>（1）nowrap（默认）：不换行。</p>
-<p><img src="https://itwanggj.github.io/images/bg2015071007.png" alt=""></p>
-<p>（2）wrap：换行，第一行在上方。</p>
-<p><img src="https://itwanggj.github.io/images/bg2015071008.jpg" alt=""></p>
-<p>（3）wrap-reverse：换行，第一行在下方。</p>
-<p><img src="https://itwanggj.github.io/images/bg2015071009.jpg" alt=""></p>
-<h3 id="3-3-flex-flow"><a href="#3-3-flex-flow" class="headerlink" title="3.3 flex-flow"></a>3.3 flex-flow</h3><p>flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">flex-flow</span>: &lt;flex-direction&gt; || &lt;flex-wrap&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="3-4-justify-content属性"><a href="#3-4-justify-content属性" class="headerlink" title="3.4 justify-content属性"></a>3.4 justify-content属性</h3><p>justify-content属性定义了项目在主轴上的对齐方式。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071010.png" alt=""></p>
-<p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
-<ul>
-<li>flex-start（默认值）：左对齐</li>
-<li>flex-end：右对齐</li>
-<li>center： 居中</li>
-<li>space-between：两端对齐，项目之间的间隔都相等</li>
-<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍</li>
-</ul>
-<h3 id="3-5-align-items属性"><a href="#3-5-align-items属性" class="headerlink" title="3.5 align-items属性"></a>3.5 align-items属性</h3><p>align-items属性定义项目在交叉轴上如何对齐。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">align-items</span>: flex-start | flex-end | center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071011.png" alt=""></p>
-<p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
-<ul>
-<li>flex-start：交叉轴的起点对齐</li>
-<li>flex-end：交叉轴的终点对齐</li>
-<li>center：交叉轴的中点对齐</li>
-<li>baseline: 项目的第一行文字的基线对齐</li>
-<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度</li>
-</ul>
-<h3 id="3-6-align-content属性"><a href="#3-6-align-content属性" class="headerlink" title="3.6 align-content属性"></a>3.6 align-content属性</h3><p>align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.box</span> &#123;</div><div class="line">  <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>该属性可能取6个值。</p>
-<ul>
-<li>flex-start：与交叉轴的起点对齐</li>
-<li>flex-end：与交叉轴的终点对齐</li>
-<li>center：与交叉轴的中点对齐</li>
-<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布</li>
-<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍</li>
-<li>stretch（默认值）：轴线占满整个交叉轴</li>
-</ul>
-<h2 id="四、项目的属性"><a href="#四、项目的属性" class="headerlink" title="四、项目的属性"></a>四、项目的属性</h2><p>以下6个属性设置在项目上。</p>
-<ul>
-<li>order</li>
-<li>flex-grow</li>
-<li>flex-shrink</li>
-<li>flex-basis</li>
-<li>flex</li>
-<li>align-self</li>
-</ul>
-<h3 id="4-1-order属性"><a href="#4-1-order属性" class="headerlink" title="4.1 order属性"></a>4.1 order属性</h3><p>order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">order</span>: &lt;integer&gt;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071012.png" alt=""></p>
-<h3 id="4-2-flex-grow属性"><a href="#4-2-flex-grow属性" class="headerlink" title="4.2 flex-grow属性"></a>4.2 flex-grow属性</h3><p>flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071013.png" alt=""></p>
-<p>如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
-<h3 id="4-3-flex-shrink属性"><a href="#4-3-flex-shrink属性" class="headerlink" title="4.3 flex-shrink属性"></a>4.3 flex-shrink属性</h3><p>flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071014.png" alt=""></p>
-<p>如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>负值对该属性无效。</p>
-<h3 id="4-4-flex-basis属性"><a href="#4-4-flex-basis属性" class="headerlink" title="4.4 flex-basis属性"></a>4.4 flex-basis属性</h3><p>flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。</p>
-<h3 id="4-5-flex属性"><a href="#4-5-flex属性" class="headerlink" title="4.5 flex属性"></a>4.5 flex属性</h3><p>flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">flex</span>: none | [ &lt;<span class="string">'flex-grow'</span>&gt; &lt;<span class="string">'flex-shrink'</span>&gt;? || &lt;<span class="string">'flex-basis'</span>&gt; ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。<br>建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。</p>
-<h3 id="4-6-align-self属性"><a href="#4-6-align-self属性" class="headerlink" title="4.6 align-self属性"></a>4.6 align-self属性</h3><p>align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.item</span> &#123;</div><div class="line">  <span class="attribute">align-self</span>: auto | flex-start | flex-end | center | baseline | stretch;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><img src="https://itwanggj.github.io/images/bg2015071016.png" alt=""></p>
-<p>该属性可能取6个值，除了auto，其他都与align-items属性完全一致。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2017/04/09/CSS--Flex布局/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -227,7 +127,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flex/">Flex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/09/CSS--Flex布局/" data-id="cj1aqevve0002s93axjj2w9gk" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/09/CSS--Flex布局/" data-id="cj1aqgpuh0002t73aajoqw8uo" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/09/CSS--Flex布局/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -302,7 +202,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/滴滴出行/">滴滴出行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/" data-id="cj1aqevwf001es93aksvsnh1e" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/" data-id="cj1aqgpvh001et73ar2td7mqz" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -361,7 +261,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型链/">原型链</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/05/聊聊JS那些事--继承/" data-id="cj1aqevwg001hs93ao8p9tazr" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/05/聊聊JS那些事--继承/" data-id="cj1aqgpvj001kt73aniat2gbi" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/05/聊聊JS那些事--继承/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -418,7 +318,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承机制的设计思想/" data-id="cj1aqevwl001ms93aazlja7ag" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承机制的设计思想/" data-id="cj1aqgpvk001mt73a21ik2u11" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承机制的设计思想/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -477,7 +377,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/" data-id="cj1aqevwd0018s93a3rkqcbaa" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/" data-id="cj1aqgpve0018t73a3zmqslhq" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -537,7 +437,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/24/聊聊JS那些事--闭包/" data-id="cj1aqevwm001os93ax9k0fg0v" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/24/聊聊JS那些事--闭包/" data-id="cj1aqgpvl001ot73az37kfut8" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/24/聊聊JS那些事--闭包/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -594,7 +494,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/" data-id="cj1aqevwi001ks93ak97lyd5o" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/" data-id="cj1aqgpvi001ht73aaz0rl9ec" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/12/聊聊JS那些事--位置/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -653,7 +553,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/D3/">D3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cj1aqevwc0016s93a8z2bkkuh" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/" data-id="cj1aqgpvd0016t73aznxv3njy" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/08/来自CSS3的黑科技－－如何实现环形进度条/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -713,7 +613,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/02/01/说说Javascript函数/" data-id="cj1aqevwp001rs93a58tvgqql" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/02/01/说说Javascript函数/" data-id="cj1aqgpvm001rt73ah5wen3p8" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/02/01/说说Javascript函数/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -770,7 +670,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html/">Html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/" data-id="cj1aqevw1000ps93artd9yq78" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/01/12/wordpress显示头像/" data-id="cj1aqgpv3000pt73at4hiyhl4" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/01/12/wordpress显示头像/#ds-thread" class="article-comment-link">Comments</a>
         
