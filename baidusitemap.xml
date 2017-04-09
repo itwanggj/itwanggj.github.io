@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/04/09/CSS--Flex%E5%B8%83%E5%B1%80/</loc>
+    <lastmod>2017-04-09T13:32:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>CSS--FLex布局介绍</title>
+        <pubTime>2017-04-09T14:27:13.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>Flex</tag>
+         
+        <tag>布局</tag>
+         
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="布局" url="https://itwanggj.github.io/categories/%E5%B8%83%E5%B1%80/"/>
+          
+             
+              <breadCrumb title="CSS" url="https://itwanggj.github.io/categories/%E5%B8%83%E5%B1%80/CSS/"/>
+          
+             
+              <breadCrumb title="Flex" url="https://itwanggj.github.io/categories/%E5%B8%83%E5%B1%80/CSS/Flex/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/04/08/%E6%BB%B4%E6%BB%B4%E5%87%BA%E8%A1%8C%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2017-04-09T13:04:11.000Z</lastmod>
     <data>
@@ -11,9 +43,9 @@
         <title>滴滴出行前端面试总结</title>
         <pubTime>2017-04-08T12:27:13.000Z</pubTime>
         
-        <tag>前端</tag>
-         
         <tag>面试</tag>
+         
+        <tag>前端</tag>
          
         <tag>滴滴出行</tag>
          
@@ -512,9 +544,9 @@
         <title>SASS语法--高级</title>
         <pubTime>2016-07-13T03:02:24.000Z</pubTime>
         
-        <tag>JS</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JS</tag>
          
         <tag>Sass</tag>
          
@@ -539,9 +571,9 @@
         <title>SASS语法--安装</title>
         <pubTime>2016-05-05T04:22:34.000Z</pubTime>
         
-        <tag>JS</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JS</tag>
          
         <tag>Sass</tag>
          
@@ -566,9 +598,9 @@
         <title>SASS语法--基础</title>
         <pubTime>2016-05-15T12:32:34.000Z</pubTime>
         
-        <tag>JS</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JS</tag>
          
         <tag>Sass</tag>
          
@@ -593,9 +625,9 @@
         <title>SASS语法--进阶</title>
         <pubTime>2016-06-02T10:12:34.000Z</pubTime>
         
-        <tag>JS</tag>
-         
         <tag>CSS</tag>
+         
+        <tag>JS</tag>
          
         <tag>Sass</tag>
          
