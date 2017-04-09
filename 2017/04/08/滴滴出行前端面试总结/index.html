@@ -36,12 +36,11 @@
 本科或以上学历，计算机相关专业，1年以上工作经验
 精通各种Web前端技术（HTML5/">
 <meta property="og:image" content="https://itwanggj.github.io/images/bg2015071004.png">
-<meta property="og:image" content="http://requirejs.org/">
 <meta property="og:image" content="https://itwanggj.github.io/images/qqqq.png">
 <meta property="og:image" content="https://itwanggj.github.io/images/20160629120335463.jpg">
 <meta property="og:image" content="https://itwanggj.github.io/images/20160629120359221.jpg">
 <meta property="og:image" content="https://itwanggj.github.io/images/20160629120502503.png">
-<meta property="og:updated_time" content="2017-04-09T12:59:51.000Z">
+<meta property="og:updated_time" content="2017-04-09T13:02:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="滴滴出行前端面试总结">
 <meta name="twitter:description" content="2017年4月6日参加【滴滴出行-杭州-前端技术开发-实习生】现场面试，招聘要求如下：
@@ -205,7 +204,7 @@
 <p>方法三：使用Object.create()方法<br>直接使用var newObj = Object.create(oldObj)，可以达到深拷贝的效果。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* ================ 深拷贝 ================ */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">initalObj, finalObj</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> obj = finalObj || &#123;&#125;;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> initalObj) &#123;</div><div class="line">        <span class="keyword">var</span> prop = initalObj[i];</div><div class="line">  </div><div class="line">        <span class="comment">// 避免相互引用对象导致死循环，如initalObj.a = initalObj的情况</span></div><div class="line">        <span class="keyword">if</span>(prop === obj) &#123;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">  </div><div class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> prop === <span class="string">'object'</span>) &#123;</div><div class="line">            obj[i] = (prop.constructor === <span class="built_in">Array</span>) ? [] : <span class="built_in">Object</span>.create(prop);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            obj[i] = prop;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> obj;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="6-【Webpack】讲讲Webpack："><a href="#6-【Webpack】讲讲Webpack：" class="headerlink" title="6.【Webpack】讲讲Webpack："></a>6.【Webpack】讲讲Webpack：</h3><p>Webpack 是当下最热门的前端资源模块化管理和打包工具。它可以将许多松散的模块按照依赖和规则打包成符合生产环境部署的前端资源。还可以将按需加载的模块进行代码分隔，等到实际需要的时候再异步加载。通过 loader 的转换，任何形式的资源都可以视作模块，比如 CommonJs 模块、 AMD 模块、 ES6 模块、CSS、图片、 JSON、Coffeescript、 LESS 等。</p>
-<h3 id="7-【requirejs】讲讲requirejs，以及使用它的好处："><a href="#7-【requirejs】讲讲requirejs，以及使用它的好处：" class="headerlink" title="7.【requirejs】讲讲requirejs，以及使用它的好处："></a>7.【requirejs】讲讲requirejs，以及使用它的好处：</h3><p>RequireJS是一个Javascript 文件和模块框架，可以从 <img src="http://requirejs.org/" alt="">下载，如果你使用Visual Studio也可以通过Nuget获取。它支持浏览器和像node.js之类的服务器环境。使用RequireJS,你可以顺序读取仅需要相关依赖模块。</p>
+<h3 id="7-【requirejs】讲讲requirejs，以及使用它的好处："><a href="#7-【requirejs】讲讲requirejs，以及使用它的好处：" class="headerlink" title="7.【requirejs】讲讲requirejs，以及使用它的好处："></a>7.【requirejs】讲讲requirejs，以及使用它的好处：</h3><p>RequireJS是一个Javascript 文件和模块框架，可以从 <img src="" alt="http://requirejs.org/">下载，如果你使用Visual Studio也可以通过Nuget获取。它支持浏览器和像node.js之类的服务器环境。使用RequireJS,你可以顺序读取仅需要相关依赖模块。</p>
 <p>RequireJS所做的是，在你使用script标签加载你所定义的依赖时，将这些依赖通过head.appendChild()函数来加载他们。当依赖加载以后，RequireJS计算出模块定义的顺序，并按正确的顺序进行调用。这意味着你需要做的仅仅是使用一个“根”来读取你需要的所有功能，然后剩下的事情只需要交给RequireJS就行了。为了正确的使用这些功能，你定义的所有模块都需要使用RequireJS的API，否者它不会像期望的那样工作。</p>
 <h3 id="8-【JavaScript】组件化开发，对外暴漏什么接口："><a href="#8-【JavaScript】组件化开发，对外暴漏什么接口：" class="headerlink" title="8.【JavaScript】组件化开发，对外暴漏什么接口："></a>8.【JavaScript】组件化开发，对外暴漏什么接口：</h3><p>无论前端也好，后端也好，都是整个软件体系的一部分。软件产品也是产品，它的研发过程也必然是有其目的。绝大多数软件产品是追逐利润的，在产品目标确定的情况下，成本有两个途径来优化：减少部署成本，提高开发效率。</p>
 <p>减少部署成本的方面，业界研究得非常多，比如近几年很流行的“去IOE”，就是很典型的，从一些费用较高的高性能产品迁移到开源的易替换的产品集群，又比如使用Linux + Mono来部署.net应用，避开Windows Server的费用。</p>
@@ -280,7 +279,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/滴滴出行/">滴滴出行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/" data-id="cj1ap648k001gmd3aq9617ry1" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/" data-id="cj1ap92zn001ena3ahm8xpypd" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/#ds-thread" class="article-comment-link">Comments</a>
         
