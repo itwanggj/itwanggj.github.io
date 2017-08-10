@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/06/24/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90%E7%9B%AE%E5%BD%95/</loc>
+    <lastmod>2017-08-10T06:58:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端开发书籍推荐目录</title>
+        <pubTime>2017-06-24T05:11:50.000Z</pubTime>
+        
+        <tag>JavaScript</tag>
+         
+        <tag>前端开发</tag>
+         
+        <tag>推荐</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发" url="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+          
+             
+              <breadCrumb title="推荐" url="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%8E%A8%E8%8D%90/"/>
+          
+             
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E6%8E%A8%E8%8D%90/JavaScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/07/15/%E4%BD%BF%E7%94%A8canvas%E7%BB%98%E5%88%B6%E6%97%B6%E9%92%9F/</loc>
     <lastmod>2017-08-10T06:33:27.000Z</lastmod>
     <data>
@@ -292,9 +322,9 @@
         <title>聊聊JS那些事--位置</title>
         <pubTime>2017-02-12T04:32:24.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -319,9 +349,9 @@
         <title>聊聊JS那些事--闭包</title>
         <pubTime>2017-02-24T14:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -375,9 +405,9 @@
         <title>wordpress显示头像</title>
         <pubTime>2017-01-12T11:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -404,9 +434,9 @@
         <title>wordpress发送邮件</title>
         <pubTime>2017-01-04T03:11:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -462,9 +492,9 @@
         <title>使用npm安装一些包失败解决办法</title>
         <pubTime>2016-02-11T05:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -491,9 +521,9 @@
         <title>npm-error</title>
         <pubTime>2016-01-18T11:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -551,9 +581,9 @@
         <title>如何使用text-algin:justify实现文本两端对齐</title>
         <pubTime>2016-08-16T03:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -892,9 +922,9 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
