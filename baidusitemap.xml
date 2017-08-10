@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://itwanggj.github.io/2017/08/04/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2017-08-10T07:18:40.000Z</lastmod>
+    <lastmod>2017-08-10T07:21:09.000Z</lastmod>
     <data>
         <display>
         <title>聊聊JS那些事--严格模式</title>
@@ -723,11 +723,11 @@
         <title>如何配置Apache服务器（MAC版）</title>
         <pubTime>2016-12-09T03:12:34.000Z</pubTime>
         
-        <tag>D3</tag>
-         
         <tag>Apache</tag>
          
         <tag>服务器</tag>
+         
+        <tag>D3</tag>
          
         <tag>数据可视化</tag>
          
