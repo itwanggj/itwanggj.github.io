@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-04-09T13:36:31.000Z</updated>
+  <updated>2017-08-10T01:56:37.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -14,6 +14,151 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>世界各地程序员共同总结的前端面试题</title>
+    <link href="https://itwanggj.github.io/2017/05/18/%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B1%E5%90%8C%E6%80%BB%E7%BB%93%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    <id>https://itwanggj.github.io/2017/05/18/世界各地程序员共同总结的前端面试题/</id>
+    <published>2017-05-18T02:27:13.000Z</published>
+    <updated>2017-08-10T01:56:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="常规问题"><a href="#常规问题" class="headerlink" title="常规问题"></a>常规问题</h1><ul>
+<li>最近你学了什么？</li>
+<li>是什么激发你对编程的兴趣？</li>
+<li>你最近在挑战什么新技术、你是怎么解决遇到的问题？</li>
+<li>当你在构建Web应用程序或网站时，你会考虑什么样的用户界面、安全性、性能、SEO、可维护性、选用的技术？</li>
+<li>谈谈你首选的开发环境（系统、编辑器或IDE、浏览器、工具等）</li>
+<li>你熟悉什么版本控制系统？</li>
+<li>请描述一下你创建一个网页的工作流程？</li>
+<li>请描述一下渐进增强和优雅降级的区别？</li>
+<li>如何优化一个网站的资源？</li>
+<li>传统上，为什么网站资源来自多个域会更好？</li>
+<li>浏览器能同时下载某个域的多少资源？</li>
+<li>如果你加入了一个项目，他们使用tab键进行格式化，而你使用空格键，你会做什么？</li>
+<li>写一个简单的幻灯片</li>
+<li>你使用什么工具来测试代码性能？</li>
+<li>如果你今年能掌握一门技术，它会是什么？</li>
+<li>尽量详细地描述从输入一个网站的URL到页面完成加载的过程。</li>
+<li>解释什么是ARIA和screenreaders，和提高网站可读性的办法。</li>
+<li>比较一下CSS动画和JavaScript动画优、缺点的</li>
+<li>解释下面的请求和响应头：</li>
+</ul>
+<h1 id="HTML-问题"><a href="#HTML-问题" class="headerlink" title="HTML 问题"></a>HTML 问题</h1><ul>
+<li>什么是doctype？</li>
+<li>标准模式和兼容模式之间的区别是什么？</li>
+<li>XHTML页面的局限性是什么？</li>
+<li>页面使用application/xhtml+xml有什么问题？</li>
+<li>如何解决网站多语言问题？</li>
+<li>开发复杂网站必须考虑哪些事情？</li>
+<li>data-属性有好处？</li>
+<li>HTML5作为一个开放的网络平台。HTML5的基石是什么？</li>
+<li>描述cookies、localStorage、sessionstorage之间的差异。</li>
+<li>解释GET和POST的区别</li>
+<li>描述<script>、<script async>、<script defer>之间的差异。</li>
+</ul>
+<h1 id="CSS问题"><a href="#CSS问题" class="headerlink" title="CSS问题"></a>CSS问题</h1><ul>
+<li>CSS 的 class 和 id 的有什么区别？</li>
+<li>描述 reset CSS文件的作用和好处。</li>
+<li>描述什么是Floats（浮动）和它们是如何工作的。</li>
+<li>描述z-index属性和叠加的内容如何显示。</li>
+<li>描述各种清除浮动的方法和适合的场景</li>
+<li>解释 CSS sprites，你是如何在网站中使用的？</li>
+<li>你最喜欢的图片替代技术什么是，什么时候使用？</li>
+<li>CSS属性的hack技术有哪些？</li>
+<li>你是如何处理对新技术有限制的浏览器？</li>
+<li>在视觉上隐藏内容（并使其可用于屏幕阅读器）的方法有哪些？</li>
+<li>你使用过的网格系统（grid system）吗？如果用过，你喜欢什么？</li>
+<li>你有使用过适合媒体查询或移动特定的布局吗？</li>
+<li>对SVG有什么认识？</li>
+<li>如何优化网页打印？</li>
+<li>编写高效的CSS有什么“陷阱”？</li>
+<li>使用CSS预处理器的优点/缺点是什么？（Sass, Compass, Stylus, LESS）</li>
+<li>描述你喜欢和不喜欢的CSS预处理器。</li>
+<li>你将如何使用非标准的字体实现一个网页设计的排版？</li>
+<li>解释浏览器如何对元素与CSS选择器匹配。</li>
+<li>解释你对盒模型的理解。你如何通过CSS告诉浏览器使用不同的盒模型来渲染你的布* 局。</li>
+<li>{ box-sizing: border-box; }有什么用？它的优点是什么？</li>
+<li>display属性有哪些值？</li>
+<li>inline and inline-block之间的区别是什么？</li>
+<li>relative、fixed、absolute、static定位的区别？</li>
+<li>CSS的“C”代表Cascading。如何确定指定样式的优先级（举一些例子）？怎么利用这* 个规则？</li>
+<li>学过或在项目中用过什么CSS框架？（Bootstrap、 PureCSS、Foundation等）</li>
+<li>有没有用过新的CSS Flexbox或网格布局？</li>
+<li>响应设计和自适应设计有什么不同？</li>
+<li>是否用过视网膜图形？</li>
+</ul>
+<h1 id="JS问题"><a href="#JS问题" class="headerlink" title="JS问题"></a>JS问题</h1><ul>
+<li>解释事件委托（event delegation）</li>
+<li>解释JavaScript的this如何工作的</li>
+<li>解释原型如何实现继承</li>
+<li>你如何去测试JavaScript？</li>
+<li>AMD与CommonJS</li>
+<li>解释为什么下面的函数不是IIFE（Imdiately Invoked Function Expression 立即执行的函数表达式）：foo() {}（）</li>
+<li>变量null、undefined、undeclared的区别</li>
+<li>闭包是什么，以及如何使用、为什么使用？</li>
+<li>一个匿名函数的典型用例是什么？</li>
+<li>你如何组织你的代码？（模块、模式、经典传继承？）</li>
+<li>宿主对象（host objects）和本地对象（native objects）的区别是什么？</li>
+<li>比较下面写法的区别：function Person(){}, var person = Person(), var person = new Person()</li>
+<li>.call 和 .apply的区别</li>
+<li>解释function.prototype.bind。</li>
+<li>你什么时候优化你的代码？</li>
+<li>你什么时候用document.write()？</li>
+<li>解释特性检测（feature detection）、特征推理（feature inference）、UA字符串（UA string）的不同之处</li>
+<li>详细解释AJAX。</li>
+<li>解释JSONP如何工作（以及它为什么不是Ajax）。</li>
+<li>你有没有使用JavaScript模板？</li>
+<li>描述事件冒泡（event bubbling）。</li>
+<li>“attribute”和“property”的区别是什么？</li>
+<li>为什么扩展内置的JavaScript对象不是一个好主意？</li>
+<li>document load事件和document ready事件之间的区别？</li>
+<li>== 和 ===的区别？</li>
+<li>解释JavaScript的同源策略</li>
+<li>什么是三元表达式，三元意味着什么？</li>
+<li>什么是“use strict（使用严格的）”？它的优点和缺点是什么？</li>
+<li>创建一个循环，循环到100，当数字是3的倍数时输出“fizz”，是5的倍数和同时是3和5的倍数时输出“FizzBuzz”</li>
+<li>为什么一般来说，不要随便创建全局变量？</li>
+</ul>
+<h1 id="jQuery问题"><a href="#jQuery问题" class="headerlink" title="jQuery问题"></a>jQuery问题</h1><ul>
+<li>解释“chaining(链式)”。</li>
+<li>解释“deferreds（延时）”。</li>
+<li>你知道哪些jQuery特定的优化？</li>
+<li>end()有什么用？</li>
+<li>说出4种可以传给jQuery方法的值。</li>
+<li>.get()、[]、.eq()的区别是什么？</li>
+</ul>
+<h1 id="有趣的问题"><a href="#有趣的问题" class="headerlink" title="有趣的问题"></a>有趣的问题</h1><ul>
+<li>你最近在做什么有意思的项目？</li>
+<li>你喜欢哪些开发工具？</li>
+<li>你有做业余项目吗？什么样的？</li>
+<li>你最喜欢Internet Explorer的什么功能？</li>
+<li>你喜欢什么样的咖啡？</li>
+</ul>
+</script></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;常规问题&quot;&gt;&lt;a href=&quot;#常规问题&quot; class=&quot;headerlink&quot; title=&quot;常规问题&quot;&gt;&lt;/a&gt;常规问题&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;最近你学了什么？&lt;/li&gt;
+&lt;li&gt;是什么激发你对编程的兴趣？&lt;/li&gt;
+&lt;li&gt;你最近在挑战什么新技术、你是怎
+    
+    </summary>
+    
+      <category term="面试" scheme="https://itwanggj.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="前端" scheme="https://itwanggj.github.io/categories/%E9%9D%A2%E8%AF%95/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="程序员" scheme="https://itwanggj.github.io/categories/%E9%9D%A2%E8%AF%95/%E5%89%8D%E7%AB%AF/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    
+    
+      <category term="面试" scheme="https://itwanggj.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="前端" scheme="https://itwanggj.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="程序员" scheme="https://itwanggj.github.io/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS--FLex布局介绍</title>
@@ -1265,69 +1410,6 @@
       <category term="SASS语法" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/"/>
     
       <category term="基础" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/%E5%9F%BA%E7%A1%80/"/>
-    
-    
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
-      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
-    
-      <category term="Sass" scheme="https://itwanggj.github.io/tags/Sass/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SASS语法--安装</title>
-    <link href="https://itwanggj.github.io/2016/05/05/SASS%E8%AF%AD%E6%B3%95--%E5%AE%89%E8%A3%85/"/>
-    <id>https://itwanggj.github.io/2016/05/05/SASS语法--安装/</id>
-    <published>2016-05-05T04:22:34.000Z</published>
-    <updated>2017-02-27T12:50:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装Ruby"><a href="#安装Ruby" class="headerlink" title="安装Ruby"></a>安装Ruby</h2><p>Mac安装Ruby<br>Window安装Ruby</p>
-<h2 id="安装Sass"><a href="#安装Sass" class="headerlink" title="安装Sass"></a>安装Sass</h2><p>修改Ruby镜像 -&gt; 淘宝Ruby镜像<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gem sources --remove https://rubygems.org/</div><div class="line">gem sources -a https://ruby.taobao.org/</div><div class="line">gem sources -l</div></pre></td></tr></table></figure></p>
-<p>安装Sass<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> <span class="selector-tag">install</span> <span class="selector-tag">sass</span></div><div class="line"><span class="selector-tag">sass</span> <span class="selector-tag">-v</span></div></pre></td></tr></table></figure></p>
-<p>or<br>gem install sass —version=3.3</p>
-<p>列出所有安装包<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> <span class="selector-tag">list</span></div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>卸载Sass<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem uninstall sass --version=3.3</div></pre></td></tr></table></figure></p>
-<p>or<br>gem uninstall sass</p>
-<p>编译Sass<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">sass</span> <span class="selector-tag">main</span><span class="selector-class">.scss</span> <span class="selector-tag">main</span><span class="selector-class">.css</span></div></pre></td></tr></table></figure></p>
-<p>Compass安装<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">gem</span> <span class="selector-tag">install</span> <span class="selector-tag">compass</span></div><div class="line"></div><div class="line"><span class="selector-tag">compass</span> <span class="selector-tag">-v</span></div><div class="line"></div><div class="line"><span class="selector-tag">compass</span> <span class="selector-tag">create</span> <span class="selector-tag">learn-compass-init</span></div></pre></td></tr></table></figure></p>
-<p>使用css原生@import的既定规则：</p>
-<p>1.当@import后边跟的文件名是以.css结尾的时候<br>2.当@import后边跟的是”<a href="http://&quot;开头的字符串的时候" target="_blank" rel="external">http://&quot;开头的字符串的时候</a><br>3.当@import后边跟的是一个url()函数的时候<br>4.当@import后边带有media queries的时候</p>
-<p>基于sass的既定规则</p>
-<p>1.没有文件后缀名的时候.sass会添加.scss或者.sass的后缀；<br>2.同一目录下，局部文件和非局部文件不能重名。</p>
-<p>变量操作</p>
-<p>1.直接操作变量，即变量表达式。<br>2.通过函数<br>跟代码块无关的函数，多是自己内置函数@Function<br>可重用的代码块，称mixin<br>@include方式调用<br>@extend的方式调用</p>
-<p>hsl</p>
-<p>For example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">@mixin col-6 &#123;</div><div class="line">  width: 50%;</div><div class="line">  float: left;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.webdemo-sec &#123;</div><div class="line">  @include col-6;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@mixin col-6($width) &#123;</div><div class="line">  width: $width;</div><div class="line">  float: left;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.webdemo-sec &#123;</div><div class="line">  @include col-6(50%);</div><div class="line">&#125;</div><div class="line"></div><div class="line">@mixin col-6($width: 50) &#123;</div><div class="line">  width: $width;</div><div class="line">  float: left;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.webdemo-sec &#123;</div><div class="line">  @include col-6();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.webdemo-sec</span> &#123;</div><div class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</div><div class="line">  <span class="attribute">float</span>: left;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>extend两个知识点</p>
-<p>1.extend不可以继承选择器序列<br>2.使用%，用来构建不用来继承的选择器。</p>
-<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">.error &#123;</div><div class="line">  color: #f00;</div><div class="line">&#125;</div><div class="line">.serious-error &#123;</div><div class="line">  @extend .error;</div><div class="line">  border: 1px solid #f00;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.error</span>, <span class="selector-class">.serious-error</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#f00</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.serious-error</span> &#123;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#f00</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>For example:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">%error &#123;</div><div class="line">  color: #f00;</div><div class="line">&#125;</div><div class="line">.serious-error &#123;</div><div class="line">  @extend %error;</div><div class="line">  border: 1px solid #f00;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>is compiled to:<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.serious-error</span> &#123;</div><div class="line">  <span class="attribute">color</span>: <span class="number">#f00</span>;</div><div class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#f00</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Compass核心模块</p>
-<p>CSS3<br>Helpers<br>Typography<br>Utilities<br>@import “compass”;<br>Reset<br>@import “compass/reset”;<br>Layout<br>@import “compass/layout”;</p>
-<p>Normalize核心模块<br>base<br>html5<br>links<br>typegraphy<br>embeds<br>groups<br>forms<br>tables<br>@import “normalize”;<br>or<br>@import “normalize/version”;<br>@import “normalize/base”;<br>@import “normailze/html5”;</p>
-<p>Layout模块<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">import</span> <span class="string">"compass/layout"</span>;</div><div class="line">@<span class="keyword">import</span> <span class="string">"compass/grid-background"</span>;</div><div class="line">@<span class="keyword">import</span> <span class="string">"compass/sticky-footer"</span>;</div><div class="line">@<span class="keyword">import</span> <span class="string">"compass/stretching"</span>;</div></pre></td></tr></table></figure></p>
-<p>CSS3模块<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">@import "compass/css3";</div><div class="line">@import "compass/support"</div><div class="line"></div><div class="line">$supported-browsers: chrome;</div><div class="line">$broer-minimum-versions: ("ie": "8");</div></pre></td></tr></table></figure></p>
-<h3 id="链接推荐"><a href="#链接推荐" class="headerlink" title="链接推荐"></a>链接推荐</h3><p><a href="http://compass-style.org/reference/compass/reset/utilities/" target="_blank" rel="external">Compass/Utilities</a><br><a href="http://www.sass-lang.com" target="_blank" rel="external">Sass官网</a><br><a href="http://compass-style.org" target="_blank" rel="external">Compass官网</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;安装Ruby&quot;&gt;&lt;a href=&quot;#安装Ruby&quot; class=&quot;headerlink&quot; title=&quot;安装Ruby&quot;&gt;&lt;/a&gt;安装Ruby&lt;/h2&gt;&lt;p&gt;Mac安装Ruby&lt;br&gt;Window安装Ruby&lt;/p&gt;
-&lt;h2 id=&quot;安装Sass&quot;&gt;&lt;a href=&quot;#安装Sass&quot; class=&quot;headerlink&quot; title=&quot;安装Sass&quot;&gt;&lt;/a&gt;安装Sass&lt;/h2&gt;&lt;p&gt;修改Ruby镜像 -&amp;gt; 淘宝Ruby镜像&lt;br&gt;&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gem sources --remove https://rubygems.org/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gem sources -a https://ruby.taobao.org/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gem sources -l&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;安装Sass&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;sass&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;sass&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;-v&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;or&lt;br&gt;gem install sass —version=3.3&lt;/p&gt;
-&lt;p&gt;列出所有安装包&lt;br&gt;&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;selector-tag&quot;&gt;list&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="SASS语法" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="安装" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/%E5%AE%89%E8%A3%85/"/>
     
     
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
