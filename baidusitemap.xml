@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>https://itwanggj.github.io/2017/07/08/ECMAScript%206%E4%B8%AD%E7%9A%84%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <lastmod>2017-08-10T03:17:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>ECMAScript 6中的面向对象</title>
+        <pubTime>2017-07-08T15:11:50.000Z</pubTime>
+        
+        <tag>ECMAScript6</tag>
+         
+        <tag>JavaScript</tag>
+         
+        <tag>面向对象</tag>
+         
+         
+           
+             
+              <breadCrumb title="ECMAScript6" url="https://itwanggj.github.io/categories/ECMAScript6/"/>
+          
+             
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/ECMAScript6/JavaScript/"/>
+          
+             
+              <breadCrumb title="面向对象" url="https://itwanggj.github.io/categories/ECMAScript6/JavaScript/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://itwanggj.github.io/2017/06/17/%E5%B0%81%E8%A3%85%E4%BD%A0%E7%9A%84Gulp%E4%BB%A3%E7%A0%81/</loc>
     <lastmod>2017-08-10T02:53:26.000Z</lastmod>
     <data>
@@ -232,9 +262,9 @@
         <title>聊聊JS那些事--位置</title>
         <pubTime>2017-02-12T04:32:24.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -259,9 +289,9 @@
         <title>聊聊JS那些事--闭包</title>
         <pubTime>2017-02-24T14:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -315,9 +345,9 @@
         <title>wordpress显示头像</title>
         <pubTime>2017-01-12T11:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -344,9 +374,9 @@
         <title>wordpress发送邮件</title>
         <pubTime>2017-01-04T03:11:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -402,9 +432,9 @@
         <title>使用npm安装一些包失败解决办法</title>
         <pubTime>2016-02-11T05:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -431,9 +461,9 @@
         <title>npm-error</title>
         <pubTime>2016-01-18T11:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -491,9 +521,9 @@
         <title>如何使用text-algin:justify实现文本两端对齐</title>
         <pubTime>2016-08-16T03:12:34.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -603,11 +633,11 @@
         <title>如何配置Apache服务器（MAC版）</title>
         <pubTime>2016-12-09T03:12:34.000Z</pubTime>
         
+        <tag>D3</tag>
+         
         <tag>Apache</tag>
          
         <tag>服务器</tag>
-         
-        <tag>D3</tag>
          
         <tag>数据可视化</tag>
          
@@ -745,9 +775,9 @@
         
         <tag>JavaScript</tag>
          
-        <tag>D3</tag>
-         
         <tag>CSS3</tag>
+         
+        <tag>D3</tag>
          
         <tag>html</tag>
          
@@ -832,9 +862,9 @@
         <title>Hello World</title>
         <pubTime>2015-12-19T16:00:00.000Z</pubTime>
         
-        <tag>CSS</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>CSS</tag>
          
         <tag>Html</tag>
          
@@ -859,11 +889,11 @@
         <title>JS代码让Markdown自动生成目录</title>
         <pubTime>2016-03-03T12:32:04.000Z</pubTime>
         
+        <tag>JavaScript</tag>
+         
         <tag>HEXO</tag>
          
         <tag>Markdown</tag>
-         
-        <tag>JavaScript</tag>
          
          
            
