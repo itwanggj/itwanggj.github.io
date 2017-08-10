@@ -109,39 +109,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
         <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在HTML中指定一个区域放置时钟：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"clock"</span> <span class="attr">style</span>=<span class="string">"position: relative;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>时钟的一些外观设定：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> width = <span class="number">260</span>; <span class="comment">// 桌布宽度</span></div><div class="line"><span class="keyword">var</span> height= <span class="number">260</span>; <span class="comment">// 桌布高度</span></div><div class="line"><span class="keyword">var</span> dot = &#123;</div><div class="line">    <span class="attr">x</span> : width / <span class="number">2</span>,</div><div class="line">    <span class="attr">y</span> : height / <span class="number">2</span>,</div><div class="line">    <span class="attr">radius</span> : <span class="number">6</span></div><div class="line">&#125;; <span class="comment">// 圆点位置、半径</span></div><div class="line"><span class="keyword">var</span> radius = <span class="number">120</span>; <span class="comment">// 圆半径</span></div><div class="line"><span class="keyword">var</span> borderWidth = <span class="number">6</span>; <span class="comment">// 圆边框宽度</span></div></pre></td></tr></table></figure></p>
 <p>创建<code>&lt;canvas&gt;</code>元素：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> clock = <span class="built_in">document</span>.getElementById(<span class="string">'clock'</span>);</div><div class="line"><span class="keyword">var</span> clockBg = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</div><div class="line"><span class="keyword">var</span> clockPointers = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</div><div class="line"></div><div class="line">clockPointers.width = clockBg.width = width;</div><div class="line">clockPointers.height = clockBg.height = height;</div><div class="line">clockPointers.style.position = <span class="string">'absolute'</span>;</div><div class="line">clockPointers.style.left = <span class="number">0</span>;</div><div class="line">clockPointers.style.right = <span class="number">0</span>;</div><div class="line"></div><div class="line">clock.appendChild(clockBg);</div><div class="line">clock.appendChild(clockPointers);</div></pre></td></tr></table></figure></p>
-<p>这里要创建两个<code>&lt;canvas&gt;</code>元素，目的在于把时钟的圆盘跟指针分离开。这是因为指针要根据当前时间擦除重绘，如果放置在一个<code>&lt;canvas&gt;</code>中，擦除的时候就会把圆盘也给擦掉了。</p>
-<h2 id="绘制圆盘"><a href="#绘制圆盘" class="headerlink" title="绘制圆盘"></a>绘制圆盘</h2><p>但凡要在<code>&lt;canvas&gt;</code>中绘图，都要先获得其上下文，对应的接口是 canvas.getContext：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bgCtx = clockBg.getContext(<span class="string">'2d'</span>);</div></pre></td></tr></table></figure></p>
-<p>目前canvas.getContext接口的唯一一个合法参数是’2d’，将来应该会支持3D绘图。</p>
-<p>先来绘制最外面的圆框：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">bgCtx.beginPath();</div><div class="line">bgCtx.lineWidth = borderWidth;</div><div class="line">bgCtx.strokeStyle = <span class="string">'#000'</span>;</div><div class="line">bgCtx.arc(dot.x, dot.y, radius, <span class="number">0</span>, <span class="number">2</span> * <span class="built_in">Math</span>.PI, <span class="literal">true</span>);</div><div class="line">bgCtx.stroke();</div><div class="line">bgCtx.closePath();</div></pre></td></tr></table></figure></p>
-<p>绘图的流程其实都是类似的：</p>
-<ol>
-<li>调用 context.beginPath() 新建路径；</li>
-<li>设置颜色等样式；</li>
-<li>调用路径函数生成路径；</li>
-<li>画线（stroke）或者填充（fill）；</li>
-<li>调用 context.closePath() 关闭路径；</li>
-</ol>
-<p>上面用到的 context.arc 接口可以生成圆弧路径<br>用类似的方法，画出圆点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">bgCtx.beginPath();</div><div class="line">bgCtx.fillStyle = &apos;#000&apos;;</div><div class="line">bgCtx.arc(dot.x, dot.y, dot.radius, 0, 2 * Math.PI, true);</div><div class="line">bgCtx.fill();</div><div class="line">bgCtx.closePath();</div></pre></td></tr></table></figure></p>
-<p>此时，结果如下图所示：</p>
-<p><img src="https://itwanggj.github.io/images/cc_2.png" alt=""></p>
-<h2 id="绘制刻度"><a href="#绘制刻度" class="headerlink" title="绘制刻度"></a>绘制刻度</h2><p>最复杂的地方就是画刻度了，这里要先复习一下数学中的三角函数：<br><img src="https://itwanggj.github.io/images/cc_3.png" alt=""><br>刻度的起始位置就是圆框上的一个点，第一步就是要知道这个点的坐标。上图中：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sinθ = AC / AO</div><div class="line">cosθ = OC / AO</div></pre></td></tr></table></figure></p>
-<p>其中AO即为圆半径，而θ的值则根据刻度而定。0是π/2，3是0，6是3π/2，9是π：<br><img src="https://itwanggj.github.io/images/cc_04.png" alt=""></p>
-<p>由此可得到刻度起始点的位置为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = 圆点横坐标 + AO * cosθ</div><div class="line">y = 圆点纵坐标 + AO * sinθ</div></pre></td></tr></table></figure></p>
-<p>同理可算出刻度结束点的位置为（结束点相当于在一个半径为圆框半径-刻度长度的圆上）：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">x = 圆点横坐标 + (AO - 刻度长度) * cosθ</div><div class="line">y = 圆点纵坐标 + (AO - 刻度长度) * sinθ</div></pre></td></tr></table></figure></p>
-<p>于是，这程序可以写了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, angle = <span class="number">0</span>, tmp, len; i &lt; <span class="number">60</span>; i++) &#123;</div><div class="line">    bgCtx.beginPath();</div><div class="line"></div><div class="line">    <span class="comment">// 突出显示能被5除尽的刻度</span></div><div class="line">    <span class="keyword">if</span> (<span class="number">0</span> === i % <span class="number">5</span>) &#123;</div><div class="line">        bgCtx.lineWidth = <span class="number">5</span>;</div><div class="line">        len = <span class="number">12</span>;</div><div class="line">        bgCtx.strokeStyle = <span class="string">'#000'</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        bgCtx.lineWidth = <span class="number">2</span>;</div><div class="line">        len = <span class="number">6</span>;</div><div class="line">        bgCtx.strokeStyle = <span class="string">'#999'</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    tmp = radius - borderWidth / <span class="number">2</span>; <span class="comment">// 因为圆有边框，所以要减去边框宽度</span></div><div class="line">    bgCtx.moveTo(</div><div class="line">        dot.x + tmp * <span class="built_in">Math</span>.cos(angle),</div><div class="line">        dot.y + tmp * <span class="built_in">Math</span>.sin(angle)</div><div class="line">    );</div><div class="line">    tmp -= len;</div><div class="line">    bgCtx.lineTo(dot.x + tmp * <span class="built_in">Math</span>.cos(angle), dot.y + tmp * <span class="built_in">Math</span>.sin(angle));</div><div class="line">    bgCtx.stroke();</div><div class="line">    bgCtx.closePath();</div><div class="line"></div><div class="line">    angle += <span class="built_in">Math</span>.PI / <span class="number">30</span>; <span class="comment">// 每次递增1/30π</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>画好刻度后，结果应该是这样：<br><img src="https://itwanggj.github.io/images/cc_05.png" alt=""></p>
-<h2 id="画指针"><a href="#画指针" class="headerlink" title="画指针"></a>画指针</h2><p>先得获取指针<canvas>的上下文：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ptxContext = clockPointers.getContext(<span class="string">'2d'</span>);</div></pre></td></tr></table></figure></canvas></p>
-<p>由于画指针的操作每隔一秒都要执行一次，所以这里就写成一个函数，方便传给setInterval调用：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">updatePointers</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    ptCtx.clearRect(<span class="number">0</span>, <span class="number">0</span>, width, height);　　<span class="comment">// 清掉原来的指针</span></div><div class="line"></div><div class="line">    <span class="comment">// 获取当前时间</span></div><div class="line">    <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">    <span class="keyword">var</span> h = now.getHours();</div><div class="line">    <span class="keyword">var</span> m = now.getMinutes();</div><div class="line">    <span class="keyword">var</span> s = now.getSeconds();</div><div class="line"></div><div class="line">    <span class="comment">// 算出时分秒指针现在应指向圆的几分之几处</span></div><div class="line">    h = h &gt; <span class="number">12</span> ? h - <span class="number">12</span> : h;</div><div class="line">    h = h + m / <span class="number">60</span>;</div><div class="line">    h = h / <span class="number">12</span>;</div><div class="line">    m = m / <span class="number">60</span>;</div><div class="line">    s = s / <span class="number">60</span>;</div><div class="line"></div><div class="line">    drawPointers(s, <span class="number">2</span>, <span class="number">92</span>); <span class="comment">// 画秒针</span></div><div class="line">    drawPointers(m, <span class="number">4</span>, <span class="number">82</span>); <span class="comment">// 画分针</span></div><div class="line">    drawPointers(h, <span class="number">6</span>, <span class="number">65</span>); <span class="comment">// 画时针</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>drawPointers函数的实现是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// angle是角度，lineWidth是指针宽度，length是指针长度</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawPointers</span>(<span class="params">angle, lineWidth, length</span>) </span>&#123;</div><div class="line">    angle = angle * <span class="built_in">Math</span>.PI * <span class="number">2</span> - <span class="built_in">Math</span>.PI / <span class="number">2</span>;</div><div class="line"></div><div class="line">    ptCtx.beginPath();</div><div class="line">    ptCtx.lineWidth = lineWidth;</div><div class="line">    ptCtx.strokeStyle = <span class="string">"#000"</span>;</div><div class="line">    ptCtx.moveTo(dot.x, dot.y);</div><div class="line">    ptCtx.lineTo(dot.x + length * <span class="built_in">Math</span>.cos(angle), dot.y + length * <span class="built_in">Math</span>.sin(angle));</div><div class="line">    ptCtx.stroke();</div><div class="line">    ptCtx.closePath();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这里主要也是用到三角函数，就不啰嗦了，但是要注意angel的计算。由于传入的angel是一个百分数，所以要乘以一个圆周，也就是2π，才知道对应的弧度，算出来以后还要减去π/2，因为从上面的坐标图就可以看到，0是位于x轴而不是y轴，刚好比正常的时钟多了π/2。</p>
-<p>最后别忘了调用updatePointers实时更新指针：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">setInterval(updatePointers, <span class="number">1000</span>);</div><div class="line">updatePointers();</div></pre></td></tr></table></figure></p>
-<p>这下时钟完全出来了，除了初步熟悉<canvas>绘图API外，还顺便复习了一次三角函数。</canvas></p>
-<p><img src="https://itwanggj.github.io/images/cc_06.png" alt=""></p>
-
+<p>这里要创建两个<code>&lt;canvas&gt;</code>元素，目的在于把时钟的圆盘跟指针分离开。这是因为指针要根据当前时间擦除重绘，如果放置在一个<code>&lt;canvas&gt;</code>中，擦除的时候就会把圆盘也给擦掉了。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/07/15/使用canvas绘制时钟/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -149,7 +125,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html5/">Html5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/07/15/使用canvas绘制时钟/" data-id="cj662ar9n000u873anj5a2cho" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/07/15/使用canvas绘制时钟/" data-id="cj662i7g7000v9n3ap2fo5bmp" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/07/15/使用canvas绘制时钟/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -208,7 +184,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ECMAScript6/">ECMAScript6</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/07/08/ECMAScript 6中的面向对象/" data-id="cj662ar8y0001873a17vs2lxt" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/07/08/ECMAScript 6中的面向对象/" data-id="cj662i7fp00039n3a2b2toukb" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/07/08/ECMAScript 6中的面向对象/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -267,7 +243,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/" data-id="cj662ar9y0017873aabug3nhb" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/" data-id="cj662i7gf00169n3a8h7m17ly" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -325,7 +301,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/setInterval/">setInterval</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/setTimeout/">setTimeout</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/05/26/setTimeout:setInterval的最大延时值/" data-id="cj662ar9h000i873aprrwsuf3" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/05/26/setTimeout:setInterval的最大延时值/" data-id="cj662i7g0000j9n3amhjy0wrd" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/05/26/setTimeout:setInterval的最大延时值/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -399,7 +375,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/程序员/">程序员</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/05/18/世界各地程序员共同总结的前端面试题/" data-id="cj662ar9l000r873a1u7adm33" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/05/18/世界各地程序员共同总结的前端面试题/" data-id="cj662i7g4000p9n3avlqt951u" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/05/18/世界各地程序员共同总结的前端面试题/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -460,7 +436,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flex/">Flex</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/布局/">布局</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/09/CSS--Flex布局/" data-id="cj662ar920003873a5zvnkxa4" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/09/CSS--Flex布局/" data-id="cj662i7fj00019n3a0b1h1556" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/09/CSS--Flex布局/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -535,7 +511,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/滴滴出行/">滴滴出行</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/" data-id="cj662ara6001p873awfyzm3hz" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/" data-id="cj662i7gl001l9n3ahm1dzxvh" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/08/滴滴出行前端面试总结/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -594,7 +570,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型链/">原型链</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/05/聊聊JS那些事--继承/" data-id="cj662arac001z873af1oh4dr0" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/05/聊聊JS那些事--继承/" data-id="cj662i7go001v9n3azv0r9cvj" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/05/聊聊JS那些事--继承/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -651,7 +627,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承机制的设计思想/" data-id="cj662ara8001s873axv4boefh" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承机制的设计思想/" data-id="cj662i7gl001o9n3atbpmhqn0" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/04/03/聊聊JS那些事--继承机制的设计思想/#ds-thread" class="article-comment-link">Comments</a>
         
@@ -710,7 +686,7 @@
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
 
-        <a data-url="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/" data-id="cj662ara4001k873a2m7ycbbx" class="article-share-link">Share</a>
+        <a data-url="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/" data-id="cj662i7gj001g9n3a4xo61s9e" class="article-share-link">Share</a>
         
           <a href="https://itwanggj.github.io/2017/03/01/深入理解javascript原型和闭包/#ds-thread" class="article-comment-link">Comments</a>
         
