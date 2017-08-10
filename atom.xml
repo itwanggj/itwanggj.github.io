@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-08-10T02:01:07.000Z</updated>
+  <updated>2017-08-10T02:16:24.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>setTimeout/setInterval的最大延时值</title>
+    <link href="https://itwanggj.github.io/2017/05/26/setTimeout:setInterval%E7%9A%84%E6%9C%80%E5%A4%A7%E5%BB%B6%E6%97%B6%E5%80%BC/"/>
+    <id>https://itwanggj.github.io/2017/05/26/setTimeout:setInterval的最大延时值/</id>
+    <published>2017-05-26T14:21:13.000Z</published>
+    <updated>2017-08-10T02:16:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>先来看这样一段代码：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    loadData().then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">        $(<span class="string">'#content'</span>).html(data.content);</div><div class="line">        <span class="keyword">var</span> delay = data.nextUpdateTime - <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">        <span class="keyword">if</span> (delay &gt; <span class="number">0</span>) &#123;</div><div class="line">            setTimeout(update, delay);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>其流程非常简单：通过AJAX加载数据后更新HTML的内容；如果有指定下次更新时间，则通过计时器在该时间点再执行一次整个流程。</p>
+<p>要说这段代码有什么隐患的话，那就是data.nextUpdateTime与当前时间的时间差（即delay变量的值）比较小的时候，会导致内容频繁更新。但这是属于正常的业务逻辑，要优化就只能牺牲内容更新的即时性。然而这里我要说的是，当时间差非常大的时候，也会出现同样的问题。</p>
+<p>下面模拟一下这个场景：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">log</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'executed'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> nextUpdateTime = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line"><span class="comment">// 设为一个月后</span></div><div class="line">nextUpdateTime.setMonth(nextUpdateTime.getMonth() + <span class="number">1</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> delay = nextUpdateTime - <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">setTimeout(log, delay);</div></pre></td></tr></table></figure></p>
+<p>这段代码的原意是让log函数在一个月后执行，但是运行一下就可以发现，该函数会马上执行。为什么会这样呢？</p>
+<p>搜一下相关内容可以发现，setTimeout是使用Int32来存储延时参数值的，也就是说最大的延时值是2^31-1。一旦超过了最大值，其效果就跟延时值为0的情况一样，也就是马上执行。</p>
+<p>这个最大的延时值已经接近一个月了，一般情况下，用户也不会长时间开着一个网页，如果真开了这么久，那就刷新一下吧：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    loadData().then(<span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">        $(<span class="string">'#content'</span>).html(data.content);</div><div class="line">        <span class="keyword">var</span> delay = data.nextUpdateTime - <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">        <span class="keyword">if</span> (delay &gt; <span class="number">0</span>) &#123;</div><div class="line">            <span class="comment">// 限制最大延时值为一天</span></div><div class="line">            <span class="keyword">var</span> ONE_DAY = <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span> * <span class="number">1000</span>;</div><div class="line">            <span class="keyword">if</span> (delay &gt; ONE_DAY) &#123;</div><div class="line">                setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                    <span class="built_in">window</span>.location.reload();</div><div class="line">                &#125;, ONE_DAY);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                setTimeout(update, delay);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>同样的问题也存在于setInterval中。这也算是Javascript中一个比较隐蔽的坑了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;先来看这样一段代码：&lt;br&gt;&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;
+    
+    </summary>
+    
+      <category term="setTimeout" scheme="https://itwanggj.github.io/categories/setTimeout/"/>
+    
+      <category term="setInterval" scheme="https://itwanggj.github.io/categories/setTimeout/setInterval/"/>
+    
+      <category term="JS" scheme="https://itwanggj.github.io/categories/setTimeout/setInterval/JS/"/>
+    
+    
+      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
+    
+      <category term="setTimeout" scheme="https://itwanggj.github.io/tags/setTimeout/"/>
+    
+      <category term="setInterval" scheme="https://itwanggj.github.io/tags/setInterval/"/>
+    
+  </entry>
   
   <entry>
     <title>世界各地程序员共同总结的前端面试题</title>
@@ -537,11 +575,11 @@
     
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
+      <category term="原型" scheme="https://itwanggj.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
       <category term="CSS3" scheme="https://itwanggj.github.io/tags/CSS3/"/>
     
       <category term="html" scheme="https://itwanggj.github.io/tags/html/"/>
-    
-      <category term="原型" scheme="https://itwanggj.github.io/tags/%E5%8E%9F%E5%9E%8B/"/>
     
       <category term="HTML5" scheme="https://itwanggj.github.io/tags/HTML5/"/>
     
@@ -1318,9 +1356,9 @@
       <category term="高级" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/%E9%AB%98%E7%BA%A7/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Sass" scheme="https://itwanggj.github.io/tags/Sass/"/>
     
@@ -1386,49 +1424,9 @@
       <category term="进阶" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/%E8%BF%9B%E9%98%B6/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
     
-      <category term="Sass" scheme="https://itwanggj.github.io/tags/Sass/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SASS语法--基础</title>
-    <link href="https://itwanggj.github.io/2016/05/15/SASS%E8%AF%AD%E6%B3%95--%E5%9F%BA%E7%A1%80/"/>
-    <id>https://itwanggj.github.io/2016/05/15/SASS语法--基础/</id>
-    <published>2016-05-15T12:32:34.000Z</published>
-    <updated>2017-02-27T12:49:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://itwanggj.github.io/images/sass-script-advanced.png" alt=""></p>
-<h2 id="项目创建"><a href="#项目创建" class="headerlink" title="项目创建"></a>项目创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm init</div><div class="line"></div><div class="line">compass create --bare</div></pre></td></tr></table></figure>
-<p>or<br>compass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”</p>
-<h2 id="自动化构建"><a href="#自动化构建" class="headerlink" title="自动化构建"></a>自动化构建</h2><p>在根目录下创建gulpfile.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm gulp gulp-compass browser-sync del run-sequence --save-dev</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>假如下载失败可修改：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm config git registry</div><div class="line"></div><div class="line">npm config set registry http:<span class="comment">//</span></div></pre></td></tr></table></figure></p>
-<p>安装compass-normalize、breakpoint、susy<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gem install compass-normalize breakpoint susy</div></pre></td></tr></table></figure></p>
-<p>在config.rb里分别引入<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">require "compass-normalize"</div><div class="line"># 响应式</div><div class="line">require "breakpoint"</div><div class="line"># 布局</div><div class="line">require "susy"</div></pre></td></tr></table></figure></p>
-<p>main.scss<br><figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*! Vendor */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"compass"</span></div><div class="line">, <span class="string">"susy"</span></div><div class="line">, <span class="string">"breakpoint"</span></div><div class="line">, <span class="string">"normalize-version"</span>  </div><div class="line">, <span class="string">"normalize/base"</span></div><div class="line">, <span class="string">"normalize/links"</span></div><div class="line">, <span class="string">"normalize/html5"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Helpers */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"helpers/variables"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Base*/</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"base/font"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Layout */</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"layout/main"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Components */</span> </div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"components/alerts"</span></div><div class="line">, <span class="string">"components/pop-stripe"</span></div><div class="line">, <span class="string">"components/banner"</span></div><div class="line">, <span class="string">"components/page-header"</span></div><div class="line">, <span class="string">"components/section-bottom"</span></div><div class="line">, <span class="string">"components/contentinfo"</span></div><div class="line">;</div><div class="line"></div><div class="line"><span class="comment">/*! Pages*/</span></div><div class="line">@<span class="keyword">import</span> </div><div class="line">  <span class="string">"pages/page-base"</span></div><div class="line">, <span class="string">"pages/index"</span></div><div class="line">, <span class="string">"pages/install"</span></div><div class="line">, <span class="string">"pages/guide"</span></div><div class="line">, <span class="string">"pages/community"</span></div><div class="line">, <span class="string">"pages/libsass"</span></div><div class="line">;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://itwanggj.github.io/images/sass-script-advanced.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;项目创建&quot;&gt;&lt;a href=&quot;#项目创建&quot; class=&quot;headerlink&quot; title=&quot;项目创建&quot;&gt;&lt;/a&gt;项目创建&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm init&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;compass create --bare&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;or&lt;br&gt;compass create –bare –sass-dir “sass” –css-dir “css” –images-dir “img” –javascripts-dir “js”&lt;/p&gt;
-&lt;h2 id=&quot;自动化构建&quot;&gt;&lt;a href=&quot;#自动化构建&quot; class=&quot;headerlink&quot; title=&quot;自动化构建&quot;&gt;&lt;/a&gt;自动化构建&lt;/h2&gt;&lt;p&gt;在根目录下创建gulpfile.js&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm gulp gulp-compass browser-sync del run-sequence --save-dev&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="SASS语法" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/"/>
-    
-      <category term="基础" scheme="https://itwanggj.github.io/categories/SASS%E8%AF%AD%E6%B3%95/%E5%9F%BA%E7%A1%80/"/>
-    
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
-      <category term="JS" scheme="https://itwanggj.github.io/tags/JS/"/>
     
       <category term="Sass" scheme="https://itwanggj.github.io/tags/Sass/"/>
     
