@@ -5,28 +5,28 @@
     
   <url>
     <loc>https://itwanggj.github.io/2017/08/04/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2017-08-10T07:13:48.000Z</lastmod>
+    <lastmod>2017-08-10T07:16:00.000Z</lastmod>
     <data>
         <display>
         <title>聊聊JS那些事--严格模式</title>
         <pubTime>2017-08-04T12:11:50.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript</tag>
          
         <tag>严格模式</tag>
          
          
            
              
-              <breadCrumb title="ECMAScript6" url="https://itwanggj.github.io/categories/ECMAScript6/"/>
+              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/JavaScript/"/>
           
              
-              <breadCrumb title="JavaScript" url="https://itwanggj.github.io/categories/ECMAScript6/JavaScript/"/>
+              <breadCrumb title="ECMAScript" url="https://itwanggj.github.io/categories/JavaScript/ECMAScript/"/>
           
              
-              <breadCrumb title="严格模式" url="https://itwanggj.github.io/categories/ECMAScript6/JavaScript/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
+              <breadCrumb title="严格模式" url="https://itwanggj.github.io/categories/JavaScript/ECMAScript/%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/"/>
           
         </display>
     </data>
