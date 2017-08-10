@@ -137,9 +137,10 @@
     <link href="https://itwanggj.github.io/2017/06/24/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E4%B9%A6%E7%B1%8D%E6%8E%A8%E8%8D%90%E7%9B%AE%E5%BD%95/"/>
     <id>https://itwanggj.github.io/2017/06/24/前端开发书籍推荐目录/</id>
     <published>2017-06-24T05:11:50.000Z</published>
-    <updated>2017-08-10T06:58:31.000Z</updated>
+    <updated>2017-08-10T07:01:41.000Z</updated>
     
-    <content type="html"><![CDATA[<p>关于前端开发方面的书籍，我也看过那么几本，有一些还没有看，先收藏在这里：<br>以下是正文部分。</p>
+    <content type="html"><![CDATA[<p>前端大牛关于前端开发方面推荐的书籍，我也看过那么几本，有一些还没有看，先收藏在这里：</p>
+<p>以下是正文部分。</p>
 <h1 id="1、Head-First-HTML与CSS"><a href="#1、Head-First-HTML与CSS" class="headerlink" title="1、Head First HTML与CSS"></a>1、Head First HTML与CSS</h1><p>这本书最大的优点就是除了基础还是基础，非常适合完全不知道前端开发是什么的门外汉作为第一本入门书籍来学习， 整本书采用插画和故事场景的形式叙述，和那些枯燥、深奥的HTML书籍完全不同，秉持了 Head First 系列一贯通俗易懂的风格。你看这本书的时候会发现就像是在看漫画书一样轻松。是我看过对初学者最友好的书，没有之一。</p>
 <h1 id="2、CSS-权威指南"><a href="#2、CSS-权威指南" class="headerlink" title="2、CSS 权威指南"></a>2、CSS 权威指南</h1><p>在看了第一本书后，想必你已经对 HTML 和 CSS 的基础知识有了一定的了解，甚至你已经能够做出一些简单的网站了。但是你可能只是知道一些常见的 CSS 属性，毕竟上一本书只是讲解一些基础知识。所以如果你想要全面的、深入的了解 CSS ，那么权威指南系列是你的不二选择。</p>
 <p>这是一本非常经典的 CSS 参考书，它的经典之处在于，它用普通人类可以理解的语言系统、全面地讲解了 CSS 规范。这本书会告诉你，CSS 是什么、CSS 有什么、CSS 可以做什么。</p>
@@ -178,7 +179,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;关于前端开发方面的书籍，我也看过那么几本，有一些还没有看，先收藏在这里：&lt;br&gt;以下是正文部分。&lt;/p&gt;
+      &lt;p&gt;前端大牛关于前端开发方面推荐的书籍，我也看过那么几本，有一些还没有看，先收藏在这里：&lt;/p&gt;
+&lt;p&gt;以下是正文部分。&lt;/p&gt;
 &lt;h1 id=&quot;1、Head-First-HTML与CSS&quot;&gt;&lt;a href=&quot;#1、Head-First-HTML与CSS&quot; class=&quot;headerlink&quot; title=&quot;1、Head First HTML与CSS&quot;&gt;&lt;/a&gt;1、Head First HTML与CSS&lt;/h1&gt;&lt;p&gt;这本书最大的优点就是除了基础还是基础，非常适合完全不知道前端开发是什么的门外汉作为第一本入门书籍来学习， 整本书采用插画和故事场景的形式叙述，和那些枯燥、深奥的HTML书籍完全不同，秉持了 Head First 系列一贯通俗易懂的风格。你看这本书的时候会发现就像是在看漫画书一样轻松。是我看过对初学者最友好的书，没有之一。&lt;/p&gt;
 &lt;h1 id=&quot;2、CSS-权威指南&quot;&gt;&lt;a href=&quot;#2、CSS-权威指南&quot; class=&quot;headerlink&quot; title=&quot;2、CSS 权威指南&quot;&gt;&lt;/a&gt;2、CSS 权威指南&lt;/h1&gt;&lt;p&gt;在看了第一本书后，想必你已经对 HTML 和 CSS 的基础知识有了一定的了解，甚至你已经能够做出一些简单的网站了。但是你可能只是知道一些常见的 CSS 属性，毕竟上一本书只是讲解一些基础知识。所以如果你想要全面的、深入的了解 CSS ，那么权威指南系列是你的不二选择。&lt;/p&gt;
 &lt;p&gt;这是一本非常经典的 CSS 参考书，它的经典之处在于，它用普通人类可以理解的语言系统、全面地讲解了 CSS 规范。这本书会告诉你，CSS 是什么、CSS 有什么、CSS 可以做什么。&lt;/p&gt;
@@ -1011,9 +1013,9 @@
       <category term="闭包" scheme="https://itwanggj.github.io/categories/Javascript/%E9%97%AD%E5%8C%85/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1057,9 +1059,9 @@
       <category term="偏移量" scheme="https://itwanggj.github.io/categories/Javascript/%E5%81%8F%E7%A7%BB%E9%87%8F/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1214,9 +1216,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1245,9 +1247,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1315,11 +1317,11 @@
       <category term="MAC版" scheme="https://itwanggj.github.io/categories/%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E5%99%A8/APACHE/MAC%E7%89%88/"/>
     
     
-      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
-    
       <category term="Apache" scheme="https://itwanggj.github.io/tags/Apache/"/>
     
       <category term="服务器" scheme="https://itwanggj.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+      <category term="D3" scheme="https://itwanggj.github.io/tags/D3/"/>
     
       <category term="数据可视化" scheme="https://itwanggj.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
