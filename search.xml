@@ -24,8 +24,8 @@
 <li>如果你今年能掌握一门技术，它会是什么？</li>
 <li>尽量详细地描述从输入一个网站的URL到页面完成加载的过程。</li>
 <li>解释什么是ARIA和screenreaders，和提高网站可读性的办法。</li>
-<li>比较一下CSS动画和JavaScript动画优、缺点的</li>
-<li>解释下面的请求和响应头：</li>
+<li>比较一下CSS动画和JavaScript动画优、缺点的<a id="more"></a>
+</li>
 </ul>
 <h1 id="HTML-问题"><a href="#HTML-问题" class="headerlink" title="HTML 问题"></a>HTML 问题</h1><ul>
 <li>什么是doctype？</li>
