@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-08-10T02:43:15.000Z</updated>
+  <updated>2017-08-10T02:46:09.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -20,16 +20,10 @@
     <link href="https://itwanggj.github.io/2017/06/17/%E5%B0%81%E8%A3%85%E4%BD%A0%E7%9A%84Gulp%E4%BB%A3%E7%A0%81/"/>
     <id>https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/</id>
     <published>2017-06-17T12:11:50.000Z</published>
-    <updated>2017-08-10T02:43:15.000Z</updated>
+    <updated>2017-08-10T02:46:09.000Z</updated>
     
     <content type="html"><![CDATA[<p>近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。</p>
-<h2 id="Gulp的使用"><a href="#Gulp的使用" class="headerlink" title="Gulp的使用"></a>Gulp的使用</h2><p>以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：<br>/Users/me/project/project-a</p>
-<ul>
-<li>src/</li>
-<li>dist/</li>
-<li>package.json</li>
-<li>gulpfile.js</li>
-</ul>
+<h2 id="Gulp的使用"><a href="#Gulp的使用" class="headerlink" title="Gulp的使用"></a>Gulp的使用</h2><p>以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：<br>– /Users/me/project/project-a<br>– src/<br>– dist/<br>– package.json<br>– gulpfile.js</p>
 <p>其中「src」为源代码目录，「dist」为发布代码目录。「gulpfile.js」的代码为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    gulpCleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>),</div><div class="line">    gulpUglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">    gulpMD5 = <span class="built_in">require</span>(<span class="string">'gulp-md5-plus'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 把.html文件直接copy到发布目录</span></div><div class="line">gulp.task(<span class="string">'copy-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./src/*.html'</span>)</div><div class="line">        .pipe( gulp.dest(<span class="string">'./dist'</span>) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'compress-css'</span>, [<span class="string">'copy-html'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./src/*.css'</span>)</div><div class="line">        <span class="comment">// 压缩CSS代码</span></div><div class="line">        .pipe( gulpCleanCSS() ) </div><div class="line">        <span class="comment">// 文件名增加MD5，并替换.html文件中的引用地址</span></div><div class="line">        .pipe( gulpMD5(<span class="number">10</span>, <span class="string">'./dist/*.html'</span>) ) </div><div class="line">        <span class="comment">// 构建到发布目录</span></div><div class="line">        .pipe( gulp.dest(<span class="string">'./dist'</span>) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'compress-js'</span>, [<span class="string">'copy-html'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./src/*.js'</span>)</div><div class="line">        <span class="comment">// 压缩JS代码</span></div><div class="line">        .pipe( gulpUglify() )</div><div class="line">        <span class="comment">// 文件名增加MD5，并替换.html文件中的引用地址</span></div><div class="line">        .pipe( gulpMD5(<span class="number">10</span>, <span class="string">'./dist/*.html'</span>) )</div><div class="line">        <span class="comment">// 构建到发布目录</span></div><div class="line">        .pipe( gulp.dest(<span class="string">'./dist'</span>) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'compress-css'</span>, <span class="string">'compress-js'</span>]);</div></pre></td></tr></table></figure></p>
 <p>要正常执行这段代码，还要进行部署。<br>第一步，全局安装Gulp：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install gulp -g</div></pre></td></tr></table></figure></p>
 <a id="more"></a>
@@ -103,13 +97,7 @@
     <summary type="html">
     
       &lt;p&gt;近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。&lt;/p&gt;
-&lt;h2 id=&quot;Gulp的使用&quot;&gt;&lt;a href=&quot;#Gulp的使用&quot; class=&quot;headerlink&quot; title=&quot;Gulp的使用&quot;&gt;&lt;/a&gt;Gulp的使用&lt;/h2&gt;&lt;p&gt;以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：&lt;br&gt;/Users/me/project/project-a&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;src/&lt;/li&gt;
-&lt;li&gt;dist/&lt;/li&gt;
-&lt;li&gt;package.json&lt;/li&gt;
-&lt;li&gt;gulpfile.js&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2 id=&quot;Gulp的使用&quot;&gt;&lt;a href=&quot;#Gulp的使用&quot; class=&quot;headerlink&quot; title=&quot;Gulp的使用&quot;&gt;&lt;/a&gt;Gulp的使用&lt;/h2&gt;&lt;p&gt;以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：&lt;br&gt;– /Users/me/project/project-a&lt;br&gt;– src/&lt;br&gt;– dist/&lt;br&gt;– package.json&lt;br&gt;– gulpfile.js&lt;/p&gt;
 &lt;p&gt;其中「src」为源代码目录，「dist」为发布代码目录。「gulpfile.js」的代码为：&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;32&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; gulp = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp&#39;&lt;/span&gt;),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    gulpCleanCSS = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-clean-css&#39;&lt;/span&gt;),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    gulpUglify = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-uglify&#39;&lt;/span&gt;),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    gulpMD5 = &lt;span class=&quot;built_in&quot;&gt;require&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&#39;gulp-md5-plus&#39;&lt;/span&gt;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// 把.html文件直接copy到发布目录&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;copy-html&#39;&lt;/span&gt;, &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; gulp.src(&lt;span class=&quot;string&quot;&gt;&#39;./src/*.html&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulp.dest(&lt;span class=&quot;string&quot;&gt;&#39;./dist&#39;&lt;/span&gt;) );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;compress-css&#39;&lt;/span&gt;, [&lt;span class=&quot;string&quot;&gt;&#39;copy-html&#39;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; gulp.src(&lt;span class=&quot;string&quot;&gt;&#39;./src/*.css&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 压缩CSS代码&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulpCleanCSS() ) &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 文件名增加MD5，并替换.html文件中的引用地址&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulpMD5(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;./dist/*.html&#39;&lt;/span&gt;) ) &lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 构建到发布目录&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulp.dest(&lt;span class=&quot;string&quot;&gt;&#39;./dist&#39;&lt;/span&gt;) );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;compress-js&#39;&lt;/span&gt;, [&lt;span class=&quot;string&quot;&gt;&#39;copy-html&#39;&lt;/span&gt;], &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; gulp.src(&lt;span class=&quot;string&quot;&gt;&#39;./src/*.js&#39;&lt;/span&gt;)&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 压缩JS代码&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulpUglify() )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 文件名增加MD5，并替换.html文件中的引用地址&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulpMD5(&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;./dist/*.html&#39;&lt;/span&gt;) )&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;// 构建到发布目录&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;        .pipe( gulp.dest(&lt;span class=&quot;string&quot;&gt;&#39;./dist&#39;&lt;/span&gt;) );&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;gulp.task(&lt;span class=&quot;string&quot;&gt;&#39;default&#39;&lt;/span&gt;, [&lt;span class=&quot;string&quot;&gt;&#39;compress-css&#39;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&#39;compress-js&#39;&lt;/span&gt;]);&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;要正常执行这段代码，还要进行部署。&lt;br&gt;第一步，全局安装Gulp：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install gulp -g&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
@@ -853,9 +841,9 @@
       <category term="闭包" scheme="https://itwanggj.github.io/categories/Javascript/%E9%97%AD%E5%8C%85/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -899,9 +887,9 @@
       <category term="偏移量" scheme="https://itwanggj.github.io/categories/Javascript/%E5%81%8F%E7%A7%BB%E9%87%8F/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1056,9 +1044,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1087,9 +1075,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1415,9 +1403,9 @@
       <category term="CSS" scheme="https://itwanggj.github.io/categories/text-align/CSS/"/>
     
     
-      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
-    
       <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
+    
+      <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
