@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-08-10T02:46:09.000Z</updated>
+  <updated>2017-08-10T02:49:00.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://itwanggj.github.io/2017/06/17/%E5%B0%81%E8%A3%85%E4%BD%A0%E7%9A%84Gulp%E4%BB%A3%E7%A0%81/"/>
     <id>https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/</id>
     <published>2017-06-17T12:11:50.000Z</published>
-    <updated>2017-08-10T02:46:09.000Z</updated>
+    <updated>2017-08-10T02:49:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。</p>
 <h2 id="Gulp的使用"><a href="#Gulp的使用" class="headerlink" title="Gulp的使用"></a>Gulp的使用</h2><p>以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：<br>– /Users/me/project/project-a<br>– src/<br>– dist/<br>– package.json<br>– gulpfile.js</p>
@@ -30,30 +30,17 @@
 <p>第二步，初始化「package.json」的内容（放置一个空对象即可）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;  &#125;</div></pre></td></tr></table></figure></p>
 <p>最后一步，在项目目录下安装Gulp以及用到的插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project/project-a</div><div class="line">npm install gulp --save</div><div class="line">npm install gulp-clean-css --save</div><div class="line">npm install gulp-uglify --save</div><div class="line">npm install gulp-md5-plus —save</div></pre></td></tr></table></figure></p>
 <p>部署完成后，项目目录下会多了一个「node_modules」文件夹，「package.json」也会记录了所需的依赖。此时在命令行中执行「gulp」就可以构建了。</p>
-<p>然而，如果有多个项目，要怎么办呢？<br>/Users/me/project</p>
-<ul>
-<li><p>project-a/</p>
-</li>
-<li><p>project-b/</p>
-</li>
-<li><p>project-c/</p>
-</li>
-</ul>
-<p>即使它们的构建流程是一样的，也要在每个项目下重复部署构建环境。一旦构建流程的代码有所改动，又得在每个项目中重新部署。为了解决这个问题，我们把「gulpfile.js」、「node_modules」以及「package.json」提取出来：<br>/Users/me/project</p>
-<ul>
-<li><p>project-a/</p>
-</li>
-<li><p>project-b/</p>
-</li>
-<li><p>project-c/</p>
-</li>
-<li><p>gulpfile.js</p>
-</li>
-<li><p>node_modules/</p>
-</li>
-<li><p>package.json</p>
-</li>
-</ul>
+<p>然而，如果有多个项目，要怎么办呢？<br>– /Users/me/project</p>
+<p>– project-a/</p>
+<p>– project-b/</p>
+<p>– project-c/</p>
+<p>即使它们的构建流程是一样的，也要在每个项目下重复部署构建环境。一旦构建流程的代码有所改动，又得在每个项目中重新部署。为了解决这个问题，我们把「gulpfile.js」、「node_modules」以及「package.json」提取出来：<br>– /Users/me/project</p>
+<p>– project-a/</p>
+<p>– project-b/</p>
+<p>– project-c/</p>
+<p>– gulpfile.js</p>
+<p>– node_modules/</p>
+<p>– package.json</p>
 <p>这样，其他项目在构建的时候也可以用「gulpfile.js」。例如要构建「project-b」时可以执行这样的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">gulp --project ./project-b</div></pre></td></tr></table></figure></p>
 <p>也就是增加「–project」参数指定要构建的项目。当然，「gulpfile.js」也要做一些改动去拿到这个参数的值。首先，安装「minimist」包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">npm install minimist --save</div></pre></td></tr></table></figure></p>
 <p>在「gulpfile.js」中通过这个包解析命令行参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var argv = require(&apos;minimist&apos;)( process.argv.slice(2) );</div><div class="line">argv.project; // &apos;./project-b&apos;</div></pre></td></tr></table></figure></p>
@@ -65,13 +52,7 @@
 <p>下面做个小实验，在「project」目录下新建「run.js」，其内容为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
 <p>然后在命令行运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">node run.js --project ./project-a</div></pre></td></tr></table></figure></p>
 <p>构建结果跟直接运行「gulp」是一致的。这意味着我们可以通过代码调用Gulp，而且在调用之前还可以做一些「手脚」。<br><img src="https://itwanggj.github.io/images/cc_1.png" alt=""></p>
-<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>建立另一个项目去开发这个工具：<br>/Users/me/tool/fe-build</p>
-<ul>
-<li>node_modules/</li>
-<li>bin/fe-build.js</li>
-<li>gulpfile.js</li>
-<li>package.json</li>
-</ul>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>建立另一个项目去开发这个工具：<br>– /Users/me/tool/fe-build<br>– node_modules/<br>– bin/fe-build.js<br>– gulpfile.js<br>– package.json</p>
 <p>其中「gulpfile.js」、「node_modules」和「package.json」都可以从「project」目录剪切过来。开发的时候，要达到的效果是，通过以下调试命令可以对project-a进行构建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/tool/fe-build</div><div class="line">node bin/fe-build.js /Users/me/project/project-a</div></pre></td></tr></table></figure></p>
 <h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>第一步，在「fe-build.js」中获取路径参数。该参数直接跟在运行的js文件后面，获取更方便了（不需要再借助「minimist」）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var pjPath = process.argv[2];</div><div class="line"></div><div class="line">// 可能是相对路径，要resolve</div><div class="line">var path = require(&apos;path&apos;);</div><div class="line">pjPath = path.resolve(pjPath);</div></pre></td></tr></table></figure></p>
 <p>「pjPath」肯定要在「gulpfile.js」中使用，但是「gulpfile.js」无法访问「fe-build.js」中的局部变量。所以在调用Gulp之前，还要把「pjPath」记录到全局变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">process.env.PJ_PATH = pjPath;</div><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
