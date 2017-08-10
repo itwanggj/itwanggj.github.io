@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-08-10T01:56:37.000Z</updated>
+  <updated>2017-08-10T01:59:26.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://itwanggj.github.io/2017/05/18/%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E7%A8%8B%E5%BA%8F%E5%91%98%E5%85%B1%E5%90%8C%E6%80%BB%E7%BB%93%E7%9A%84%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     <id>https://itwanggj.github.io/2017/05/18/世界各地程序员共同总结的前端面试题/</id>
     <published>2017-05-18T02:27:13.000Z</published>
-    <updated>2017-08-10T01:56:37.000Z</updated>
+    <updated>2017-08-10T01:59:26.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="常规问题"><a href="#常规问题" class="headerlink" title="常规问题"></a>常规问题</h1><ul>
 <li>最近你学了什么？</li>
@@ -54,7 +54,6 @@
 <li>HTML5作为一个开放的网络平台。HTML5的基石是什么？</li>
 <li>描述cookies、localStorage、sessionstorage之间的差异。</li>
 <li>解释GET和POST的区别</li>
-<li>描述<script>、<script async>、<script defer>之间的差异。</li>
 </ul>
 <h1 id="CSS问题"><a href="#CSS问题" class="headerlink" title="CSS问题"></a>CSS问题</h1><ul>
 <li>CSS 的 class 和 id 的有什么区别？</li>
@@ -134,7 +133,7 @@
 <li>你最喜欢Internet Explorer的什么功能？</li>
 <li>你喜欢什么样的咖啡？</li>
 </ul>
-</script></li></ul>]]></content>
+]]></content>
     
     <summary type="html">
     
@@ -684,9 +683,9 @@
       <category term="闭包" scheme="https://itwanggj.github.io/categories/Javascript/%E9%97%AD%E5%8C%85/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -730,9 +729,9 @@
       <category term="偏移量" scheme="https://itwanggj.github.io/categories/Javascript/%E5%81%8F%E7%A7%BB%E9%87%8F/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -887,9 +886,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -918,9 +917,9 @@
       <category term="javascript" scheme="https://itwanggj.github.io/categories/wordpress/javascript/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
@@ -1246,9 +1245,9 @@
       <category term="CSS" scheme="https://itwanggj.github.io/categories/text-align/CSS/"/>
     
     
-      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
-    
       <category term="JavaScript" scheme="https://itwanggj.github.io/tags/JavaScript/"/>
+    
+      <category term="CSS" scheme="https://itwanggj.github.io/tags/CSS/"/>
     
       <category term="Html" scheme="https://itwanggj.github.io/tags/Html/"/>
     
