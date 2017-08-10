@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>封装你的Gulp代码 | Guojun Wang&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。
+Gulp的使用以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：/Users/me/project/project-a
+
+src/
+dist/
+package.json
+gulpfile.js
+
+其">
+<meta property="og:type" content="article">
+<meta property="og:title" content="封装你的Gulp代码">
+<meta property="og:url" content="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/index.html">
+<meta property="og:site_name" content="Guojun Wang's Blog">
+<meta property="og:description" content="近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。
+Gulp的使用以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：/Users/me/project/project-a
+
+src/
+dist/
+package.json
+gulpfile.js
+
+其">
+<meta property="og:image" content="https://itwanggj.github.io/images/cc_1.png">
+<meta property="og:updated_time" content="2017-08-10T02:43:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="封装你的Gulp代码">
+<meta name="twitter:description" content="近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。
+Gulp的使用以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：/Users/me/project/project-a
+
+src/
+dist/
+package.json
+gulpfile.js
+
+其">
+<meta name="twitter:image" content="https://itwanggj.github.io/images/cc_1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Guojun Wang&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://itwanggj.github.io/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link href="https://itwanggj.github.io/css/fonts.css" rel="stylesheet" type="text/css">
+  
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <nav id="upper-nav" class="inner">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <div class="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github" class="nav-icon" href="https://github.com/itwanggj"></a>
+        
+      </div>
+    </nav>
+    <div id="header-title">
+      
+        <h1 id="blog-title-wrap">
+          <a href="/" id="blog-title">Guojun Wang&#39;s Blog</a>
+        </h1>
+      
+    </div>
+    <div id="contenedor">
+      <ul class="cube">
+        <li class="cara">前端</li>
+        <li class="cara">jQuery</li>
+        <li class="cara">JS</li>
+        <li class="cara">Html5</li>
+        <li class="cara">CSS3</li>
+        <li class="cara">Gulp</li>
+      </ul>
+    </div>
+    <nav id="main-nav">
+      
+        <a class="main-nav-link" href="/">Home</a>
+      
+        <a class="main-nav-link" href="/archives">Archives</a>
+      
+        <a class="main-nav-link" href="/about">About</a>
+      
+      <a class="main-nav-link st-search-show-outputs"></a>
+    </nav>
+  </div>
+</header>
+
+
+    <a class="github-fork" href="https://github.com/itwanggj" style="position:fixed;right:0;top:0;" target="_blank"><img src="https://itwanggj.github.io/images/forkme.png"></a>
+    <div class="outer">
+      <section id="main"><article id="post-封装你的Gulp代码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/06/17/封装你的Gulp代码/" class="article-date">
+  <time datetime="2017-06-17T12:11:50.000Z" itemprop="datePublished">2017-06-17</time>
+</h3>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Gulp/">Gulp</a>►<a class="article-category-link" href="/categories/Gulp/JavaScript/">JavaScript</a>►<a class="article-category-link" href="/categories/Gulp/JavaScript/Grunt/">Grunt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      封装你的Gulp代码
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p>近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。</p>
+<h2 id="Gulp的使用"><a href="#Gulp的使用" class="headerlink" title="Gulp的使用"></a>Gulp的使用</h2><p>以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：<br>/Users/me/project/project-a</p>
+<ul>
+<li>src/</li>
+<li>dist/</li>
+<li>package.json</li>
+<li>gulpfile.js</li>
+</ul>
+<p>其中「src」为源代码目录，「dist」为发布代码目录。「gulpfile.js」的代码为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    gulpCleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>),</div><div class="line">    gulpUglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">    gulpMD5 = <span class="built_in">require</span>(<span class="string">'gulp-md5-plus'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 把.html文件直接copy到发布目录</span></div><div class="line">gulp.task(<span class="string">'copy-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./src/*.html'</span>)</div><div class="line">        .pipe( gulp.dest(<span class="string">'./dist'</span>) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'compress-css'</span>, [<span class="string">'copy-html'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./src/*.css'</span>)</div><div class="line">        <span class="comment">// 压缩CSS代码</span></div><div class="line">        .pipe( gulpCleanCSS() ) </div><div class="line">        <span class="comment">// 文件名增加MD5，并替换.html文件中的引用地址</span></div><div class="line">        .pipe( gulpMD5(<span class="number">10</span>, <span class="string">'./dist/*.html'</span>) ) </div><div class="line">        <span class="comment">// 构建到发布目录</span></div><div class="line">        .pipe( gulp.dest(<span class="string">'./dist'</span>) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'compress-js'</span>, [<span class="string">'copy-html'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./src/*.js'</span>)</div><div class="line">        <span class="comment">// 压缩JS代码</span></div><div class="line">        .pipe( gulpUglify() )</div><div class="line">        <span class="comment">// 文件名增加MD5，并替换.html文件中的引用地址</span></div><div class="line">        .pipe( gulpMD5(<span class="number">10</span>, <span class="string">'./dist/*.html'</span>) )</div><div class="line">        <span class="comment">// 构建到发布目录</span></div><div class="line">        .pipe( gulp.dest(<span class="string">'./dist'</span>) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'compress-css'</span>, <span class="string">'compress-js'</span>]);</div></pre></td></tr></table></figure></p>
+<p>要正常执行这段代码，还要进行部署。<br>第一步，全局安装Gulp：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install gulp -g</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>第二步，初始化「package.json」的内容（放置一个空对象即可）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;  &#125;</div></pre></td></tr></table></figure></p>
+<p>最后一步，在项目目录下安装Gulp以及用到的插件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project/project-a</div><div class="line">npm install gulp --save</div><div class="line">npm install gulp-clean-css --save</div><div class="line">npm install gulp-uglify --save</div><div class="line">npm install gulp-md5-plus —save</div></pre></td></tr></table></figure></p>
+<p>部署完成后，项目目录下会多了一个「node_modules」文件夹，「package.json」也会记录了所需的依赖。此时在命令行中执行「gulp」就可以构建了。</p>
+<p>然而，如果有多个项目，要怎么办呢？<br>/Users/me/project</p>
+<ul>
+<li><p>project-a/</p>
+</li>
+<li><p>project-b/</p>
+</li>
+<li><p>project-c/</p>
+</li>
+</ul>
+<p>即使它们的构建流程是一样的，也要在每个项目下重复部署构建环境。一旦构建流程的代码有所改动，又得在每个项目中重新部署。为了解决这个问题，我们把「gulpfile.js」、「node_modules」以及「package.json」提取出来：<br>/Users/me/project</p>
+<ul>
+<li><p>project-a/</p>
+</li>
+<li><p>project-b/</p>
+</li>
+<li><p>project-c/</p>
+</li>
+<li><p>gulpfile.js</p>
+</li>
+<li><p>node_modules/</p>
+</li>
+<li><p>package.json</p>
+</li>
+</ul>
+<p>这样，其他项目在构建的时候也可以用「gulpfile.js」。例如要构建「project-b」时可以执行这样的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">gulp --project ./project-b</div></pre></td></tr></table></figure></p>
+<p>也就是增加「–project」参数指定要构建的项目。当然，「gulpfile.js」也要做一些改动去拿到这个参数的值。首先，安装「minimist」包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">npm install minimist --save</div></pre></td></tr></table></figure></p>
+<p>在「gulpfile.js」中通过这个包解析命令行参数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var argv = require(&apos;minimist&apos;)( process.argv.slice(2) );</div><div class="line">argv.project; // &apos;./project-b&apos;</div></pre></td></tr></table></figure></p>
+<p>然后修改「gulpfile.js」中所有匹配路径的代码即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">// gulp.src(&apos;./src/*.html&apos;)</div><div class="line">gulp.src( path.join(argv.project, &apos;./src/*.html&apos;) )</div><div class="line"></div><div class="line">// gulp.dest(&apos;./dist&apos;)</div><div class="line">gulp.dest( path.join(argv.project, &apos;./dist&apos;) )</div></pre></td></tr></table></figure></p>
+<p>然而，因为Gulp默认情况下是调用当前目录的「gulpfile.js」，所以，如果当前目录不是该文件所在的目录，就要增加「–gulpfile」参数去指定它的路径：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">gulp --project ./project-a</div><div class="line"></div><div class="line">cd /Users/me/project-a</div><div class="line">gulp --gulpfile ../gulpfile.js --project ./project-a</div><div class="line"></div><div class="line">cd /Users/me</div><div class="line">gulp --gulpfile ./project/gulpfile.js --project ./project-a</div></pre></td></tr></table></figure></p>
+<p>这显然还不够方便。下面我们进一步把构建代码封装成命令行工具「fe-build」，使其可以这样调用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">cd /Users/me</div><div class="line">fe-build /Users/me/project/project-a</div><div class="line"></div><div class="line">cd /Users/me/project/project-a</div><div class="line">fe-build .</div></pre></td></tr></table></figure></p>
+<h2 id="封装为npm包"><a href="#封装为npm包" class="headerlink" title="封装为npm包"></a>封装为npm包</h2><h3 id="Gulp的调用入口"><a href="#Gulp的调用入口" class="headerlink" title="Gulp的调用入口"></a>Gulp的调用入口</h3><p>要基于Gulp封装另一个npm包，得先理解Gulp的调用方式。查看Gulp的「package.json」可以发现这样一段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;bin&quot;: &#123;</div><div class="line">    &quot;gulp&quot;: &quot;./bin/gulp.js&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>也就是说，在命令行中执行「gulp」时，实际上运行的是Gulp包内bin目录下的「gulp.js」。</p>
+<p>下面做个小实验，在「project」目录下新建「run.js」，其内容为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
+<p>然后在命令行运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">node run.js --project ./project-a</div></pre></td></tr></table></figure></p>
+<p>构建结果跟直接运行「gulp」是一致的。这意味着我们可以通过代码调用Gulp，而且在调用之前还可以做一些「手脚」。<br><img src="https://itwanggj.github.io/images/cc_1.png" alt=""></p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>建立另一个项目去开发这个工具：<br>/Users/me/tool/fe-build</p>
+<ul>
+<li>node_modules/</li>
+<li>bin/fe-build.js</li>
+<li>gulpfile.js</li>
+<li>package.json</li>
+</ul>
+<p>其中「gulpfile.js」、「node_modules」和「package.json」都可以从「project」目录剪切过来。开发的时候，要达到的效果是，通过以下调试命令可以对project-a进行构建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/tool/fe-build</div><div class="line">node bin/fe-build.js /Users/me/project/project-a</div></pre></td></tr></table></figure></p>
+<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>第一步，在「fe-build.js」中获取路径参数。该参数直接跟在运行的js文件后面，获取更方便了（不需要再借助「minimist」）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var pjPath = process.argv[2];</div><div class="line"></div><div class="line">// 可能是相对路径，要resolve</div><div class="line">var path = require(&apos;path&apos;);</div><div class="line">pjPath = path.resolve(pjPath);</div></pre></td></tr></table></figure></p>
+<p>「pjPath」肯定要在「gulpfile.js」中使用，但是「gulpfile.js」无法访问「fe-build.js」中的局部变量。所以在调用Gulp之前，还要把「pjPath」记录到全局变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">process.env.PJ_PATH = pjPath;</div><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
+<p>第二步，修改「gulpfile.js」中所有匹配路径的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var pjPath = process.env.PJ_PATH;</div><div class="line">gulp.src( path.join(pjPath, &apos;src&apos;, &apos;*.html&apos;) )</div><div class="line">gulp.dest( path.join(pjPath, &apos;dist&apos;) )</div></pre></td></tr></table></figure></p>
+<p>尝试执行调试命令，但出现错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Task &apos;/Users/me/project/project-a&apos; is not in your gulpfile</div></pre></td></tr></table></figure></p>
+<p>要理解这个错误的起因，首先要知道，无论是「fe-build.js」还是通过它调用的Gulp，都是从全局变量「process.argv」获取命令行参数的。而查找Gulp的官方文档可以发现，「gulp」有这样一种执行方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp &lt;task&gt; &lt;othertask&gt;</div></pre></td></tr></table></figure></p>
+<p>所以Gulp就把路径参数识别为任务id了。所幸的是，「process.argv」这个数组是可以修改的。既然如此，只要在调用Gulp之前，把项目路径参数从数组里面移掉就可以了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">var pjPath = path.resolve(process.argv[2]);</div><div class="line">process.env.PJ_PATH = pjPath;</div><div class="line">process.argv.splice(2, 1);</div><div class="line"></div><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
+<p>现在再执行调试命令，已经可以正常运行了。但是稍微改一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me</div><div class="line">node /Users/me/tool/fe-build/bin/fe-build.js /Users/me/project/project-a</div></pre></td></tr></table></figure></p>
+<p>还是出现错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">No gulpfile found</div></pre></td></tr></table></figure></p>
+<p>导致这个问题的原因是，「gulpfile.js」不在当前目录（「/Users/me」）下。所以「–gulpfile」参数还是必须的，不过并不是加到命令上，而是操作「process.argv」：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">process.argv.push(</div><div class="line">    &apos;--gulpfile&apos;,</div><div class="line">    path.resolve(__dirname, &apos;../gulpfile.js&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>其中「__dirname」是全局变量，表示当前脚本文件所在的目录。因为「fe-build.js」跟「gulpfile.js」的路径关系是确定的，所以通过前者的路径就可以很方便地计算出后者的路径。</p>
+<p>「fe-build.js」的全部代码为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 可能是相对路径，要resolve</span></div><div class="line"><span class="keyword">var</span> pjPath = path.resolve(process.argv[<span class="number">2</span>]);</div><div class="line"><span class="comment">// 移除参数，以免gulp把它当成任务id</span></div><div class="line">process.argv.splice(<span class="number">2</span>, <span class="number">1</span>);</div><div class="line"><span class="comment">// 记录起来，以便在gulpfile.js中使用</span></div><div class="line">process.env.PJ_PATH = pjPath;</div><div class="line"></div><div class="line"><span class="comment">// 增加--gulpfile参数</span></div><div class="line">process.argv.push(</div><div class="line">    <span class="string">'--gulpfile'</span>,</div><div class="line">    <span class="comment">// __dirname是全局变量，表示当前文件所在目录</span></div><div class="line">    path.resolve(__dirname, <span class="string">'../gulpfile.js'</span>)</div><div class="line">);</div><div class="line"></div><div class="line"><span class="built_in">require</span>(<span class="string">'gulp/bin/gulp'</span>);</div></pre></td></tr></table></figure></p>
+<p>「gulpfile.js」的全部代码为：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>),</div><div class="line">    gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    gulpCleanCSS = <span class="built_in">require</span>(<span class="string">'gulp-clean-css'</span>),</div><div class="line">    gulpUglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">    gulpMD5 = <span class="built_in">require</span>(<span class="string">'gulp-md5-plus'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 获取具体项目路径</span></div><div class="line"><span class="keyword">var</span> pjPath = process.env.PJ_PATH;</div><div class="line"></div><div class="line">gulp.task(<span class="string">'copy-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src( path.join(pjPath, <span class="string">'src'</span>, <span class="string">'*.html'</span>) )</div><div class="line">        .pipe( gulp.dest( path.join(pjPath, <span class="string">'dist'</span>) ) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'compress-css'</span>, [<span class="string">'copy-html'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src( path.join(pjPath, <span class="string">'src'</span>, <span class="string">'*.css'</span>) )</div><div class="line">    .pipe( gulpCleanCSS() )</div><div class="line">        .pipe( gulpMD5( <span class="number">10</span>, path.join(pjPath, <span class="string">'dist'</span>, <span class="string">'*.html'</span>) ) )</div><div class="line">        .pipe( gulp.dest( path.join(pjPath, <span class="string">'dist'</span>) ) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'compress-js'</span>, [<span class="string">'copy-html'</span>], <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src( path.join(pjPath, <span class="string">'src'</span>, <span class="string">'*.js'</span>) )</div><div class="line">        .pipe( gulpUglify() )</div><div class="line">        .pipe( gulpMD5( <span class="number">10</span>, path.join(pjPath, <span class="string">'dist'</span>, <span class="string">'*.html'</span>) ) )</div><div class="line">        .pipe( gulp.dest( path.join(pjPath, <span class="string">'dist'</span>) ) );</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, [<span class="string">'compress-css'</span>, <span class="string">'compress-js'</span>]);</div></pre></td></tr></table></figure></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>「npm」命令对全局安装的包是有要求的，必须在「package.json」中指定name、version和bin。修改「package.json」增加这三项（「minimist」的依赖可以删掉了）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  &quot;name&quot;: &quot;fe-build&quot;,</div><div class="line">  &quot;version&quot;: &quot;1.0.0&quot;,</div><div class="line">  &quot;bin&quot;: &#123;</div><div class="line">    &quot;fe-build&quot;: &quot;bin/fe-build.js&quot;</div><div class="line">  &#125;,</div><div class="line">  &quot;dependencies&quot;: &#123;</div><div class="line">    &quot;gulp&quot;: &quot;^3.9.1&quot;,</div><div class="line">    &quot;gulp-clean-css&quot;: &quot;^2.0.4&quot;,</div><div class="line">    &quot;gulp-md5-plus&quot;: &quot;^0.2.0&quot;,</div><div class="line">    &quot;gulp-uglify&quot;: &quot;^1.5.3&quot;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后就可以进行安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/tool/fe-build</div><div class="line">npm install -g</div></pre></td></tr></table></figure></p>
+<p>构建目标项目：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fe-build /Users/me/project/project-a</div></pre></td></tr></table></figure></p>
+<p>意外情况出现了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">syntax error</div></pre></td></tr></table></figure></p>
+<p>相信很多新手用Node.js开发命令行工具时也会遇到相同的问题。原因在于，操作系统不知道用什么环境去运行「fe-build」（开发的时候指定了「node fe-build.js」，所以不会有问题）。解决方法也很简单，在「fe-build.js」的开头声明运行环境即可（留意第一行）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env node</div><div class="line"></div><div class="line">var path = require(&apos;path&apos;);</div><div class="line"></div><div class="line">// 可能是相对路径，要resolve</div><div class="line">var pjPath = path.resolve(process.argv[2]);</div><div class="line">// 移除参数，以免gulp把它当成任务id</div><div class="line">process.argv.splice(2, 1);</div><div class="line">// 记录起来，以便在gulpfile.js中使用</div><div class="line">process.env.PJ_PATH = pjPath;</div><div class="line"></div><div class="line">// 增加--gulpfile参数</div><div class="line">process.argv.push(</div><div class="line">    &apos;--gulpfile&apos;,</div><div class="line">    // __dirname是全局变量，表示当前文件所在目录</div><div class="line">    path.resolve(__dirname, &apos;../gulpfile.js&apos;)</div><div class="line">);</div><div class="line"></div><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
+<p>改好之后重新安装一次，就可以正常运行了。</p>
+<p>就这样，一个专属的构建工具就完成了。而且，不知道大家有没有发现这样做的另一个好处：「gulpfile.js」以及部署产生的「node_modules」、「package.json」不用再放在具体项目的目录下，可以减少开发时的干扰。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Grunt/">Grunt</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+        <a data-url="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/" data-id="cj65uan110015u13a0aaehlne" class="article-share-link">Share</a>
+        
+          <a href="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/#ds-thread" class="article-comment-link">Comments</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/05/26/setTimeout:setInterval的最大延时值/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">setTimeout/setInterval的最大延时值</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2017/06/17/封装你的Gulp代码/" data-title="封装你的Gulp代码" data-url="https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/"></div>
+  </section>
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/06/17/封装你的Gulp代码/">封装你的Gulp代码</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/26/setTimeout:setInterval的最大延时值/">setTimeout/setInterval的最大延时值</a>
+          </li>
+        
+          <li>
+            <a href="/2017/05/18/世界各地程序员共同总结的前端面试题/">世界各地程序员共同总结的前端面试题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/09/CSS--Flex布局/">CSS--FLex布局介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/08/滴滴出行前端面试总结/">滴滴出行前端面试总结</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/404/">404</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apache/">Apache</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS3/">CSS3</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/D3/">D3</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flex/">Flex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Grunt/">Grunt</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gulp/">Gulp</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HEXO/">HEXO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/">HTML5</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Html/">Html</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Http/">Http</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ionic/">Ionic</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LESS/">LESS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SASS/">SASS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCSS/">SCSS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sass/">Sass</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ajax/">ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/npm/">npm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/setInterval/">setInterval</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/setTimeout/">setTimeout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型/">原型</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型链/">原型链</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据可视化/">数据可视化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/滴滴出行/">滴滴出行</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/程序员/">程序员</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/继承/">继承</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/闭包/">闭包</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试/">面试</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/404/" style="font-size: 10px;">404</a> <a href="/tags/Apache/" style="font-size: 10px;">Apache</a> <a href="/tags/Bootstrap/" style="font-size: 11.43px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 18.57px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 14.29px;">CSS3</a> <a href="/tags/D3/" style="font-size: 11.43px;">D3</a> <a href="/tags/Flex/" style="font-size: 10px;">Flex</a> <a href="/tags/Grunt/" style="font-size: 11.43px;">Grunt</a> <a href="/tags/Gulp/" style="font-size: 11.43px;">Gulp</a> <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a> <a href="/tags/HTML5/" style="font-size: 12.86px;">HTML5</a> <a href="/tags/Html/" style="font-size: 17.14px;">Html</a> <a href="/tags/Http/" style="font-size: 10px;">Http</a> <a href="/tags/Ionic/" style="font-size: 11.43px;">Ionic</a> <a href="/tags/JS/" style="font-size: 15.71px;">JS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/LESS/" style="font-size: 10px;">LESS</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SASS/" style="font-size: 10px;">SASS</a> <a href="/tags/SCSS/" style="font-size: 10px;">SCSS</a> <a href="/tags/Sass/" style="font-size: 14.29px;">Sass</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/bootstrap/" style="font-size: 10px;">bootstrap</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/html/" style="font-size: 14.29px;">html</a> <a href="/tags/jQuery/" style="font-size: 14.29px;">jQuery</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/npm/" style="font-size: 11.43px;">npm</a> <a href="/tags/setInterval/" style="font-size: 10px;">setInterval</a> <a href="/tags/setTimeout/" style="font-size: 10px;">setTimeout</a> <a href="/tags/wordpress/" style="font-size: 11.43px;">wordpress</a> <a href="/tags/前端/" style="font-size: 11.43px;">前端</a> <a href="/tags/原型/" style="font-size: 11.43px;">原型</a> <a href="/tags/原型链/" style="font-size: 10px;">原型链</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/数据可视化/" style="font-size: 10px;">数据可视化</a> <a href="/tags/服务器/" style="font-size: 10px;">服务器</a> <a href="/tags/滴滴出行/" style="font-size: 10px;">滴滴出行</a> <a href="/tags/程序员/" style="font-size: 10px;">程序员</a> <a href="/tags/继承/" style="font-size: 10px;">继承</a> <a href="/tags/闭包/" style="font-size: 11.43px;">闭包</a> <a href="/tags/面试/" style="font-size: 12.86px;">面试</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li class='link'><a href='https://maoqiq.github.io' target='_blank'>Mao Qi&#39;s Blog</a></li>
+        
+          <li class='link'><a href='https://github.com/itwanggj' target='_blank'>GitHub</a></li>
+        
+          <li class='link'><a href='http://ued.hengtiansoft.com/' target='_blank'>UED</a></li>
+        
+          <li class='link'><a href='http://www.markdown.cn/' target='_blank'>Markdown</a></li>
+        
+          <li class='link'><a href='https://github.com/sun11/hexo-theme-paperbox' target='_blank'>Paperbox</a></li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+  
+    
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Guojun Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+
+      <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+      </script>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
+</nav>
+  
+
+<!-- totop start -->
+<div id="totop">
+	<a title="To Top"></a>
+</div>
+<!-- totop end -->
+
+<!-- swiftype search start -->
+
+<!-- swiftype search end -->
+
+
+<!-- duoshuo start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"itwanggj"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- duoshuo end -->
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?205315c67c3b49d5edcb9344ca199928";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</div>
+</body>
+</html>
+
