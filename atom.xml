@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://itwanggj.github.io/"/>
-  <updated>2017-08-10T02:49:00.000Z</updated>
+  <updated>2017-08-10T02:49:44.000Z</updated>
   <id>https://itwanggj.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://itwanggj.github.io/2017/06/17/%E5%B0%81%E8%A3%85%E4%BD%A0%E7%9A%84Gulp%E4%BB%A3%E7%A0%81/"/>
     <id>https://itwanggj.github.io/2017/06/17/封装你的Gulp代码/</id>
     <published>2017-06-17T12:11:50.000Z</published>
-    <updated>2017-08-10T02:49:00.000Z</updated>
+    <updated>2017-08-10T02:49:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>近年来，前端工程化深入人心，而工程化中必不可少的环节就是构建。所谓构建就是基于既定的流程对项目中的文件进行处理，从而得到最终用于发布的文件。而Gulp正是目前最流行的前端构建工具之一。</p>
 <h2 id="Gulp的使用"><a href="#Gulp的使用" class="headerlink" title="Gulp的使用"></a>Gulp的使用</h2><p>以下是使用Gulp进行构建的例子，也是本文的示例项目。文件结构为：<br>– /Users/me/project/project-a<br>– src/<br>– dist/<br>– package.json<br>– gulpfile.js</p>
@@ -51,7 +51,8 @@
 <p>也就是说，在命令行中执行「gulp」时，实际上运行的是Gulp包内bin目录下的「gulp.js」。</p>
 <p>下面做个小实验，在「project」目录下新建「run.js」，其内容为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">require(&apos;gulp/bin/gulp&apos;);</div></pre></td></tr></table></figure></p>
 <p>然后在命令行运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/project</div><div class="line">node run.js --project ./project-a</div></pre></td></tr></table></figure></p>
-<p>构建结果跟直接运行「gulp」是一致的。这意味着我们可以通过代码调用Gulp，而且在调用之前还可以做一些「手脚」。<br><img src="https://itwanggj.github.io/images/cc_1.png" alt=""></p>
+<p>构建结果跟直接运行「gulp」是一致的。这意味着我们可以通过代码调用Gulp，而且在调用之前还可以做一些「手脚」。</p>
+<p><img src="https://itwanggj.github.io/images/cc_1.png" alt=""></p>
 <h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>建立另一个项目去开发这个工具：<br>– /Users/me/tool/fe-build<br>– node_modules/<br>– bin/fe-build.js<br>– gulpfile.js<br>– package.json</p>
 <p>其中「gulpfile.js」、「node_modules」和「package.json」都可以从「project」目录剪切过来。开发的时候，要达到的效果是，通过以下调试命令可以对project-a进行构建：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /Users/me/tool/fe-build</div><div class="line">node bin/fe-build.js /Users/me/project/project-a</div></pre></td></tr></table></figure></p>
 <h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>第一步，在「fe-build.js」中获取路径参数。该参数直接跟在运行的js文件后面，获取更方便了（不需要再借助「minimist」）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var pjPath = process.argv[2];</div><div class="line"></div><div class="line">// 可能是相对路径，要resolve</div><div class="line">var path = require(&apos;path&apos;);</div><div class="line">pjPath = path.resolve(pjPath);</div></pre></td></tr></table></figure></p>
