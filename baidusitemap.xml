@@ -3,6 +3,37 @@
 
 
     
+  <url>
+    <loc>https://itwanggj.github.io/2015/12/24/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2018-10-13T13:47:05.670Z</lastmod>
+    <data>
+        <display>
+        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
+        <pubTime>2015-12-24T10:32:04.000Z</pubTime>
+        
+        <tag>jQuery</tag>
+         
+        <tag>Bootstrap</tag>
+         
+        <tag>Ionic</tag>
+         
+        <tag>github</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+          
+             
+              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>https://itwanggj.github.io/2017/08/04/%E8%81%8A%E8%81%8AJS%E9%82%A3%E4%BA%9B%E4%BA%8B--%E4%B8%A5%E6%A0%BC%E6%A8%A1%E5%BC%8F/</loc>
@@ -566,37 +597,6 @@
           
              
               <breadCrumb title="error" url="https://itwanggj.github.io/categories/npm/error/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://itwanggj.github.io/2015/12/24/%E4%BD%BF%E7%94%A8GitHub%20+%20Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-03-01T14:37:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用GitHub + Hexo搭建博客（Mac版）</title>
-        <pubTime>2015-12-24T10:32:04.000Z</pubTime>
-        
-        <tag>jQuery</tag>
-         
-        <tag>Bootstrap</tag>
-         
-        <tag>Ionic</tag>
-         
-        <tag>github</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo博客搭建" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-          
-             
-              <breadCrumb title="博客优化" url="https://itwanggj.github.io/categories/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
           
         </display>
     </data>
