@@ -133,9 +133,9 @@
         <title>ECMAScript 6中的面向对象</title>
         <pubTime>2017-07-08T15:11:50.000Z</pubTime>
         
-        <tag>ECMAScript6</tag>
-         
         <tag>JavaScript</tag>
+         
+        <tag>ECMAScript6</tag>
          
         <tag>面向对象</tag>
          
@@ -319,13 +319,13 @@
          
         <tag>CSS3</tag>
          
+        <tag>原型</tag>
+         
         <tag>html</tag>
          
         <tag>HTML5</tag>
          
         <tag>继承</tag>
-         
-        <tag>原型</tag>
          
         <tag>原型链</tag>
          
@@ -979,11 +979,11 @@
         <title>JS代码让Markdown自动生成目录</title>
         <pubTime>2016-03-03T12:32:04.000Z</pubTime>
         
-        <tag>JavaScript</tag>
-         
         <tag>HEXO</tag>
          
         <tag>Markdown</tag>
+         
+        <tag>JavaScript</tag>
          
          
            
